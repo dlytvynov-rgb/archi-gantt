@@ -14,7 +14,9 @@ interface TaskRow {
   start_date: string;
   segments: Segment[];
   current_status: string;
-  returns: number; // times went back to In progress from QA/Ready
+  returns: number;       // QA → IP (внутренний возврат)
+  rfa_count: number;     // сколько раз была в RFA
+  client_returns: number; // rfa_count - 1 (клиент вернул)
 }
 
 const SC: Record<string, { bg: string; tx: string }> = {
@@ -73,7 +75,7 @@ function parseCSV(raw: string): TaskRow[] {
     if (!map.has(id)) {
       map.set(id, { id, name: c[iName]||"", project: c[iProj]||"", assignee: (c[iAss]||"").trim(),
         pm: (c[iPm]||"").replace(/^PM\s+/,"").trim(), planned_end: c[iPEnd]||"",
-        start_date: from, segments: [], current_status: status, returns: 0 });
+        start_date: from, segments: [], current_status: status, returns: 0, rfa_count: 0, client_returns: 0 });
     }
     const t = map.get(id)!;
     if (from < t.start_date) t.start_date = from;
@@ -86,13 +88,16 @@ function parseCSV(raw: string): TaskRow[] {
     else t.segments.push({ status, from, to });
   }
 
-  // count returns = transitions from QA → In progress only
   for (const t of map.values()) {
     for (let i = 1; i < t.segments.length; i++) {
-      if (t.segments[i].status === "In progress" &&
-        t.segments[i-1].status === "Quality control")
-        t.returns++;
+      const cur = t.segments[i].status, prev = t.segments[i-1].status;
+      if (cur === "In progress" && prev === "Quality control") t.returns++;
+      // count only transitions INTO RFA from a different status
+      if (cur === "Ready for acceptance" && prev !== "Ready for acceptance") t.rfa_count++;
     }
+    // segments[0] not covered by loop above
+    if (t.segments.length === 1 && t.segments[0].status === "Ready for acceptance") t.rfa_count++;
+    t.client_returns = Math.max(0, t.rfa_count - 1);
   }
   return Array.from(map.values());
 }
@@ -100,16 +105,40 @@ function parseCSV(raw: string): TaskRow[] {
 // ─── Cards View ───────────────────────────────────────────────────────────────
 function CardsView({ tasks, search, hideStatus, onSelect }: { tasks: TaskRow[]; search: string; hideStatus: Set<string>; onSelect: (t: TaskRow) => void }) {
   const today = new Date().toISOString().slice(0, 10);
-  const [sortBy, setSortBy] = useState<"assignee"|"deadline"|"returns"|"status">("assignee");
+  const [sortBy, setSortBy] = useState<"urgent"|"assignee"|"deadline"|"returns"|"status"|"progress">("urgent");
 
   let filtered = tasks.filter(t => !hideStatus.has(t.current_status));
   if (search) filtered = filtered.filter(t => t.name.toLowerCase().includes(search) || t.assignee.toLowerCase().includes(search));
 
+  const ACTIVE = new Set(["In progress", "Paused", "Quality control"]);
+
+  const urgencyKey = (t: TaskRow) => {
+    if (!ACTIVE.has(t.current_status)) return 3;
+    if (!t.planned_end) return 2;
+    const d = dif(today, t.planned_end);
+    if (d < 0) return 0;   // просроченные
+    if (d <= 3) return 1;  // горящие
+    return 2;
+  };
+
   const sorted = [...filtered].sort((a, b) => {
+    if (sortBy === "urgent") {
+      const ua = urgencyKey(a), ub = urgencyKey(b);
+      if (ua !== ub) return ua - ub;
+      return (a.planned_end || "9").localeCompare(b.planned_end || "9");
+    }
     if (sortBy === "assignee") return a.assignee.localeCompare(b.assignee);
     if (sortBy === "deadline") return (a.planned_end || "9").localeCompare(b.planned_end || "9");
     if (sortBy === "returns")  return b.returns - a.returns;
     if (sortBy === "status")   return a.current_status.localeCompare(b.current_status);
+    if (sortBy === "progress") {
+      const pct = (t: TaskRow) => {
+        const total = t.start_date && t.planned_end ? dif(t.start_date, t.planned_end) : 0;
+        const done  = t.start_date ? dif(t.start_date, today) : 0;
+        return total > 0 ? Math.min(100, Math.round(done / total * 100)) : 0;
+      };
+      return pct(b) - pct(a);
+    }
     return 0;
   });
 
@@ -121,18 +150,18 @@ function CardsView({ tasks, search, hideStatus, onSelect }: { tasks: TaskRow[]; 
       {/* Sort bar */}
       <div style={{ display:"flex", gap:8, marginBottom:12, alignItems:"center" }}>
         <span style={{ color:"#6B7A90", fontSize:11, fontWeight:600, textTransform:"uppercase" }}>Сортировка</span>
-        {(["assignee","deadline","returns","status"] as const).map(v => (
+        {(["urgent","assignee","deadline","progress","returns","status"] as const).map(v => (
           <span key={v} onClick={() => setSortBy(v)} className="pill"
-            style={{ padding:"3px 10px", borderRadius:20, cursor:"pointer", fontSize:12, fontWeight:600, border:"1.5px solid", userSelect:"none",
+            style={{ padding:"3px 10px", borderRadius:6, cursor:"pointer", fontSize:12, fontWeight:600, border:"1.5px solid", userSelect:"none",
               borderColor: sortBy===v ? "#1F2D3D" : "#D8E0EC", background: sortBy===v ? "#1F2D3D" : "#EEF2F7", color: sortBy===v ? "#fff" : "#6B7A90" }}>
-            {v === "assignee" ? "Воркер" : v === "deadline" ? "Дедлайн" : v === "returns" ? "Возвраты ↓" : "Статус"}
+            {v === "urgent" ? "🔥 Горящие" : v === "assignee" ? "Воркер" : v === "deadline" ? "Дедлайн" : v === "progress" ? "Прогресс ↓" : v === "returns" ? "Возвраты ↓" : "Статус"}
           </span>
         ))}
         <span style={{ marginLeft:"auto", color:"#6B7A90", fontSize:12 }}>{sorted.length} задач</span>
       </div>
 
       {/* Table */}
-      <div style={{ background:"#fff", borderRadius:10, border:"1px solid #D8E0EC", overflow:"hidden" }}>
+      <div style={{ background:"#fff", borderRadius:12, boxShadow:"0 1px 8px rgba(0,0,0,.08)", overflow:"hidden" }}>
         {/* Header */}
         <div style={{ display:"grid", gridTemplateColumns:"1fr 140px 160px 90px 90px 180px", background:"#1F2D3D", padding:"0 16px" }}>
           {["Задача","Воркер","Статус","Дедлайн","Возвраты","Прогресс"].map(h => (
@@ -142,19 +171,24 @@ function CardsView({ tasks, search, hideStatus, onSelect }: { tasks: TaskRow[]; 
 
         {/* Rows */}
         {sorted.map((t, i) => {
-          const isOverdue = t.planned_end && t.planned_end < today && t.current_status !== "Done";
+          const isActive  = ACTIVE.has(t.current_status);
+          const isOverdue = isActive && !!t.planned_end && t.planned_end < today;
           const totalDays = t.start_date && t.planned_end ? dif(t.start_date, t.planned_end) : 0;
           const doneDays  = t.start_date ? dif(t.start_date, today) : 0;
           const pct = totalDays > 0 ? Math.min(100, Math.round(doneDays / totalDays * 100)) : 0;
           const daysLeft = t.planned_end ? dif(today, t.planned_end) : null;
+          const isBurning = isActive && daysLeft !== null && daysLeft >= 0 && daysLeft <= 3;
 
           // mini segment bar
           const segTotal = t.segments.length ? dif(t.segments[0].from, t.segments[t.segments.length-1].to || today) : 1;
 
+          const rowBg = isOverdue ? "#FFF5F5" : isBurning ? "#FFF8F0" : i % 2 === 0 ? "#fff" : "#FAFBFC";
+          const rowBorder = isOverdue ? "3px solid #E53E3E" : isBurning ? "3px solid #FF6F2C" : "3px solid transparent";
+
           return (
-            <div key={t.id} onClick={() => onSelect(t)} style={{ display:"grid", gridTemplateColumns:"1fr 140px 160px 90px 90px 180px", padding:"0 16px", borderTop: i === 0 ? "none" : "1px solid #F0F4F8", background: i % 2 === 0 ? "#fff" : "#FAFBFC", minHeight:48, alignItems:"center", cursor:"pointer" }}
+            <div key={t.id} onClick={() => onSelect(t)} style={{ display:"grid", gridTemplateColumns:"1fr 140px 160px 90px 90px 180px", padding:"0 16px", borderTop: i === 0 ? "none" : "1px solid #F0F4F8", background: rowBg, minHeight:48, alignItems:"center", cursor:"pointer", borderLeft: rowBorder }}
               onMouseEnter={e => (e.currentTarget.style.background = "#F0F6FF")}
-              onMouseLeave={e => (e.currentTarget.style.background = i % 2 === 0 ? "#fff" : "#FAFBFC")}>
+              onMouseLeave={e => (e.currentTarget.style.background = rowBg)}>
               {/* Task name */}
               <div style={{ padding:"8px 8px 8px 0", overflow:"hidden" }}>
                 <a href={`https://archivizer.com/tasks/${t.id}`} target="_blank" rel="noreferrer"
@@ -179,8 +213,8 @@ function CardsView({ tasks, search, hideStatus, onSelect }: { tasks: TaskRow[]; 
                 <div style={{ fontSize:12, fontWeight:600, color: isOverdue ? "#E53E3E" : "#4A5568" }}>
                   {t.planned_end ? fmtD(t.planned_end) : "—"}
                 </div>
-                {daysLeft !== null && t.current_status !== "Done" && (
-                  <div style={{ fontSize:10, color: daysLeft < 0 ? "#E53E3E" : daysLeft <= 2 ? "#FF6F2C" : "#9AA5B4", marginTop:1 }}>
+                {daysLeft !== null && isActive && (
+                  <div style={{ fontSize:10, color: daysLeft < 0 ? "#E53E3E" : daysLeft <= 3 ? "#FF6F2C" : "#9AA5B4", marginTop:1 }}>
                     {daysLeft < 0 ? `+${Math.abs(daysLeft)}д просроч` : daysLeft === 0 ? "сегодня" : `${daysLeft}д осталось`}
                   </div>
                 )}
@@ -225,10 +259,16 @@ function TaskHistoryPanel({ task, onClose }: { task: TaskRow; onClose: () => voi
   const lastTo = task.segments[task.segments.length - 1]?.to || today;
   const totalDays = Math.max(1, dif(task.start_date, lastTo));
 
+  const segDays = task.segments.map(s => dif(s.from, s.to || today));
+  const maxSegDays = Math.max(...segDays);
+  const isOverduePanel = ["In progress","Paused","Quality control"].includes(task.current_status)
+    && !!task.planned_end && task.planned_end < today;
+  const score = task.returns * 1.0 + task.client_returns * 0.2;
+
   return (
     <>
-      <div onClick={onClose} style={{ position:"fixed", inset:0, background:"rgba(0,0,0,.4)", zIndex:200 }} />
-      <div style={{ position:"fixed", top:0, right:0, bottom:0, width:420, background:"#fff", zIndex:201, display:"flex", flexDirection:"column", boxShadow:"-4px 0 30px rgba(0,0,0,.22)", overflowY:"auto" }}>
+      <div onClick={onClose} style={{ position:"fixed", inset:0, background:"rgba(15,20,30,.5)", backdropFilter:"blur(4px)", WebkitBackdropFilter:"blur(4px)", zIndex:200 }} />
+      <div style={{ position:"fixed", top:0, right:0, bottom:0, width:420, background:"#fff", zIndex:201, display:"flex", flexDirection:"column", boxShadow:"-8px 0 40px rgba(0,0,0,.18)", overflowY:"auto", borderRadius:"12px 0 0 12px" }}>
         {/* Header */}
         <div style={{ background:"#1F2D3D", padding:"16px 20px 14px", flexShrink:0 }}>
           <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", gap:12 }}>
@@ -239,13 +279,20 @@ function TaskHistoryPanel({ task, onClose }: { task: TaskRow; onClose: () => voi
             <button onClick={onClose} style={{ background:"rgba(255,255,255,.14)", border:"none", color:"#fff", width:28, height:28, borderRadius:6, cursor:"pointer", fontSize:15, flexShrink:0, display:"flex", alignItems:"center", justifyContent:"center" }}>✕</button>
           </div>
           <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"8px 16px", marginTop:14 }}>
-            {([["Воркер", task.assignee || "—"], ["PM", task.pm || "—"], ["Дедлайн", task.planned_end ? fmtD(task.planned_end) : "—"], ["Возвраты", task.returns > 0 ? `↩ ${task.returns}` : "—"]] as [string,string][]).map(([l, v]) => (
+            {([["Воркер", task.assignee || "—"], ["PM", task.pm || "—"], ["Дедлайн", task.planned_end ? fmtD(task.planned_end) : "—"], ["QA возвраты", task.returns > 0 ? `↩ ${task.returns}` : "—"], ["Клиент циклы", task.rfa_count > 0 ? `${task.rfa_count} RFA` : "—"], ["Клиент вернул", task.client_returns > 0 ? `↩ ${task.client_returns}` : "—"]] as [string,string][]).map(([l, v]) => (
               <div key={l}>
                 <div style={{ fontSize:10, color:"rgba(255,255,255,.38)", textTransform:"uppercase", letterSpacing:".4px", marginBottom:2 }}>{l}</div>
-                <div style={{ fontSize:12, fontWeight:600, color: l==="Возвраты" && task.returns > 0 ? "#FF8C8C" : "#fff" }}>{v}</div>
+                <div style={{ fontSize:12, fontWeight:600, color: (l==="QA возвраты"&&task.returns>0)||(l==="Клиент вернул"&&task.client_returns>0) ? "#FF8C8C" : "#fff" }}>{v}</div>
               </div>
             ))}
           </div>
+          {(score > 0 || isOverduePanel) && (
+            <div style={{ display:"flex", flexWrap:"wrap", gap:6, marginTop:12 }}>
+              {task.returns > 0 && <span style={{ padding:"2px 8px", borderRadius:4, background:"#E53E3E", color:"#fff", fontSize:11, fontWeight:700 }}>⚠ {task.returns} QA возврат{task.returns>1?"а":""}</span>}
+              {task.client_returns > 0 && <span style={{ padding:"2px 8px", borderRadius:4, background:"#FF6F2C", color:"#fff", fontSize:11, fontWeight:700 }}>↩ клиент вернул {task.client_returns}×</span>}
+              {isOverduePanel && <span style={{ padding:"2px 8px", borderRadius:4, background:"rgba(229,62,62,.7)", color:"#fff", fontSize:11, fontWeight:700 }}>🔴 просроч +{Math.abs(dif(today, task.planned_end))}д</span>}
+            </div>
+          )}
         </div>
 
         {/* Link */}
@@ -266,15 +313,23 @@ function TaskHistoryPanel({ task, onClose }: { task: TaskRow; onClose: () => voi
             const prev = task.segments[i - 1];
             const isReturn = i > 0 && seg.status === "In progress" && !!prev &&
               prev.status === "Quality control";
+            const isClientReturn = i > 0 && seg.status === "In progress" && !!prev &&
+              prev.status === "Ready for acceptance";
             const days = dif(seg.from, seg.to || today);
             const sc = SC[seg.status];
             const isLast = i === task.segments.length - 1;
+            const isSlowest = days === maxSegDays && maxSegDays > 1;
 
             return (
               <div key={i}>
                 {isReturn && (
                   <div style={{ display:"flex", alignItems:"center", gap:6, padding:"4px 0 4px 24px", color:"#E53E3E", fontSize:11, fontWeight:700 }}>
-                    <span>↩ Возврат в работу</span>
+                    <span>↩ QA вернул в работу</span>
+                  </div>
+                )}
+                {isClientReturn && (
+                  <div style={{ display:"flex", alignItems:"center", gap:6, padding:"4px 0 4px 24px", color:"#FF6F2C", fontSize:11, fontWeight:700 }}>
+                    <span>↩ Клиент вернул на доработку</span>
                   </div>
                 )}
                 <div style={{ display:"flex", gap:12, alignItems:"flex-start" }}>
@@ -287,7 +342,9 @@ function TaskHistoryPanel({ task, onClose }: { task: TaskRow; onClose: () => voi
                       <span style={{ padding:"2px 8px", borderRadius:4, fontSize:11, fontWeight:600, background:sc?.bg||"#ccc", color:sc?.tx||"#fff" }}>
                         {STATUS_SHORT[seg.status] || seg.status}
                       </span>
-                      <span style={{ fontSize:11, color:"#9AA5B4", fontWeight:500 }}>{days} дн</span>
+                      <span style={{ fontSize:11, fontWeight:600, color: isSlowest ? "#E53E3E" : "#9AA5B4" }}>
+                        {days} дн {isSlowest ? "⏱ самый долгий" : ""}
+                      </span>
                     </div>
                     <div style={{ fontSize:11, color:"#6B7A90", marginTop:4 }}>
                       {fmtD(seg.from)} → {fmtD(seg.to || today)}
@@ -391,13 +448,13 @@ function buildClientStats(tasks: TaskRow[], today: string): ClientStat[] {
   });
 }
 
-function WorkerCard({ stat }: { stat: WorkerStat }) {
+function WorkerCard({ stat, hero }: { stat: WorkerStat; hero?: boolean }) {
   return (
-    <div style={{ background:"#fff", borderRadius:10, border:"1px solid #D8E0EC", overflow:"hidden" }}>
-      <div style={{ background:"#1F2D3D", padding:"12px 16px" }}>
+    <div style={{ background:"#fff", borderRadius:12, boxShadow:"0 1px 8px rgba(0,0,0,.08)", overflow:"hidden", height:"100%" }}>
+      <div style={{ background: hero ? "linear-gradient(135deg,#1a2540 0%,#1F2D3D 100%)" : "#1F2D3D", padding: hero ? "16px 20px" : "12px 16px" }}>
         <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center" }}>
-          <div style={{ fontSize:14, fontWeight:700, color:"#fff" }}>{stat.assignee}</div>
-          <div style={{ fontSize:11, color:"rgba(255,255,255,.5)" }}>{stat.totalTasks} задач</div>
+          <div style={{ fontSize: hero ? 16 : 14, fontWeight:700, color:"#fff" }}>{stat.assignee}</div>
+          <div style={{ fontSize:11, color:"rgba(255,255,255,.5)", background:"rgba(255,255,255,.08)", padding:"2px 8px", borderRadius:4 }}>{stat.totalTasks} задач</div>
         </div>
         <div style={{ display:"flex", height:6, borderRadius:3, overflow:"hidden", marginTop:10, gap:1 }}>
           {ALL_STATUSES.map(s => {
@@ -457,7 +514,7 @@ function ClientCard({ stat }: { stat: ClientStat }) {
       })
     : null;
   return (
-    <div style={{ background:"#fff", borderRadius:10, border:"1px solid #D8E0EC", overflow:"hidden" }}>
+    <div style={{ background:"#fff", borderRadius:12, boxShadow:"0 1px 8px rgba(0,0,0,.08)", overflow:"hidden" }}>
       <div style={{ background:"#1F2D3D", padding:"12px 16px" }}>
         <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", gap:8 }}>
           <div style={{ fontSize:13, fontWeight:700, color:"#fff", overflow:"hidden", whiteSpace:"nowrap", textOverflow:"ellipsis" }}>{stat.name || "(без клиента)"}</div>
@@ -522,7 +579,7 @@ function AnalyticsView({ tasks }: { tasks: TaskRow[] }) {
   return (
     <div style={{ flex:1, overflow:"auto", padding:"12px 20px 20px" }}>
       <div style={{ display:"flex", gap:10, marginBottom:14, alignItems:"center", flexWrap:"wrap" }}>
-        <div style={{ display:"flex", background:"#fff", borderRadius:8, padding:3, gap:2, border:"1px solid #D8E0EC" }}>
+        <div style={{ display:"flex", background:"#fff", borderRadius:8, padding:3, gap:2, boxShadow:"0 1px 4px rgba(0,0,0,.07)" }}>
           {(["workers","clients"] as const).map(v => (
             <button key={v} onClick={() => setSub(v)}
               style={{ padding:"4px 16px", borderRadius:6, border:"none", cursor:"pointer", fontSize:12, fontWeight:600,
@@ -535,14 +592,14 @@ function AnalyticsView({ tasks }: { tasks: TaskRow[] }) {
         {sub === "workers"
           ? (Object.keys(wSortLabels) as (keyof typeof wSortLabels)[]).map(v => (
               <span key={v} className="pill" onClick={() => setSortW(v as typeof sortW)}
-                style={{ padding:"3px 10px", borderRadius:20, fontSize:12, fontWeight:600, border:"1.5px solid",
+                style={{ padding:"3px 10px", borderRadius:6, fontSize:12, fontWeight:600, border:"1.5px solid",
                   borderColor: sortW===v ? "#1F2D3D" : "#D8E0EC", background: sortW===v ? "#1F2D3D" : "#EEF2F7", color: sortW===v ? "#fff" : "#6B7A90" }}>
                 {wSortLabels[v]}
               </span>
             ))
           : (Object.keys(cSortLabels) as (keyof typeof cSortLabels)[]).map(v => (
               <span key={v} className="pill" onClick={() => setSortC(v as typeof sortC)}
-                style={{ padding:"3px 10px", borderRadius:20, fontSize:12, fontWeight:600, border:"1.5px solid",
+                style={{ padding:"3px 10px", borderRadius:6, fontSize:12, fontWeight:600, border:"1.5px solid",
                   borderColor: sortC===v ? "#1F2D3D" : "#D8E0EC", background: sortC===v ? "#1F2D3D" : "#EEF2F7", color: sortC===v ? "#fff" : "#6B7A90" }}>
                 {cSortLabels[v]}
               </span>
@@ -551,8 +608,12 @@ function AnalyticsView({ tasks }: { tasks: TaskRow[] }) {
         <span style={{ marginLeft:"auto", color:"#6B7A90", fontSize:11 }}>весь период · {tasks.length} задач</span>
       </div>
       {sub === "workers" && (
-        <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill,minmax(360px,1fr))", gap:14 }}>
-          {sortedW.map(w => <WorkerCard key={w.assignee} stat={w} />)}
+        <div style={{ display:"grid", gridTemplateColumns:"repeat(12, 1fr)", gap:14 }}>
+          {sortedW.map((w, i) => (
+            <div key={w.assignee} style={{ gridColumn: i === 0 ? "span 8" : i === 1 ? "span 4" : i < 5 ? "span 4" : "span 3" }}>
+              <WorkerCard stat={w} hero={i === 0} />
+            </div>
+          ))}
         </div>
       )}
       {sub === "clients" && (
@@ -574,8 +635,8 @@ export default function CsvGantt() {
   const [hideStatus, setHideStatus] = useState<Set<string>>(new Set(["Done"]));
   const [collapsed, setCollapsed]   = useState<Set<string>>(new Set());
   const [selectedTask, setSelectedTask] = useState<TaskRow | null>(null);
+  const [tooltip, setTooltip] = useState<{ task: TaskRow; x: number; y: number } | null>(null);
   const scrollerRef = useRef<HTMLDivElement>(null);
-  const didScroll   = useRef(false);
 
   useEffect(() => {
     const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
@@ -583,8 +644,7 @@ export default function CsvGantt() {
   }, []);
 
   useEffect(() => {
-    if (!tasks.length || didScroll.current || !scrollerRef.current || view !== "gantt") return;
-    didScroll.current = true;
+    if (!tasks.length || !scrollerRef.current || view !== "gantt") return;
     const today = new Date().toISOString().slice(0, 10);
     const vs = tasks.flatMap(t => t.segments.map(s => s.from)).sort()[0] || today;
     scrollerRef.current.scrollLeft = Math.max(0, (dif(vs, today) - 7) * DW);
@@ -623,44 +683,46 @@ export default function CsvGantt() {
   const toggleSt = (s: string) => setHideStatus(p => { const n = new Set(p); n.has(s)?n.delete(s):n.add(s); return n; });
 
   return (
-    <div style={{ fontFamily:"system-ui,sans-serif", background:"#EEF2F7", color:"#1F2D3D", fontSize:13, overflow:"hidden", height:"100vh", display:"flex", flexDirection:"column" }}>
+    <div style={{ fontFamily:"system-ui,sans-serif", background:"#F4F6F8", color:"#1F2D3D", fontSize:13, overflow:"hidden", height:"100vh", display:"flex", flexDirection:"column" }}>
       <style>{`
         @keyframes sp{to{transform:rotate(360deg)}}
         .task-link{font-size:12px;color:#2D7FF9;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;width:100%}
         .task-link:hover{text-decoration:underline}
-        .grow-row:hover{background:#F0F6FF!important}
+        .grow-row:hover{background:#EEF4FF!important}
         .pill{transition:all .15s;user-select:none;cursor:pointer}
         .pill:hover{opacity:.8}
       `}</style>
 
       {/* NAV */}
-      <nav style={{ height:52, background:"#1F2D3D", display:"flex", alignItems:"center", padding:"0 20px", gap:12, flexShrink:0, boxShadow:"0 2px 8px rgba(0,0,0,.25)" }}>
-        <div style={{ color:"#fff", fontSize:15, fontWeight:700, flex:1 }}>
-          ARCHI <span style={{ color:"#2D7FF9" }}>History</span>
-          <span style={{ fontSize:11, fontWeight:400, color:"rgba(255,255,255,.4)", marginLeft:10 }}>{tasks.length} задач · CSV</span>
+      <nav style={{ height:56, background:"#161E2D", display:"flex", alignItems:"center", padding:"0 24px", gap:16, flexShrink:0, boxShadow:"0 1px 0 rgba(255,255,255,.06)" }}>
+        <div style={{ display:"flex", alignItems:"center", gap:10, flex:1 }}>
+          <div style={{ width:28, height:28, borderRadius:8, background:"#2D7FF9", display:"flex", alignItems:"center", justifyContent:"center", fontSize:14, flexShrink:0 }}>A</div>
+          <div>
+            <div style={{ color:"#fff", fontSize:13, fontWeight:700, letterSpacing:"-.2px", lineHeight:1 }}>ARCHI <span style={{ color:"#2D7FF9" }}>Gantt</span></div>
+            <div style={{ fontSize:10, color:"rgba(255,255,255,.3)", marginTop:2 }}>{tasks.length} задач · CSV</div>
+          </div>
         </div>
         {/* View switcher */}
-        <div style={{ display:"flex", background:"rgba(255,255,255,.1)", borderRadius:8, padding:3, gap:2 }}>
+        <div style={{ display:"flex", background:"rgba(255,255,255,.07)", borderRadius:8, padding:3, gap:1 }}>
           {(["gantt","cards","analytics"] as const).map(v => (
             <button key={v} onClick={() => setView(v)}
-              style={{ padding:"4px 14px", borderRadius:6, border:"none", cursor:"pointer", fontSize:12, fontWeight:600, background: view===v ? "#2D7FF9" : "transparent", color: view===v ? "#fff" : "rgba(255,255,255,.6)", transition:"all .15s" }}>
-              {v === "gantt" ? "📊 Ганта" : v === "cards" ? "📋 Карточки" : "📈 Аналитика"}
+              style={{ padding:"5px 16px", borderRadius:6, border:"none", cursor:"pointer", fontSize:12, fontWeight:600, background: view===v ? "#2D7FF9" : "transparent", color: view===v ? "#fff" : "rgba(255,255,255,.5)", transition:"all .15s", letterSpacing:"-.1px" }}>
+              {v === "gantt" ? "Ганта" : v === "cards" ? "Карточки" : "Аналитика"}
             </button>
           ))}
         </div>
-        <span style={{ fontSize:11, color:"rgba(255,255,255,.35)" }}>↖ кликни строку → история</span>
-        <a href="/" style={{ padding:"6px 14px", borderRadius:6, border:"1px solid rgba(255,255,255,.2)", background:"rgba(255,255,255,.1)", color:"#fff", fontSize:12, fontWeight:600, textDecoration:"none" }}>← Gantt API</a>
+        <a href="/" style={{ padding:"6px 14px", borderRadius:6, border:"1px solid rgba(255,255,255,.12)", background:"transparent", color:"rgba(255,255,255,.6)", fontSize:12, fontWeight:500, textDecoration:"none", transition:"all .15s" }}>← API</a>
       </nav>
 
       {/* FILTERS */}
-      {view !== "analytics" && <div style={{ background:"#fff", margin:"12px 20px 0", borderRadius:10, padding:"10px 16px", display:"flex", flexWrap:"wrap", gap:10, alignItems:"center", border:"1px solid #D8E0EC", flexShrink:0 }}>
+      {view !== "analytics" && <div style={{ background:"#fff", margin:"12px 20px 0", borderRadius:12, padding:"10px 16px", display:"flex", flexWrap:"wrap", gap:10, alignItems:"center", boxShadow:"0 1px 6px rgba(0,0,0,.07)", flexShrink:0 }}>
         {view === "gantt" && (
           <>
             <div style={{ display:"flex", alignItems:"center", gap:8 }}>
               <span style={{ color:"#6B7A90", fontSize:11, fontWeight:600, textTransform:"uppercase" }}>Group</span>
               {(["assignee","project"] as const).map(v => (
                 <span key={v} className="pill" onClick={() => setGroupBy(v)}
-                  style={{ padding:"4px 11px", borderRadius:20, fontSize:12, fontWeight:600, border:"1.5px solid", borderColor:groupBy===v?"#1F2D3D":"#D8E0EC", background:groupBy===v?"#1F2D3D":"#EEF2F7", color:groupBy===v?"#fff":"#6B7A90" }}>
+                  style={{ padding:"4px 11px", borderRadius:6, fontSize:12, fontWeight:600, border:"1.5px solid", borderColor:groupBy===v?"#1F2D3D":"#D8E0EC", background:groupBy===v?"#1F2D3D":"#EEF2F7", color:groupBy===v?"#fff":"#6B7A90" }}>
                   {v === "assignee" ? "By Worker" : "By Project"}
                 </span>
               ))}
@@ -675,7 +737,7 @@ export default function CsvGantt() {
             const c = SC[s]?.bg || "#ccc";
             return (
               <span key={s} className="pill" onClick={() => toggleSt(s)}
-                style={{ padding:"3px 9px", borderRadius:20, fontSize:11, fontWeight:600, border:"1.5px solid", borderColor:c, background:off?"transparent":c, color:off?c:(SC[s]?.tx||"#fff"), opacity:off?.4:1 }}>
+                style={{ padding:"3px 9px", borderRadius:6, fontSize:11, fontWeight:600, border:"1.5px solid", borderColor:c, background:off?"transparent":c, color:off?c:(SC[s]?.tx||"#fff"), opacity:off?.4:1 }}>
                 {STATUS_SHORT[s]||s}
               </span>
             );
@@ -693,7 +755,7 @@ export default function CsvGantt() {
         : view === "cards"
         ? <CardsView tasks={tasks} search={search} hideStatus={hideStatus} onSelect={setSelectedTask} />
         : (
-          <div style={{ flex:1, overflow:"hidden", margin:"12px 20px 16px", borderRadius:10, border:"1px solid #D8E0EC", background:"#fff", display:"flex", flexDirection:"column" }}>
+          <div style={{ flex:1, overflow:"hidden", margin:"12px 20px 16px", borderRadius:12, boxShadow:"0 1px 8px rgba(0,0,0,.08)", background:"#fff", display:"flex", flexDirection:"column" }}>
             {filtered.length === 0
               ? <div style={{ display:"flex", alignItems:"center", justifyContent:"center", height:200, color:"#6B7A90" }}>Нет задач</div>
               : <div ref={scrollerRef} style={{ flex:1, overflow:"auto" }}>
@@ -723,18 +785,20 @@ export default function CsvGantt() {
                     const isc = collapsed.has(gk);
                     return (
                       <div key={gk}>
-                        <div onClick={()=>toggleGroup(gk)} style={{ display:"flex", cursor:"pointer", borderTop:"2px solid #2C3E50", minWidth:`calc(520px + ${TW}px)` }}>
-                          <div style={{ position:"sticky", left:0, zIndex:10, width:520, flexShrink:0, background:"#D0DCE8", borderRight:"2px solid #2C3E50", display:"flex", alignItems:"center", gap:8, padding:"7px 12px", fontWeight:700, fontSize:13, color:"#1F2D3D" }}>
-                            <span style={{ fontSize:9, transform:isc?"rotate(-90deg)":"none", transition:"transform .2s" }}>▼</span>
-                            {gk} <span style={{ fontWeight:400, fontSize:11, opacity:.6 }}>{gt.length} задач</span>
+                        <div onClick={()=>toggleGroup(gk)} style={{ display:"flex", cursor:"pointer", borderTop:"1px solid #E2E8F0", minWidth:`calc(520px + ${TW}px)` }}>
+                          <div style={{ position:"sticky", left:0, zIndex:10, width:520, flexShrink:0, background:"#F8FAFC", borderRight:"1px solid #E2E8F0", borderLeft:"3px solid #2D7FF9", display:"flex", alignItems:"center", gap:8, padding:"7px 12px", fontWeight:700, fontSize:12, color:"#1F2D3D" }}>
+                            <span style={{ fontSize:9, transform:isc?"rotate(-90deg)":"none", transition:"transform .2s", color:"#9AA5B4" }}>▼</span>
+                            {gk} <span style={{ fontWeight:400, fontSize:11, color:"#9AA5B4" }}>{gt.length}</span>
                           </div>
-                          <div style={{ flex:1, background:"#C8D8E8", opacity:.45, borderTop:"2px solid #2C3E50" }} />
+                          <div style={{ flex:1, background:"#F8FAFC", borderTop:"none" }} />
                         </div>
                         {!isc && gt.map((t, ri) => {
-                          const rowBg = ri%2===0?"#fff":"#FAFBFC";
+                          const ACTIVE_ST = new Set(["In progress", "Paused", "Quality control"]);
+                          const isGanttOverdue = ACTIVE_ST.has(t.current_status) && !!t.planned_end && t.planned_end < today;
+                          const rowBg = isGanttOverdue ? "#FFF5F5" : ri%2===0?"#fff":"#FAFBFC";
                           const deadlineX = t.planned_end ? dif(vs, t.planned_end)*DW : null;
                           return (
-                            <div key={t.id} className="grow-row" onClick={() => setSelectedTask(t)} style={{ display:"flex", height:36, borderTop:"1px solid #D8E0EC", background:rowBg, minWidth:`calc(520px + ${TW}px)`, cursor:"pointer" }}>
+                            <div key={t.id} className="grow-row" onClick={() => setSelectedTask(t)} style={{ display:"flex", height:36, borderTop:"1px solid #D8E0EC", background:rowBg, minWidth:`calc(520px + ${TW}px)`, cursor:"pointer", borderLeft: isGanttOverdue ? "3px solid #E53E3E" : "3px solid transparent" }}>
                               <div style={{ position:"sticky", left:0, zIndex:10, width:520, flexShrink:0, display:"flex", background:rowBg }}>
                                 <div style={{ width:260, flexShrink:0, padding:"0 12px", borderRight:"1px solid #D8E0EC", display:"flex", alignItems:"center", overflow:"hidden" }}>
                                   <a className="task-link" href={`https://archivizer.com/tasks/${t.id}`} target="_blank" rel="noreferrer" title={t.name} onClick={e => e.stopPropagation()}>{t.name}</a>
@@ -748,8 +812,11 @@ export default function CsvGantt() {
                                 {t.segments.map((seg,si)=>{
                                   const x0=dif(vs,seg.from)*DW, x1=dif(vs,seg.to)*DW, w=Math.max(2,x1-x0);
                                   const sc=SC[seg.status]; if(!sc||x1<0||x0>TW) return null;
-                                  return <div key={si} title={`${seg.status}\n${fmtD(seg.from)} → ${fmtD(seg.to)} (${dif(seg.from,seg.to)}д)`}
-                                    style={{ position:"absolute", top:"50%", transform:"translateY(-50%)", height:18, borderRadius:2, left:Math.max(0,x0), width:x0<0?w+x0:w, background:sc.bg, opacity:.88, zIndex:2 }} />;
+                                  return <div key={si}
+                                    onMouseEnter={e => setTooltip({ task: t, x: e.clientX, y: e.clientY })}
+                                    onMouseMove={e  => setTooltip(prev => prev ? { ...prev, x: e.clientX, y: e.clientY } : null)}
+                                    onMouseLeave={() => setTooltip(null)}
+                                    style={{ position:"absolute", top:"50%", transform:"translateY(-50%)", height:18, borderRadius:2, left:Math.max(0,x0), width:x0<0?w+x0:w, background:sc.bg, opacity:.88, zIndex:2, cursor:"pointer" }} />;
                                 })}
                                 {deadlineX!==null && deadlineX>=0 && deadlineX<=TW && (
                                   <div title={`Дедлайн: ${fmtD(t.planned_end)}`} style={{ position:"absolute", top:0, bottom:0, left:deadlineX, width:2, background:"rgba(255,80,80,.7)", zIndex:3, pointerEvents:"none" }} />
@@ -768,6 +835,41 @@ export default function CsvGantt() {
         )
       }
       {selectedTask && <TaskHistoryPanel task={selectedTask} onClose={() => setSelectedTask(null)} />}
+
+      {tooltip && (() => {
+        const t = tooltip.task;
+        const today = new Date().toISOString().slice(0, 10);
+        const lastTo = t.segments[t.segments.length-1]?.to || today;
+        const totalDays = Math.max(1, dif(t.start_date, lastTo));
+        const isOverdue = ["In progress","Paused","Quality control"].includes(t.current_status) && !!t.planned_end && t.planned_end < today;
+        const daysLeft = t.planned_end ? dif(today, t.planned_end) : null;
+        return (
+          <div style={{ position:"fixed", left: tooltip.x + 14, top: tooltip.y - 10, zIndex:500, pointerEvents:"none",
+            background:"rgba(22,30,45,.82)", backdropFilter:"blur(16px)", WebkitBackdropFilter:"blur(16px)",
+            color:"#fff", borderRadius:12, padding:"12px 16px", minWidth:230, maxWidth:300,
+            boxShadow:"0 8px 32px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.08)",
+            border:"1px solid rgba(255,255,255,.1)", fontSize:12, lineHeight:1.6 }}>
+            <div style={{ fontWeight:700, marginBottom:6, whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis" }}>{t.name}</div>
+            <div style={{ color:"rgba(255,255,255,.55)", fontSize:11, marginBottom:8 }}>{t.project}</div>
+            <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"4px 12px" }}>
+              <div style={{ color:"rgba(255,255,255,.5)", fontSize:10 }}>ВОРКЕР</div>
+              <div style={{ color:"rgba(255,255,255,.5)", fontSize:10 }}>ДЛИТЕЛЬНОСТЬ</div>
+              <div style={{ fontWeight:600 }}>{t.assignee}</div>
+              <div style={{ fontWeight:600 }}>{totalDays} дн</div>
+              <div style={{ color:"rgba(255,255,255,.5)", fontSize:10, marginTop:4 }}>QA ВОЗВРАТЫ</div>
+              <div style={{ color:"rgba(255,255,255,.5)", fontSize:10, marginTop:4 }}>КЛИЕНТ ЦИКЛЫ</div>
+              <div style={{ fontWeight:600, color: t.returns > 0 ? "#FF8C8C" : "#fff" }}>{t.returns > 0 ? `↩ ${t.returns}` : "—"}</div>
+              <div style={{ fontWeight:600, color: t.client_returns > 0 ? "#FFB347" : "#fff" }}>{t.rfa_count > 0 ? `${t.rfa_count} RFA${t.client_returns > 0 ? ` · ↩${t.client_returns}×` : ""}` : "—"}</div>
+            </div>
+            {(isOverdue || daysLeft !== null) && t.current_status !== "Done" && (
+              <div style={{ marginTop:8, paddingTop:8, borderTop:"1px solid rgba(255,255,255,.12)", fontSize:11,
+                color: isOverdue ? "#FF8C8C" : daysLeft !== null && daysLeft <= 3 ? "#FFB347" : "rgba(255,255,255,.6)" }}>
+                {isOverdue ? `🔴 просроч +${Math.abs(dif(today, t.planned_end))}д` : daysLeft === 0 ? "⚡ дедлайн сегодня" : daysLeft !== null && daysLeft <= 3 ? `⚡ ${daysLeft}д до дедлайна` : `дедлайн ${fmtD(t.planned_end)}`}
+              </div>
+            )}
+          </div>
+        );
+      })()}
     </div>
   );
 }
