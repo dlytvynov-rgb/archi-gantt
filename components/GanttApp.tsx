@@ -51,26 +51,76 @@ export default function GanttApp() {
   const scrollerRef = useRef<HTMLDivElement>(null);
   const firstRenderRef = useRef(true);
 
+  const DATA_URL = `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/data.json`;
+  const IS_STATIC = !!process.env.NEXT_PUBLIC_BASE_PATH;
+  const GH_REPO = "dlytvynov-rgb/archi-gantt";
+  const GH_WORKFLOW = "update.yml";
+
   useEffect(() => {
-    fetch("/api/data")
+    const url = IS_STATIC ? DATA_URL : "/api/data";
+    fetch(url)
       .then((r) => r.json())
       .then((d: GanttData) => {
+        d.today = new Date().toISOString().slice(0, 10);
         setData(d);
         setNavStatus(d.cached_at ? `cached ${d.cached_at}` : "");
-      });
+      })
+      .catch(() => setNavStatus("⚠ Failed to load data"));
   }, []);
 
   const doRefresh = async () => {
+    if (!IS_STATIC) {
+      // Local dev — use API route
+      setRefreshing(true);
+      setNavStatus("");
+      try {
+        const r = await fetch("/api/refresh", { method: "POST" });
+        const d = await r.json();
+        const fresh: GanttData = await (await fetch("/api/data")).json();
+        setData(fresh);
+        setNavStatus(`✓ ${d.count} tasks · ${d.cached_at}`);
+      } catch (e: any) {
+        setNavStatus("⚠ Error: " + e.message);
+      } finally {
+        setRefreshing(false);
+      }
+      return;
+    }
+
+    // GitHub Pages — trigger Actions workflow
+    let pat = localStorage.getItem("gh_pat") || "";
+    if (!pat) {
+      pat = window.prompt("Введи GitHub Personal Access Token (scope: workflow):\n\ngithub.com → Settings → Developer settings → Personal access tokens") || "";
+      if (!pat) return;
+      localStorage.setItem("gh_pat", pat);
+    }
+
     setRefreshing(true);
-    setNavStatus("");
+    setNavStatus("⏳ Запускаю обновление…");
     try {
-      const r = await fetch("/api/refresh", { method: "POST" });
-      const d = await r.json();
-      const fresh: GanttData = await (await fetch("/api/data")).json();
-      setData(fresh);
-      setNavStatus(`✓ ${d.count} tasks · ${d.cached_at}`);
+      const resp = await fetch(
+        `https://api.github.com/repos/${GH_REPO}/actions/workflows/${GH_WORKFLOW}/dispatches`,
+        {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${pat}`,
+            Accept: "application/vnd.github+json",
+            "X-GitHub-Api-Version": "2022-11-28",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ ref: "master" }),
+        }
+      );
+      if (resp.status === 204) {
+        setNavStatus("✓ Обновление запущено (~2 мин). Обновите страницу.");
+      } else if (resp.status === 401) {
+        localStorage.removeItem("gh_pat");
+        setNavStatus("⚠ Неверный токен. Попробуй ещё раз.");
+      } else {
+        setNavStatus(`⚠ GitHub ответил: ${resp.status}`);
+      }
     } catch (e: any) {
-      setNavStatus("⚠ Error: " + e.message);
+      setNavStatus("⚠ " + e.message);
     } finally {
       setRefreshing(false);
     }

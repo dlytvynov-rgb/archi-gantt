@@ -1,0 +1,55 @@
+name: Update & Deploy
+
+on:
+  schedule:
+    - cron: "0 */2 * * *"   # every 2 hours
+  workflow_dispatch:          # manual trigger (Refresh button)
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - run: npm ci
+
+      - name: Fetch Archivizer data
+        env:
+          ARCHIVIZER_EMAIL: ${{ secrets.ARCHIVIZER_EMAIL }}
+          ARCHIVIZER_PASSWORD: ${{ secrets.ARCHIVIZER_PASSWORD }}
+          ARCHIVIZER_EMAIL_TANIA: ${{ secrets.ARCHIVIZER_EMAIL_TANIA }}
+          ARCHIVIZER_PASSWORD_TANIA: ${{ secrets.ARCHIVIZER_PASSWORD_TANIA }}
+        run: node scripts/fetch-data.mjs
+
+      - name: Build static export
+        env:
+          NEXT_EXPORT: "true"
+          NEXT_PUBLIC_BASE_PATH: "/archi-gantt"
+        run: npm run build
+
+      - uses: actions/configure-pages@v4
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out/
+
+      - id: deploy
+        uses: actions/deploy-pages@v4

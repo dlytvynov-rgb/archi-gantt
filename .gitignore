@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# server-side cache (not needed in repo — Actions writes public/data.json)
+/data/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

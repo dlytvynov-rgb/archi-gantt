@@ -1,4 +1,27 @@
+import https from "node:https";
+
 const BASE_URL = "https://api.archivizer.com/api/v3";
+
+function httpsGetJson(url: string, headers: Record<string, string>, body: object): Promise<any> {
+  return new Promise((resolve, reject) => {
+    const bodyStr = JSON.stringify(body);
+    const u = new URL(url);
+    const req = https.request(
+      { hostname: u.hostname, path: u.pathname, method: "GET", headers: { ...headers, "Content-Length": Buffer.byteLength(bodyStr).toString() } },
+      (res) => {
+        let raw = "";
+        res.on("data", (c) => (raw += c));
+        res.on("end", () => {
+          if ((res.statusCode ?? 0) >= 200 && (res.statusCode ?? 0) < 300) resolve(JSON.parse(raw));
+          else reject(new Error(`HTTP ${res.statusCode}`));
+        });
+      }
+    );
+    req.on("error", reject);
+    req.write(bodyStr);
+    req.end();
+  });
+}
 
 export const STATUS_MAP: Record<string, string> = {
   definition:               "Setting task",
@@ -64,13 +87,10 @@ async function fetchTasksForUser(token: string, userId: number, statuses: string
   let page = 1;
 
   while (true) {
-    const resp = await fetch(`${BASE_URL}/tasks`, {
-      method: "GET",
-      headers,
-      body: JSON.stringify({ page, page_size: 100, filters: { user_id: userId, status: statuses } }),
-    });
-    if (!resp.ok) break;
-    const data = await resp.json();
+    let data: any;
+    try {
+      data = await httpsGetJson(`${BASE_URL}/tasks`, headers, { page, page_size: 100, filters: { user_id: userId, status: statuses } });
+    } catch { break; }
     const tasks: any[] = data.data || data.tasks || data.items || (Array.isArray(data) ? data : []);
     if (!tasks.length) break;
     all.push(...tasks);
@@ -101,23 +121,11 @@ function clampDate(d: string, lo: string, hi: string) {
   return d;
 }
 
-const ACTIVE_WORKERS = new Set([
-  "Irina Kovalenko", "Anastasia Mishustina", "Tetiana Opich",
-  "Vera Duhina", "Mykola Stepanov", "Ivan Ivashchenko",
-  "Artem Glukhov", "Tanya Rybalova", "Volodymyr Holchevskyi",
-  "Maksym Solodkyi", "Krystyna Stan", "Andrii Savchuk",
-  "Volodymyr Lysak", "Alona Yaloma", "Oleksii Tereshchenko",
-  "Khrystyna Tertytsia", "Diana Savchuk", "Alexander Barsukov",
-  "Artur Kovhan", "Kseniia Kukuiashna", "Liliia Sandulska",
-  "Kristina Kvach", "Oleksandr Todoriko", "Olena Poruchyk",
-  "Ivan Melnychuk", "Dima Lytvynov", "Tania Zykova",
-]);
+// PM user IDs (Dima Lytvynov, Tania Zykova) — filter by ID, not by name (names are in Russian)
+const PM_USER_IDS = new Set([21296, 34174]);
 
-const EXCLUDED_CLIENTS = ["Kyle Neilsen"];
 const EXCLUDED_KEYWORDS = ["recap"];
-const PM_FILTER = ["Dima Lytvynov", "Tania Zykova"];
 const ACTIVE_STATUSES = ["definition","implementation","qa","incomplete_specification","paused","acceptance"];
-const ALL_STATUSES    = [...ACTIVE_STATUSES, "performed", "canceled"];
 
 export async function fetchGanttData(): Promise<GanttData> {
   const emailDima  = process.env.ARCHIVIZER_EMAIL!;
@@ -156,19 +164,17 @@ export async function fetchGanttData(): Promise<GanttData> {
     const rawStatus = t.status as string;
     const status = STATUS_MAP[rawStatus] || rawStatus;
 
-    // PM filter
+    // Members
     const members: any[] = t.members || [];
-    const pms = members.filter((m: any) => {
-      const full = `${m.name || ""} ${m.surname || ""}`.trim();
-      return full.startsWith("PM ");
-    });
-    const pmNames = pms.map((m: any) => {
-      const full = `${m.name || ""} ${m.surname || ""}`.trim().replace(/^PM /, "");
-      return full;
-    });
+    const fullName = (m: any) => `${m.name || ""} ${m.surname || ""}`.trim();
 
-    const pmMatch = PM_FILTER.some(pm => pmNames.some(n => n.includes(pm.split(" ")[0]) || pm.includes(n.split(" ").pop() || "")));
-    if (!pmMatch && pmNames.length > 0) continue;
+    const pms      = members.filter((m: any) => fullName(m).startsWith("PM ") && PM_USER_IDS.has(m.id));
+    const mentors  = members.filter((m: any) => fullName(m).startsWith("M "));
+    const workers  = members.filter((m: any) => !fullName(m).startsWith("PM ") && !fullName(m).startsWith("M "));
+
+    // Skip tasks that have PMs but none of them are our PMs
+    const hasPMs = members.some((m: any) => fullName(m).startsWith("PM "));
+    if (hasPMs && pms.length === 0) continue;
 
     // Dates
     const createdRaw  = t.created_date || t.created_at || today;
@@ -181,26 +187,16 @@ export async function fetchGanttData(): Promise<GanttData> {
     const barStart = clampDate(created,  viewStart, viewEnd);
     const barEnd   = clampDate(estimate, viewStart, viewEnd);
 
-    // Exclude
-    if (EXCLUDED_CLIENTS.some(c => (t.client_name || "").includes(c))) continue;
     if (EXCLUDED_KEYWORDS.some(k => t.name?.toLowerCase().includes(k))) continue;
 
-    // Workers from API members
-    const workers = members.filter((m: any) => {
-      const full = `${m.name || ""} ${m.surname || ""}`.trim();
-      return !full.startsWith("PM ") && !full.startsWith("M ");
-    });
-
-    const pmStr = pmNames.join("; ") || "—";
-    const mentors = members.filter((m: any) => `${m.name || ""} ${m.surname || ""}`.trim().startsWith("M "));
-    const mentorStr = mentors.map((m: any) => `${m.name || ""} ${m.surname || ""}`.trim().replace(/^M /, "")).join("; ") || "—";
+    const pmStr     = pms.map((m: any) => fullName(m).replace(/^PM /, "")).join("; ") || "—";
+    const mentorStr = mentors.map((m: any) => fullName(m).replace(/^M /, "")).join("; ") || "—";
 
     const workerList = workers.length
-      ? workers.map((m: any) => `${m.name || ""} ${m.surname || ""}`.trim())
-      : [pmNames[0] || "Unassigned"];
+      ? workers.map((m: any) => fullName(m))
+      : [pmStr.split(";")[0].trim() || "Unassigned"];
 
     for (const w of workerList) {
-      if (!ACTIVE_WORKERS.has(w) && w !== "Unassigned") continue;
       rows.push({
         name:      t.name || "(no name)",
         worker:    w,
