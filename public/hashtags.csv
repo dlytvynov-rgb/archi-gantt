@@ -1,0 +1,2942 @@
+task_id,task_name,spec_id,spec_name,pm_id,pm_name,message_id,body,created_at,author,visible_for_client
+509959,L 1 - lobby,35543,Kseniia Kukuiashna,21296,PM Dima Lytvynov,22919847,##OT,2026-02-18 20:30:38.514044,PM Dima Lytvynov,False
+509959,L 1 - lobby,35432,Artur Kovhan,21296,PM Dima Lytvynov,22919847,##OT,2026-02-18 20:30:38.514044,PM Dima Lytvynov,False
+516195,1,4482,Tetiana Opich,21296,PM Dima Lytvynov,22534618,##DRR_Cash,2026-01-05 09:22:12.968545,Iryna Kramarenko,False
+549090,Project budget,4482,Tetiana Opich,21296,PM Dima Lytvynov,22534511,##DRR_Cash,2026-01-05 09:14:33.710953,Iryna Kramarenko,False
+553275,Basement,27257,Krystyna Stan,21296,PM Dima Lytvynov,22954182,##OT Тут по моей вине спек будет работать после 5 вечера - я только добрался до этой задачи ,2026-02-23 14:50:13.283331,PM Dima Lytvynov,False
+569046,S3458 HELSTON A Interior Kitchen Main  Layout 3 + Sink View,31646,Khrystyna Tertytsia,21296,PM Dima Lytvynov,22724555,##A1 @Khrystyna Tertytsia,2026-01-27 14:56:02.933454,PM Dima Lytvynov,False
+569046,S3458 HELSTON A Interior Kitchen Main  Layout 3 + Sink View,27257,Krystyna Stan,21296,PM Dima Lytvynov,22724555,##A1 @Khrystyna Tertytsia,2026-01-27 14:56:02.933454,PM Dima Lytvynov,False
+569047,S3458 HELSTON B Interior Kitchen Layout 2 with Gas,27257,Krystyna Stan,21296,PM Dima Lytvynov,22724558,##A1 @Khrystyna Tertytsia,2026-01-27 14:56:16.009724,PM Dima Lytvynov,False
+569047,S3458 HELSTON B Interior Kitchen Layout 2 with Gas,31646,Khrystyna Tertytsia,21296,PM Dima Lytvynov,22724558,##A1 @Khrystyna Tertytsia,2026-01-27 14:56:16.009724,PM Dima Lytvynov,False
+569048,S3458 HELSTON C Interior Kitchen_ Layout 1 with Electric,31646,Khrystyna Tertytsia,21296,PM Dima Lytvynov,22724563,##A1 @Khrystyna Tertytsia,2026-01-27 14:56:35.037758,PM Dima Lytvynov,False
+569048,S3458 HELSTON C Interior Kitchen_ Layout 1 with Electric,27257,Krystyna Stan,21296,PM Dima Lytvynov,22724563,##A1 @Khrystyna Tertytsia,2026-01-27 14:56:35.037758,PM Dima Lytvynov,False
+573532,S4275 CORBY_A_Interior_PrimaryBath_Layout 7,27257,Krystyna Stan,21296,PM Dima Lytvynov,22868777,##A1,2026-02-12 14:53:20.863619,PM Dima Lytvynov,False
+585158,"1397/PBH/Whitmore Estates 90s/Alexander: E1, E2",5881,Mykola Stepanov,21296,PM Dima Lytvynov,22625749,"### Загальні зауваження для всіх планів (перевірити обовʼязково):
+
+- На передніх входах має бути бруківка (paver bricks), така сама, як на драйввеї; у багатьох рендерах зараз показаний сірий бетон під накриттям входу.
+- Рами вікон мають виглядати чорними (хоча в специфікації вони названі “bronze”); на деяких планах вони виглядають білими або світло-коричневими.
+
+### Alexander — всі фасади:
+
+- Високі транцеві вікна на бічному фасаді кухні потрібно прибрати (їх видалили на будмайданчику).
+- Драйввей, доріжка до накритого входу та ландшафт показані некоректно відносно того, як об’єкт реально будується.
+
+",2026-01-15 11:34:23.365332,PM Tania Zykova,False
+585159,"1397/PBH/Whitmore Estates 90s/Churchill: E1, E2",5881,Mykola Stepanov,21296,PM Dima Lytvynov,22625736,"### Загальні зауваження для всіх планів (перевірити обовʼязково):
+
+- На передніх входах має бути бруківка (paver bricks), така сама, як на драйввеї; у багатьох рендерах зараз показаний сірий бетон під накриттям входу.
+- Рами вікон мають виглядати чорними (хоча в специфікації вони названі “bronze”); на деяких планах вони виглядають білими або світло-коричневими.
+
+### Churchill E1:
+
+- Замінити вхідні двері.
+- Замінити гаражні ворота.
+- Відсутній виступ стіни та даху в кам’яній частині гаража на 2 авто.
+- Стеля накритого входу має бути вищою за передню балку
+- Відсутні вікна на бічному фасаді.
+
+### Churchill E2:
+
+- Стеля накритого входу має бути вищою за передню балку
+- Нижня балка накритого входу (між верхніми та нижніми вікнами) помилково показана як штукатурне бандування.
+- Відсутні вікна на бічному фасаді.",2026-01-15 11:32:57.878576,PM Tania Zykova,False
+592926,Clubroom and Terrace,4482,Tetiana Opich,21296,PM Dima Lytvynov,22549921,"##ALERT
+
+будет в 18,30
+
+дольше рендерит",2026-01-06 15:26:36.722076,Tetiana Opich,False
+604928,Entryway,15320,Tanya Rybalova,21296,PM Dima Lytvynov,22547465,##needDownload,2026-01-06 12:21:49.785160,Dariya Shibalova,False
+604928,Entryway,15320,Tanya Rybalova,21296,PM Dima Lytvynov,22547466,##downloaded,2026-01-06 12:21:55.413929,Dariya Shibalova,False
+605317,North Traditional Kitchen,15320,Tanya Rybalova,21296,PM Dima Lytvynov,22547463,##needDownload,2026-01-06 12:21:44.827090,Dariya Shibalova,False
+605317,North Traditional Kitchen,15320,Tanya Rybalova,21296,PM Dima Lytvynov,22547467,##downloaded,2026-01-06 12:21:59.524479,Dariya Shibalova,False
+605318,East Contemporary kitchen,15320,Tanya Rybalova,21296,PM Dima Lytvynov,22547461,##needDownload,2026-01-06 12:21:40.979645,Dariya Shibalova,False
+605318,East Contemporary kitchen,31646,Khrystyna Tertytsia,21296,PM Dima Lytvynov,22547461,##needDownload,2026-01-06 12:21:40.979645,Dariya Shibalova,False
+605318,East Contemporary kitchen,15320,Tanya Rybalova,21296,PM Dima Lytvynov,22547468,##downloaded,2026-01-06 12:22:04.265805,Dariya Shibalova,False
+605318,East Contemporary kitchen,31646,Khrystyna Tertytsia,21296,PM Dima Lytvynov,22547468,##downloaded,2026-01-06 12:22:04.265805,Dariya Shibalova,False
+607400,D4 Townhouse Apartment,4482,Tetiana Opich,21296,PM Dima Lytvynov,23245041,"##ALERT
+
+Пропустила 1 панораму, дорендерювала",2026-03-27 15:57:52.432909,Tetiana Opich,False
+607400,D4 Townhouse Apartment,4482,Tetiana Opich,21296,PM Dima Lytvynov,23478712,"##ALERT 
+
+правки PM",2026-04-28 17:10:51.896271,Tetiana Opich,False
+609108,Brick Lights Front of Home 2 / Close - up,4482,Tetiana Opich,21296,PM Dima Lytvynov,22554909,##downloaded,2026-01-07 08:53:45.784058,Dariya Shibalova,False
+610062,Kesara Shower Doors,15320,Tanya Rybalova,21296,PM Dima Lytvynov,22547459,##needDownload,2026-01-06 12:21:36.462979,Dariya Shibalova,False
+610062,Kesara Shower Doors,31646,Khrystyna Tertytsia,21296,PM Dima Lytvynov,22547459,##needDownload,2026-01-06 12:21:36.462979,Dariya Shibalova,False
+610062,Kesara Shower Doors,15320,Tanya Rybalova,21296,PM Dima Lytvynov,22547469,##downloaded,2026-01-06 12:22:08.788581,Dariya Shibalova,False
+610062,Kesara Shower Doors,31646,Khrystyna Tertytsia,21296,PM Dima Lytvynov,22547469,##downloaded,2026-01-06 12:22:08.788581,Dariya Shibalova,False
+611188,Tatel restaurant,6776,Ivan Ivashchenko,21296,PM Dima Lytvynov,22608493,##BT Задача сгорела не по вине спека,2026-01-13 17:32:55.001439,PM Dima Lytvynov,False
+611188,Tatel restaurant,1410,Irina Kovalenko,21296,PM Dima Lytvynov,22608493,##BT Задача сгорела не по вине спека,2026-01-13 17:32:55.001439,PM Dima Lytvynov,False
+611188,Tatel restaurant,6776,Ivan Ivashchenko,21296,PM Dima Lytvynov,22818669,"##ALERT дофотошоплюю,",2026-02-06 13:41:00.698509,Irina Kovalenko,False
+611188,Tatel restaurant,1410,Irina Kovalenko,21296,PM Dima Lytvynov,22818669,"##ALERT дофотошоплюю,",2026-02-06 13:41:00.698509,Irina Kovalenko,False
+613401,Animation,35432,Artur Kovhan,21296,PM Dima Lytvynov,22838998,"## **Animation Execution — Commentary (Collaborative Direction)**
+
+I wanted to share a proposed flow for the animation and get your thoughts on it. The goal is to make the experience feel cinematic, spatially intuitive, and emotionally engaging, while still allowing room for your creative input.
+
+**Opening / Front Exterior**
+I’m envisioning starting with the front exterior, including the version with birds. Rather than a straight-on view, I think a slightly angled approach could really help show the driveway length and the true depth of the property. Starting a bit farther back and moving toward the entry might make the home feel more expansive—curious to hear your thoughts on this.
+
+**Interior / Main Level**
+From there, we’d transition inside to the foyer and then into the living space, letting the ceiling height and openness really come through. I’d love to include a brief close-up of the kitchen island detailing as a tactile moment.
+For the kitchen, my thought is to first view it from behind the dining table, then exit the space from the living area perspective—but I’m open to suggestions if you feel another sequence reads better.
+
+**Stair Feature / Spatial Transition**
+As we move upstairs, I think reintroducing the stair feature could be really helpful in orienting the viewer and reinforcing how the levels connect. This feels like a nice moment to pause and give spatial context.
+
+**Bedrooms**
+In terms of bedroom flow, I was thinking:
+
+- Lower-level primary bedroom with ensuite
+- Upper-level regular bedroom
+- Upper-level primary bedroom with ensuite
+
+Let me know if you feel this order works best or if you’d recommend a different progression.
+
+**Wine Cellar**
+I’d love to treat the wine cellar as a lifestyle moment—something experiential—with slightly warmer, more atmospheric lighting to set it apart subtly from the rest of the home.
+
+**Exterior / Grounds**
+After that, returning outdoors in daylight, moving from the yard toward the house, and capturing the tennis court, pool, built-in patio, and upstairs terrace feels like a nice way to re-anchor the home within its landscape.
+
+**Closing / Sunset to Night Aerial**
+For the close, I’m imagining the light beginning to shift toward sunset, transitioning into a nighttime view of the property. Pulling the camera upward and outward into a wide aerial feels like a calm, cinematic way to finish—open to your thoughts on how best to pace or stage this moment.
+
+**Overall Feel**
+Across the entire animation, I’m hoping for fluid, cinematic camera movement with no abrupt cuts or lighting shifts, allowing the story to naturally progress from day to sunset to night.
+
+Looking forward to hearing your thoughts and any creative suggestions you feel would elevate this even further.",2026-02-09 20:08:13.846046, ,True
+616310,T3030_B_Primary Bedroom,27257,Krystyna Stan,21296,PM Dima Lytvynov,22614889,"##alert
+
+Вночі через світло рендер вибило, а картинка довго рендериться",2026-01-14 13:04:32.877259,Oleksandr  Todoriko,False
+616310,T3030_B_Primary Bedroom,27257,Krystyna Stan,21296,PM Dima Lytvynov,22615278,##OT тех проблеми,2026-01-14 13:39:58.455310,PM Tania Zykova,False
+616624,Model view / Bedroom and Bathroom 1 ,31646,Khrystyna Tertytsia,21296,PM Dima Lytvynov,22924809,##Q1,2026-02-19 12:10:23.087792,PM Dima Lytvynov,False
+616624,Model view / Bedroom and Bathroom 1 ,27257,Krystyna Stan,21296,PM Dima Lytvynov,22924809,##Q1,2026-02-19 12:10:23.087792,PM Dima Lytvynov,False
+616625,Model view / Bedroom and Bathroom 2,27257,Krystyna Stan,21296,PM Dima Lytvynov,22724911,##Q1.3 @Krystyna Stan,2026-01-27 15:12:15.783672,PM Dima Lytvynov,False
+616625,Model view / Bedroom and Bathroom 2,27257,Krystyna Stan,21296,PM Dima Lytvynov,22924803,##Q1,2026-02-19 12:09:45.993528,PM Dima Lytvynov,False
+617956,Living/Dining Room,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22840793, ##T1 @Anastasia Mishustina,2026-02-10 07:30:21.607508,PM Dima Lytvynov,False
+619294,Kitchen,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22585519,"## **Kitchen Rendering – Revision Suggestions** 
+
+Please revise the kitchen rendering with the following updates:
+
+### **Framing & Composition**
+
+- The current framing feels slightly tight on the **right-hand cabinetry and foreground**.
+- Please **zoom out more dramatically** to capture a wider field of view and introduce additional breathing room and negative space in the foreground.
+- This adjustment should:
+    - Better express the **scale of the space**
+    - Strengthen the relationship between the **dining table, island, cabinetry, and ceiling volume**
+    - Elevate the image to an **editorial-quality hero rendering**
+
+### **Camera & Perspective**
+
+- Maintain the **existing camera height and perspective**.
+- Avoid any wide-angle distortion; this should feel like a natural step back, not a lens change.
+
+### **Architectural & Detail Refinements**
+
+- Add **vertical dividers above the cabinetry in the section above the sink**.
+- **Fill the spaces within these dividers with greenery**; I will select the plant material from the catalogue.
+- Extend cabinetry **across the refrigerator**, matching the treatment above the sink and **incorporating the same divider detail**.
+- Refine the **built-in surrounding the refrigerator** so it reads fully integrated and intentional.
+- At the **protruding wall between the foyer and kitchen**, ensure the **spacing between cabinet doors** matches the **fry reglet spacing** for visual consistency.
+- Install **gold hardware on the refrigerator doors** to match the rest of the kitchen hardware.
+
+### **Cabinetry – Wood Grain Direction**
+
+- V**ertical wood grain orientation** on all wood cabinetry throughout the kitchen **and the wet bar within the living space** for a cohesive, refined appearance (the wood Grain withi the 1st drafts came out much better)?
+
+### **Lighting – Fixtures & Atmosphere**
+
+- **Revise all recessed (high-hat) lighting to square fixtures throughout** for a more modern, architectural expression.
+- Maintain a **daylight-forward scene**, layering in **subtle interior warmth** to add depth.
+- Introduce a **soft “on” glow** to indicate interior lighting is active—this should remain ambient and restrained, not dramatic.
+
+### **Styling Adjustment**
+
+- Relocate the **apples currently on the dining table** to the **center of the kitchen island** to create a cleaner dining vignette and reinforce the island as the focal point.
+
+### **Consistency**
+
+- Keep all **materials, finishes, exterior greenery, and overall lighting temperature** consistent with the current rendering.
+
+### **Overall Intent**
+
+- The final image should read as a **clean, balanced and refined.**
+
+Thank you",2026-01-11 06:03:19.331906, ,True
+619294,Kitchen,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22585522,"### **Countertop Styling –** 
+
+- Please **remove most items from the kitchen countertops** to maintain a clean, editorial presentation.",2026-01-11 06:22:20.259763, ,True
+619294,Kitchen,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22585523,"### **Natural Light Refinement –** 
+
+- Please **enhance the natural daylight within the space**, allowing the room to read brighter and more open.
+- Increase **soft, diffused daylight** and interior bounce light while maintaining a realistic daytime condition.",2026-01-11 06:23:38.060431, ,True
+619294,Kitchen,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22790715,"### Kitchen Camera Angles — POV Reference
+
+Please use the attached first-floor plan as the **point-of-view reference** for the three kitchen renderings.
+
+The highlighted markers indicate the **exact camera origin locations** for each kitchen angle. Each rendering should be generated from these positions to accurately reflect spatial relationships, circulation, and architectural hierarchy within the kitchen, dining, and adjacent areas.
+
+Camera orientation should remain consistent with the intent of each marked location, clearly communicating depth, cabinetry alignment, ceiling conditions, and window relationships. These views are intended to read as architectural perspectives, not cropped vignettes.
+
+Please confirm that all three angles can be fully achieved from the indicated positions before proceeding with final rendering.",2026-02-03 19:58:23.733166, ,True
+619294,Kitchen,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22802811,"### **Styling Instructions – Olive & Cotton Floral Arrangements**
+
+Please use **two identical olive-and-cotton floral arrangements**, styled **individually and intentionally separated** within the kitchen.
+
+#### **Placement 1 — Secondary / Distant Countertop**
+
+- Place **one arrangement centered on the farthest countertop** located **to the left of the picture window**.
+- This countertop is visually secondary and more recessed.
+- The arrangement should be:
+    - Centered front-to-back and left-to-right on that surface
+    - Styled **alone**, with no additional accessories nearby
+- Purpose: to introduce softness and continuity without drawing focus away from the main kitchen axis.
+
+#### **Placement 2 — Primary / Main Countertop**
+
+- Place the **second arrangement on the main countertop**, positioned **to the right side of the picture window**.
+- Do **not** center this piece on the full counter run.
+- Instead:
+    - Offset it slightly so it feels naturally placed and lived-in
+    - Allow clear breathing room around the arrangement
+- This should read as the **primary floral moment** in the kitchen.
+
+### **Scale, Balance & Styling Rules**
+
+- Vase height should remain **below upper cabinetry sightlines** and must not interrupt views through the window.
+- Avoid clustering, layering, or pairing with other decor items.
+- These arrangements should feel **light, vertical, and sculptural** — not heavy or bottom-weighted.
+- ",2026-02-04 19:53:44.591123, ,True
+619294,Kitchen,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22802877,"## **KITCHEN | OPEN CUBE SHELVING — FINAL STYLING DIRECTION**
+
+### **Middle Open Cubby Above Sink**
+
+- Use the **larger sculptural white ceramic vessel** (organic, coral-like form)
+- **Do not add florals or stems** — vessel must remain **empty**
+- Place the vessel **centered within the middle open cubby above the sink**
+    - Center both **horizontally and vertically**
+    - Use **optical centering**, not edge-to-edge measurement
+- Maintain **clear negative space on all sides**
+    - No additional objects in this cubby
+    - Do not crowd or layer items around the vessel
+
+### **Scale & Material Intent**
+
+- Vessel scale should read **architectural**, not decorative
+- Finish must appear **soft matte / ceramic**, not glossy or chalky
+- Edges should read refined and smooth, with natural light catching subtle contours
+
+### **Composition Intent**
+
+- This element is intended to act as a **quiet focal point** within the shelving
+- The styling should feel **gallery-like, intentional, and restrained**
+- The vessel must hold visual weight against the rift oak cabinetry and stone backdrop without visual noise",2026-02-04 19:59:22.380519, ,True
+619294,Kitchen,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22803024,"### **KITCHEN ISLAND – FRUIT STYLING DIRECTION**
+
+Please **remove the existing apples** currently placed on the kitchen island countertop.
+
+Replace them with **the tangerines/oranges shown in the reference image**, styled as follows:
+
+- Use a **single shallow sculptural bowl** (organic, stone or plaster-like form as referenced)
+- Fill the bowl **loosely with the oranges** — avoid an overly full or stacked look
+- The arrangement should feel **effortless and natural**, not tightly composed
+- Allow slight variation in orientation and spacing so the fruit reads fresh and lived-in
+- Position the bowl **slightly off-center on the island**, maintaining clear workspace and visual balance with surrounding elements
+
+**Color & Intent:**
+The warm orange tones should act as a **subtle seasonal accent**, introducing a sun-washed, summer Hamptons warmth that complements the oak cabinetry and stone surfaces without overpowering them.
+
+**Important Notes:**
+
+- No additional fruit varieties
+- No greenery or stems added
+- No competing accessories near the bowl
+
+The final composition should feel **clean, elevated, and quietly expressive**, enhancing the island without distracting from the architectural lines of the kitchen.",2026-02-04 20:18:22.512675, ,True
+619294,Kitchen,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22803103,"### **Open Shelving Styling — Hallway-Side Cubby** 
+
+**Location**
+Use the **open shelving cubby closest to the hallway opening**, above the sink run.
+
+**Books**
+
+- Place **Architectural Digest (AD)** as the primary book element.
+- Supplement only with **additional cookbooks or design books in neutral or white covers** (no color spines).
+- Books must be **oriented vertically**, spines facing outward, aligned cleanly toward the **hallway side** of the cubby.
+- Keep the stack minimal and architectural — no more than **2–3 books total**.
+
+**Decor Objects**
+
+- Place the **white apple and white pear sculptures** directly **adjacent to the books**, within the **same cubby**.
+- Position the apple and pear as a paired sculptural moment, slightly offset from one another, not centered.
+- Objects should feel intentional and gallery-like — avoid symmetry or crowding.
+
+**Composition Notes**
+
+- Maintain **negative space** around all elements.
+- No additional accessories, greenery, or vessels in this cubby.
+- Styling should read **quiet, refined, and sculptural**, supporting the cabinetry rather than competing with it.",2026-02-04 20:27:11.017898, ,True
+619294,Kitchen,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22803152,"###  **Middle Open Shelf (Closest to Refrigerator)**
+
+**Vessel Selection**
+
+- Use **only the smaller ceramic vessel shown**.
+- Do **not** include the larger companion piece anywhere in this shelf grouping.
+
+**Placement**
+
+- Place the vase **slightly off-center** within the cubby (avoid perfect symmetry).
+- Orientation should feel natural and relaxed — not squared or forced.
+
+**Styling Direction**
+
+- Vessel must remain **completely empty** (no florals, stems, or filler).
+- No additional objects, books, or accessories in this cubby.
+
+**Intent**
+
+- This shelf should read as a **quiet sculptural pause**.
+- Emphasis on **form, texture, and negative space** rather than decoration.
+- Overall feeling: *refined, architectural, and effortless*.",2026-02-04 20:31:58.703291, ,True
+619294,Kitchen,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22804521,"### **Kitchen Cabinetry — Drawer Front Breakdown (Island & Refrigerator Run)**
+
+Starting from the **top of the lower-level cabinetry** at the island and continuing around the **refrigerator built-in cabinetry**, the drawer configuration should be as follows:
+
+- **Top drawer front:** 7.375 inches
+- **Reveal / gap:** 1 inch
+- **Second drawer front:** 10.625 inches
+- **Reveal / gap:** 1 inch
+- **Bottom drawer front:** 10.625 inches",2026-02-05 03:57:40.594706, ,True
+619294,Kitchen,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22804589,"## **Flooring — Specification & Execution Requirements (See LIving Room Comment #1)**
+
+### **Material Expression**
+
+- Light oak tone **precisely as shown** in the approved reference.
+- No deviation warmer, cooler, or more saturated at any stage.
+- The overall read must remain **clean, neutral, and architectural**, serving as a quiet backdrop rather than a decorative surface.
+
+### **Grain Character**
+
+- Grain expression must be **calm, refined, and predominantly linear**.
+- Exclude cathedral grain, knots, mineral streaking, or pronounced character marks.
+- Grain variation should be **deliberate, subtle, and evenly distributed**, avoiding visual noise or focal interruptions.
+
+### **Plank Format**
+
+- **Wide-plank format is required** to reinforce a seamless, contemporary luxury aesthetic.
+- Plank scale should feel **expansive, intentional, and proportionally balanced** within the double-height volume.
+- Avoid plank dimensions that read residentially scaled or visually segmented.
+
+### **Layout & Direction**
+
+- Maintain **one uninterrupted plank direction** throughout the entire space and all visually connected areas.
+- No changes in orientation, borders, insets, offsets, or pattern articulation.
+- The floor should reinforce spatial flow and architectural clarity.
+
+### **Seamlessness & Continuity**
+
+- Minimize visible seams, repetition, and texture cycling.
+- Avoid tiling artifacts, looping textures, or rhythm breaks typical of rendered surfaces.
+- Flooring should read as a **continuous architectural plane**, not an assembly of individual components.
+
+### **Finish Quality**
+
+- Matte to low-sheen finish only.
+- Surface reflectivity must remain **soft, diffuse, and natural**.
+- No gloss, specular highlights, or artificial polish that detracts from the material authenticity.
+
+### **Hierarchy Control**
+
+- Flooring must remain **visually subordinate** to cabinetry, furniture, and architectural features.
+- It should ground the space quietly, functioning as a **foundational architectural element**, never a focal point or feature surface.
+
+### **Design Intent Summary**
+
+The flooring is intended to convey **modern luxury through restraint** — seamless, calm, and timeless. Its role is to support the architecture and interior composition without drawing attention to itself.",2026-02-05 04:26:25.776537, ,True
+619294,Kitchen,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22815236,"### **Global Lighting Direction — Recessed Fixtures (All Rooms)**
+
+Just a reminder as an overall direction — please ensure that **all recessed lighting throughout the project** uses a **square recessed lighting feature only**. The lighting should read as **fully square in form**.
+
+Please **do not show circular fixtures within square housings**, and eliminate any remaining round trims, lenses, or circular light sources inside square fixtures. All recessed lighting should remain **consistent in shape, scale, and detailing across all rooms**.",2026-02-06 03:52:44.163655, ,True
+619294,Kitchen,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22980713,##Q2,2026-02-25 15:06:22.456588,PM Dima Lytvynov,False
+619296,Foyer,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22581236,"### **Foyer Rendering – Revision Directives**
+
+**Framing & Scale**
+
+- Zoom out more aggressively to reveal additional foreground flooring and clearly establish scale.
+- Maintain the existing camera height and angle; adjust framing only.
+
+**Front Entry Door**
+
+- Introduce a **pivot front door** at the entry.
+- The pivot hardware and hinges should be **concealed within the interior of the door**, with no visible exterior hinges.
+- If needed, I will reference and provide a suitable option from your product catalogue.
+
+**Staircase – Glass & Railing**
+
+- Fully connect the glass and railing at both the top and bottom.
+- Resolve all connections cleanly and seamlessly (refer to the indicated area in the image).
+
+**Staircase – Material Definition**
+
+- Wood treads must read as substantial, with crisp edges and clearly visible grain.
+- Ensure continuous vertical wood grain alignment throughout the staircase.
+- Reference the kitchen notes for wood grain direction and detailing to maintain material continuity between connected spaces.
+
+**Stair Lighting**
+
+- Lighting should be warm, precise, and restrained.
+- Accentuate the rhythm of the treads only; do not allow lighting to become a focal point.
+
+**Glass Quality**
+
+- Glass must remain exceptionally clear, with no haze, distortion, or distracting reflections.
+
+**Lighting Balance**
+
+- Preserve a daylight-forward atmosphere while introducing subtle interior warmth near the staircase and console.
+- The pendant should read as light and sculptural, reinforcing vertical volume with controlled illumination.
+
+**Styling**
+
+- Keep styling minimal and calm.
+- Any adjustments should be limited to scale or placement and must not compete with the architecture.",2026-01-09 15:22:07.043752, ,True
+619296,Foyer,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22788794,"### Camera Adjustment — Foyer Refinement Notes
+
+Please move the camera slightly forward into the foyer and rotate subtly to the right, per the floor plan reference and indicated camera position. See attached file for suggestion. 
+
+The updated view must:
+
+- Fully include the stairway wall, especially in anticipation of the new panel detail
+- Maintain visibility of the open-to-above volume
+- Preserve a balanced relationship between the front door, stair, and glass guardrail
+
+The composition should feel intentional, architectural, and grounded — less of a wide reveal and more of a considered arrival sequence.
+
+### Front Door & Stair Relationship
+
+Adjust the front door placement so it does not open directly onto the staircase landing area. The front door is not centered in this view but is designed as a pivot door and extends beyond the kitchen wall plane. Due to the revised camera angle, visibility of the kitchen wall will shift, resulting in a more elongated and intentional foyer sequence.
+
+Refer to the attached first-level plan, outlined with a dotted pink circle, which clearly identifies all elements that must be included within this view.
+
+The revised layout should create a true moment of arrival, allowing occupants to step into the foyer before visually or physically engaging with the stair. The stair should be experienced gradually, not immediately upon entry.
+
+### Powder Room Door Visibility + Foyer Depth
+
+Please ensure the second powder room door is visible within this view to accurately reflect the floor plan and circulation flow, particularly in relation to the front door.
+
+At the moment, the foyer is reading slightly condensed. Please extend the foyer depth so the entry sequence feels more generous and realistic, with clearer spacing between the front door zone, circulation path, and the stair approach.
+
+Door placement and scale should feel natural, resolved, and integrated — not forced into the composition. Please reference the attached plan with the highlighted markers indicating the relative positional shift.
+
+### Foyer Styling
+
+Please remove the existing table and floral arrangement currently located beneath the drop chandelier.
+
+Replace with the previously selected table from the catalogue, positioned along the glass wall adjacent to the stairwell and aligned parallel to the guardrail.
+
+Decorative objects will be selected separately and should remain minimal, sculptural, and appropriately scaled to the table.
+
+Please remove the lower shelf from the decorative mirrored panel (the shelf closest to the floor) and remove the book from the upper shelf. A decorative object from the catalogue will be selected for this location.
+
+### Mirror Reflection Correction
+
+Please remove the reflection of the existing table, floral arrangement, and front door from the foyer mirror.
+
+Replace with a corrected reflection showing only appropriate foyer elements, including the updated table and stair. The mirror should maintain spatial accuracy and avoid visual confusion.
+
+### Stair Wall Treatment 
+
+
+
+## **Stair Feature Wall — Decorative Panel Integration (Execution Brief)**
+
+Please update the stairway wall to include the selected panel system, ensuring:
+
+- Full-height alignment
+- Clean termination at both floor and ceiling
+- No visual breaks, offsets, or misaligned seams
+
+The paneling should read as an architectural plane, not an applied surface.
+
+**Scope**
+Please apply the referenced **wave-pattern decorative wall panel** to the **entire vertical wall plane running alongside the staircase**, from **floor to ceiling**, following the full stair run.
+
+### **Panel Application**
+
+- The decorative panel must:
+    - Cover the **entire stair wall**, uninterrupted
+    - Run **continuously behind all floating treads**
+    - Extend from **finished floor level to upper ceiling line**
+- No breaks, trims, or material changes along the stair run.
+
+### **Panel Orientation & Scale**
+
+- Maintain the **vertical flow** of the wave pattern.
+- **Scale the panel appropriately** so the waves feel:
+    - Architectural and refined
+    - Not overly dense or repetitive
+- Avoid visible tiling, mirroring, or pattern looping.
+- The wall should read as **one continuous sculptural surface**, not individual panels.
+
+### **Material & Finish**
+
+- Finish: **soft matte white / off-white**
+- No gloss or high-sheen reflection.
+- Surface should read as **plaster-like or sculptural**, not plastic or decorative.
+
+### **Lighting Integration**
+
+- Preserve and enhance the **existing stair tread lighting** so it softly grazes the textured surface.
+- Allow light to **wash across the wave relief**, emphasizing depth and shadow.
+- Avoid harsh highlights or blown-out whites.
+
+### **Stair + Wall Relationship**
+
+- The panel should sit **flush behind the stair structure**.
+- No gaps between treads and wall.
+- The decorative wall must remain visually dominant while allowing the floating stair to feel light and intentional.
+
+### **Overall Intent**
+
+This wall should read as a **quiet luxury feature**:
+
+- Sculptural
+- Minimal
+- Elevated
+- Timeless
+
+The goal is for the stair wall to feel **architectural and gallery-like**, not ornamental.
+
+### Integrated Stair Lighting
+
+The integrated stair lighting is currently too visually apparent.
+
+Please retain the soft, ambient glow while further concealing the light source within the stair construction. The lighting element itself should not be visible.
+
+The effect should feel embedded, subtle, and architectural — light washing the wood rather than emitting from a readable fixture.
+
+### Kitchen Entry Wall Alignment
+
+Please adjust the drop-down wall at the kitchen entry so it aligns flush with the pantry wall.
+
+This transition should read as clean, resolved, and intentional, with no stepped planes, offsets, or misalignments.
+
+### Front Door Window Above
+
+Please double-check the proportions and placement of the window above the front door to ensure accuracy, balance, and alignment within the overall composition.",2026-02-03 17:12:08.038377, ,True
+619296,Foyer,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22788882,"### Foyer Table Styling — Vase Selection & Placement
+
+Please use **only one vase** from the selected collection. Choose the **tallest, most slender form** with the greatest amount of negative space. This piece should read as sculptural and architectural, not decorative, and must not compete with the stair wall panel detail.
+
+**Vase Placement on the Table**
+
+- Position the vase **off-center**, closer to one end of the table
+- Align the vase visually so it sits **between stair treads**, not directly in front of a tread
+- Maintain **generous negative space** on both sides of the vase so the table’s silhouette remains clearly legible
+
+The vase should act as a quiet vertical counterpoint to the stair — subtle, restrained, and intentional — allowing the stair wall and floating stair to remain the primary focal elements.",2026-02-03 17:19:20.794578, ,True
+619296,Foyer,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22789557,"### Decorative Mirrored Panel — Upper Shelf Styling
+
+Please place the **white fluted bowl** from the provided reference image on the **upper shelf of the built-in mirrored panel**.
+
+The bowl should be positioned considered and intentional, not centered—allowing negative space around it so the shelf and mirror remain visually light.
+
+No additional objects, books, candles, or accessories should be added to this shelf. The bowl should read as a quiet sculptural element, complementing the foyer architecture without competing with the stair wall or surrounding details.",2026-02-03 18:13:17.035827, ,True
+619296,Foyer,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22815238,"### **Global Lighting Direction — Recessed Fixtures (All Rooms)**
+
+Just a reminder as an overall direction — please ensure that **all recessed lighting throughout the project** uses a **square recessed lighting feature only**. The lighting should read as **fully square in form**.
+
+Please **do not show circular fixtures within square housings**, and eliminate any remaining round trims, lenses, or circular light sources inside square fixtures. All recessed lighting should remain **consistent in shape, scale, and detailing across all rooms**.",2026-02-06 03:53:17.692157, ,True
+619300, Living Room,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22581904,"## **Great Room Rendering – Suggested Revision Brief**
+
+Please implement the following revisions to the great room rendering:
+
+### **Framing & Composition**
+
+- Execute a **more aggressive zoom out** from the **same camera position** to significantly expand the field of view.
+- Reveal additional foreground flooring and increased ceiling volume to fully express scale and architecture.
+- Advance the camera **slightly forward** so the point of view aligns directly beneath the intersection of the wall axes, reinforcing symmetry and architectural order.
+- Do not change the camera angle or introduce wide-angle distortion.
+
+### **Exterior View / Indoor–Outdoor Continuity**
+
+- **Update the exterior view visible through the glazing** to accurately reflect the approved exterior renderings.
+- Landscaping, materials, horizon line, and lighting conditions should align with the current exterior design so the indoor–outdoor relationship feels cohesive and believable.
+
+### **Fireplace & Feature Wall**
+
+- **Remove the television above the fireplace.** The fireplace and architectural feature wall must remain the sole focal point.
+- The stone surround must be **continuous and uninterrupted** from the firebox through the upper feature wall.
+- **Remove the round stone feature** within the fireplace composition.
+- Refine the fireplace wall with subtle variation in material tone, texture, and shadow articulation to enhance depth and realism.
+- If appropriate, we may explore an alternative treatment—such as plaster—in coordination with the builder.
+- The fireplace wall must anchor the space both visually and emotionally, with no competing elements.
+
+### **Material Depth & Realism**
+
+- Enhance material definition through refined shadowing, crisp edges, and clean transitions so all architectural junctions read precise and intentional.
+
+### **Furnishings**
+
+- Replace the existing sofa with a **refined, sculptural profile**.
+- Keep all furnishings restrained and secondary to the architecture.
+- I will select and provide furnishings from the product catalogue.
+
+### **Lighting**
+
+- **Revise all recessed lighting to square fixtures throughout.**
+- Maintain a daylight-forward scene, layering in subtle interior warmth for depth.
+- Soften the firebox glow to achieve a calm, ambient presence—avoid high contrast or dramatic flame effects.
+
+### **Wet Bar & Material Detailing**
+
+- Add a **fry reglet** around the built-in wet bar for a crisp, architectural reveal.
+- Emphasize clean reglet lines and precise junctions so all transitions read intentional and architectural.
+- The wine cooler must be **fully concealed with a wood panel cover**, integrated seamlessly into the cabinetry.
+- **Ensure vertical wood grain direction and panel proportions align with adjacent architectural elements.**
+
+### **Artwork**
+
+- Replace the existing artwork. I will provide the selected pieces from the product catalogue.
+- Limit artwork to **one or two pieces maximum**, aligned compositionally with the stair axis and overall room geometry.
+
+### **Styling Restraint**
+
+- Limit accessories and soft elements near the fireplace wall to avoid visual competition (**one table only**).
+- I will provide table accessories.
+- Styling should introduce texture and warmth without distracting from the architecture.
+
+### **Overall Intent**
+
+- The final image must read as a **luxury hero rendering**, emphasizing volume, calm, and architectural clarity.
+- The fireplace wall is the dominant architectural feature and must remain visually uncompromised.
+- The overall atmosphere should feel **serene, expansive, and quietly powerful**.",2026-01-09 16:04:06.180292, ,True
+619300, Living Room,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22585510,"## **Seating Layout Direction - Suggested Revisions**
+
+Please adjust the seating layout as follows:
+
+- Position the **sofa closest to the wet bar**.
+- Place the **two lounge chairs directly across from the sofa**, facing it head-on.
+- The sofa and chairs should be aligned on the same central axis to create a balanced, conversational arrangement.
+- Maintain clear circulation paths around the seating group and keep spacing proportional and intentional.
+
+The goal is a **symmetrical, anchored seating layout** that reinforces the room’s architecture and creates a focused gathering zone.
+
+Thank you.",2026-01-11 05:17:32.713341, ,True
+619300, Living Room,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22585514,"## **Seating - Wood Finish Coordination** 
+
+Please revise the wood elements within the seating arrangement to **match the wood tone, grain, and warmth of the dining table**, using the referenced dining table image as the primary guide.
+
+- Align **color temperature, finish, and grain character** so all wood elements read as part of the same material family.
+- The seating wood should introduce **warmth and cohesion**, reinforcing continuity between the living and dining areas.",2026-01-11 05:46:57.552852, ,True
+619300, Living Room,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22585515,"## **Coffee Table Suggestion**
+
+Please revise the coffee table as follows:
+
+- **Increase the overall height** of the coffee table to better align with the seating proportions. ",2026-01-11 05:47:43.636372, ,True
+619300, Living Room,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22649801,"##ALERT 
+
+Вирішуємо питання з ліцензією на форест , тому не встигаю",2026-01-19 12:23:31.215861,Anastasia Mishustina,False
+619300, Living Room,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22765382,"## **LIVING ROOM / BAR AREA — FINAL REFINEMENT & RENDER EXECUTION NOTES**
+
+### **Overall Image Intent**
+
+- Execute the space as calm, refined, and architecturally composed.
+- Maintain a clear visual hierarchy with a quiet-luxury sensibility suitable for editorial publication.
+- Reinforce symmetry, alignment, depth, and material realism throughout.
+- Apply a subtle editorial color balance: gently warm midtones, clean whites, and soft blacks (no crushed contrast).
+- Remove or correct anything that reads as decorative, incidental, unresolved..
+
+### **Window Placement, Symmetry & Glazing** 
+
+- Correct the asymmetrical window placement on the bar wall. - Realign all windows so spacing is balanced and proportional to the bar cabinetry and adjacent wall planes.
+- Maintain consistent margins between all windows.
+- Connect window corners with a shared **black corner detail**.
+- Align all window frames and mullions perfectly; no distortion or softness.
+- Control glass reflections so they read photographic and natural—avoid mirror-like or repetitive reflections.
+- Slightly soften exterior contrast and saturation so the interior remains visually dominant and editorially calm.
+
+### Bar Area — Fry Reglet, Millwork & Lighting
+
+- Change the bar toe kick to wood grain, matching the millwork finish.
+- Extend the bottom bar drawers fully to both corners and remove all dead space.
+- Increase contrast subtly between the bar millwork and adjacent wall planes so the bar reads intentionally designed, not recessed.
+- Complete the fry reglet detailing fully around the bar with continuous, uninterrupted lines, as it does not appear complete, 
+- Adjust under-cabinet lighting to a soft, warm, integrated glow; eliminate hotspots and harsh brightness.
+- Refine brass fixture clarity slightly while keeping the finish architectural and restrained (no excessive shine).
+- Reduce and correct the faucet scale so it reads proportionate to the bar sink and cabinetry.
+- Remove the wine decanter; I will select and provide water from the catalog as a replacement
+
+### **Fireplace Alignment & Stone Feature (Primary Focal Point)**
+
+- Center stone cladding precisely on the fireplace opening.
+- Align stone vertically from floor to ceiling with no lateral drift (should not have any Gypsum board showing here.)
+- Increase stone texture depth and micro-variation so the material reads tactile and dimensional.
+- Ensure the fireplace clearly reads as the dominant focal element of the room.
+- Reduce fireplace flame brightness and contrast.
+- Soften flame edges and strictly limit light spill.
+- Maintain a low, steady ambient fire glow that gently warms adjacent surfaces—no dramatic, active, or theatrical flame behavior.
+
+### **Stair Landing & Hallway Relationship**
+
+- Extend the stair landing outward to align exactly with the hallway wall height.
+- Adjust stair geometry so the stairs visually sit ""on top"" of the hallway entrance rather than stopping short.
+- Resolve the transition cleanly and architecturally with no abrupt breaks.
+
+### **Drop-Down Wall Alignment**
+
+- Adjust the upper-right drop-down wall or built in storage to align precisely with the ceiling datum.
+- Ensure all adjacent planes align cleanly with no stepped or misaligned edges.
+
+### **Artwork & Wall Elements**
+
+- Add a second ribbon-style artwork above the existing piece.
+- Rotate the new piece in the opposite direction.
+- Arrange both pieces to form a soft “S” shape.
+- Refine edge definition so the artwork reads sculptural and dimensional, not graphic.
+- Adjust scale, spacing, contrast, and centering so the installation feels intentional and editorially composed.
+
+### **Lighting, Atmosphere & Depth**
+
+- Warm interior lighting temperature slightly while keeping it natural and consistent across all fixtures.
+- Ensure all lighting feels motivated; no competing color temperatures.
+- Introduce subtle light falloff toward the frame edges to guide focus toward the seating and fireplace.
+- Increase soft contact shadows beneath seating, tables, and millwork to ground all elements.
+- Eliminate flat or overly even lighting; depth and hierarchy must be legible without drama.
+
+### **Flooring Realism**
+
+- Introduce slight tonal and grain variation in the wood flooring to avoid uniform repetition.
+- Reduce overall floor brightness slightly so it does not overpower furnishings.
+- Add soft, proportional contact shadows where furniture meets the floor.
+- Ensure floor reflections remain subtle and uneven—no mirror sheen.
+
+### **Styling Adjustments**
+
+- Center the floral arrangement precisely on the living area table.
+- Remove the wine decanter from the bar.
+- If beverages are shown, display **water only**, per catalog reference.
+- Do not place a table in front of the stairs at this time; I will select and provide a long, thin table for this location. Suggestions are welcome, but no placeholder should be added.
+
+### **Camera, Composition & Technical Cleanup**
+
+- Confirm all verticals are perfectly true and orthogonal.
+- Confirm framing feels balanced with adequate breathing room at all edges.
+- Apply a very subtle vignette or edge softening only if it reinforces focal hierarchy (no visible post effects).
+- Avoid over-sharpening, HDR contrast, or heavy post-processing.
+- Final output must be print-quality, suitable for full-page editorial layout",2026-01-30 21:32:20.577835, ,True
+619300, Living Room,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22765721,"### **Living Room Seating — Final Furniture Repositioning**
+
+- Reposition the living room seating so the coffee table sits clearly centered in front of the fireplace with unobstructed circulation on all sides.
+- Move the two lounge chairs so they are no longer blocking the table; reposition them together on one side of the seating area, oriented to face the main sofa.
+- Remove the sofa that is furthest from the bar area entirely; do not replace it with another seating element.
+- Ensure the remaining sofa is positioned directly opposite the two chairs, creating a balanced, conversational seating arrangement centered on the fireplace.
+- Maintain clear visual and physical circulation paths between the bar, stair approach, and seating area.
+- Confirm the final layout reads intentional, open, and editorial, with the fireplace as the primary focal point.",2026-01-30 22:31:51.169836, ,True
+619300, Living Room,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22765814,"### **Camera Position & View Angle — Great Room (Final Editorial POV)**
+
+- Position the camera at the **foyer / stair landing area**, approximately at the location indicated on the plan (adjacent to the stair and railing, before entering the great room).
+- Orient the camera so the point of view looks **into the great room from the stair approach**, capturing the space as it is revealed upon entry.
+- Angle the camera toward the **fireplace wall**, ensuring the fireplace and seating composition are centered as the primary focal point.
+- Maintain a slightly diagonal view into the room rather than a straight-on elevation to create depth and spatial layering.
+- Keep the stair railing visible only as a **subtle foreground framing element**; it should not dominate or obstruct the view.
+- Maintain all verticals perfectly true and orthogonal (no keystone distortion).
+- Frame the shot to include the relationship between the bar area, seating group, and fireplace, reinforcing circulation and architectural hierarchy.",2026-01-30 22:48:59.602020, ,True
+619300, Living Room,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22766440,"## **Flooring — Specification & Execution Requirements**
+
+### **Material Expression**
+
+- Light oak tone **precisely as shown** in the approved reference.
+- No deviation warmer, cooler, or more saturated at any stage.
+- The overall read must remain **clean, neutral, and architectural**, serving as a quiet backdrop rather than a decorative surface.
+
+### **Grain Character**
+
+- Grain expression must be **calm, refined, and predominantly linear**.
+- Exclude cathedral grain, knots, mineral streaking, or pronounced character marks.
+- Grain variation should be **deliberate, subtle, and evenly distributed**, avoiding visual noise or focal interruptions.
+
+### **Plank Format**
+
+- **Wide-plank format is required** to reinforce a seamless, contemporary luxury aesthetic.
+- Plank scale should feel **expansive, intentional, and proportionally balanced** within the double-height volume.
+- Avoid plank dimensions that read residentially scaled or visually segmented.
+
+### **Layout & Direction**
+
+- Maintain **one uninterrupted plank direction** throughout the entire space and all visually connected areas.
+- No changes in orientation, borders, insets, offsets, or pattern articulation.
+- The floor should reinforce spatial flow and architectural clarity.
+
+### **Seamlessness & Continuity**
+
+- Minimize visible seams, repetition, and texture cycling.
+- Avoid tiling artifacts, looping textures, or rhythm breaks typical of rendered surfaces.
+- Flooring should read as a **continuous architectural plane**, not an assembly of individual components.
+
+### **Finish Quality**
+
+- Matte to low-sheen finish only.
+- Surface reflectivity must remain **soft, diffuse, and natural**.
+- No gloss, specular highlights, or artificial polish that detracts from the material authenticity.
+
+### **Hierarchy Control**
+
+- Flooring must remain **visually subordinate** to cabinetry, furniture, and architectural features.
+- It should ground the space quietly, functioning as a **foundational architectural element**, never a focal point or feature surface.
+
+### **Design Intent Summary**
+
+The flooring is intended to convey **modern luxury through restraint** — seamless, calm, and timeless. Its role is to support the architecture and interior composition without drawing attention to itself.",2026-01-31 02:27:03.045955, ,True
+619300, Living Room,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22768714,"## **Stair Feature Wall — Decorative Panel Integration** 
+
+
+Please apply the referenced **wave-pattern decorative wall panel** to the **entire vertical wall plane running alongside the staircase**, from **floor to ceiling**, following the full stair run.
+
+### **Panel Application**
+
+- The decorative panel must:
+    - Cover the **entire stair wall**, uninterrupted
+    - Run **continuously behind all floating treads**
+    - Extend from **finished floor level to upper ceiling line**
+- No breaks, trims, or material changes along the stair run.
+
+### **Panel Orientation & Scale**
+
+- Maintain the **vertical flow** of the wave pattern.
+- **Scale the panel appropriately** so the waves feel:
+    - Architectural and refined
+    - Not overly dense or repetitive
+- Avoid visible tiling, mirroring, or pattern looping.
+- The wall should read as **one continuous sculptural surface**, not individual panels.
+
+### **Material & Finish**
+
+- Finish: **soft matte white / off-white**
+- No gloss or high-sheen reflection.
+- Surface should read as **plaster-like or sculptural**, not plastic or decorative.
+
+### **Lighting Integration**
+
+- Preserve and enhance the **existing stair tread lighting** so it softly grazes the textured surface.
+- Allow light to **wash across the wave relief**, emphasizing depth and shadow.
+- Avoid harsh highlights or blown-out whites.
+
+### **Stair + Wall Relationship**
+
+- The panel should sit **flush behind the stair structure**.
+- No gaps between treads and wall.
+- The decorative wall must remain visually dominant while allowing the floating stair to feel light and intentional.
+
+### **Overall Intent**
+
+This wall should read as a **quiet luxury feature**:
+
+- Sculptural
+- Minimal
+- Elevated
+- Timeless
+
+The goal is for the stair wall to feel **architectural and gallery-like**, not ornamental.",2026-02-02 03:49:27.275888, ,True
+619300, Living Room,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22779577,"## **Artwork Update — Replacement & Vertical Placement (Critical Direction)**
+
+Please update the **artwork within the living area** as follows:
+
+### **Artwork Replacement**
+
+- Remove the existing **3D gold ribbon installation** in the living space.
+- Replace it **only** with the **two-piece artwork shown in the bottom portion of the attached reference image**.
+    - Use **only the white background artwork with soft brown / tan tonal layering**.
+    - Do **not** reference or use the upper multi-panel artwork shown in the image.
+- The artwork must be used **exactly as shown** — no reinterpretation, recoloring, cropping, or compositional modification.
+
+### **Orientation & Configuration**
+
+- The artwork is to be installed **vertically**, composed of **two separate panels stacked one above the other**.
+- Maintain a **clean, minimal gap** between the panels, consistent with a refined gallery-style installation.
+
+### **Vertical Alignment & Placement (Critical)**
+
+- The **top artwork panel** must align **precisely with the elevation where the stair landing terminates**.
+- The **second panel** is to be installed **directly below the first**, maintaining exact vertical alignment and consistent spacing.
+- Together, the two panels should read as **one continuous vertical composition**.
+
+### **Scale & Intent**
+
+- The artwork must feel **tall, calm, and architectural**, reinforcing the verticality of the double-height living space.
+- Avoid underscaling — this installation should feel **intentionally proportioned for the volume**, not residentially scaled or decorative.
+
+### **Confirmation Required**
+
+- Please confirm alignment with the above artwork selection, placement, and scale **prior to submitting final renderings**, to ensure full accuracy before final delivery.
+
+Thank you.",2026-02-02 21:28:53.739519, ,True
+619300, Living Room,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22779680,"## **Fireplace Shape & Firebox Placement — Precise Implementation Instructions**
+
+Revise the existing fireplace to a **rectilinear, monolithic mass** with a **single horizontal firebox opening**, following the **proportional logic of the attached reference image**, with a **slightly increased opening height** to strengthen architectural presence and ensure **clear visibility above standard table height**.
+
+### **Firebox Opening Requirements**
+
+The firebox opening shall be:
+
+- **Strictly horizontal**
+- **Unobstructed at both ends** (no returns, end caps, or visual termination elements)
+- **Long and low in proportion** (linear ribbon format), while being **slightly taller than the current configuration**
+- **Positioned so the active flame line is clearly visible above standard table height** from primary seating positions
+- **Centered within the lower third** of the fireplace mass, consistent with the reference
+
+### **Recess & Integration**
+
+The opening must be **fully recessed** into the plaster/stone volume:
+
+- No projecting trim, surround, mantel, or metal framing
+- No visible casing beyond the shadow line created by the recess
+- The firebox must read as **carved directly into the mass**, not applied or inset
+
+### **Modeling & Geometry**
+
+- Execute the opening via **boolean subtraction** from the fireplace mass
+- Maintain **clean, sharp internal edges** with minimal chamfer (no rounding)
+- Ensure both ends of the opening terminate **cleanly within the stone plane**, remaining visually open and uninterrupted
+
+### **Surface Continuity**
+
+- Upper and lower fireplace planes must remain **continuous, uninterrupted plaster/stone surfaces**
+- No ledges, seams, material changes, or articulation above or below the fire opening
+- The fire should read as a **horizontal incision within a solid vertical volume**
+
+### **Flame Presentation**
+
+- Use a **single linear burner** with a continuous flame line
+- No logs, stones, glass, or decorative fire media
+- Flame height to remain **even, controlled, and legible** across the entire opening
+
+### **Maintain Without Change**
+
+- Existing fireplace location
+- Existing wall thickness
+- Existing plaster/stone color, texture, and finish from the approved rendering",2026-02-02 21:43:20.519073, ,True
+619300, Living Room,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22780062,"### **Approved Styling Elements (Only These Items)**
+
+**Luxury Portfolio magazine**
+
+- Use the attached *Luxury Portfolio* magazine reference for **design, tone, and cover style**
+- The magazine is a **soft-covered publication**
+- Model the magazine at **10.14 inches tall × 9 inches wide × approximately 0.25 inches thick**
+- The **binding/spine must display the text “LUXURY PORTFOLIO MAGAZINE” in clear, legible capital lettering**
+- The magazine should read as a **refined, editorial object**, appropriate for a luxury listing
+
+**Floral arrangement**
+
+- Use **only the white hydrangea floral arrangement** shown in the attached catalogue reference
+- Arrangement should be **low, rounded, and soft**
+- Vessel must be **clear glass or neutral-toned**, with no color or decorative pattern
+- Keep the arrangement restrained and balanced — not oversized or dramatic
+
+**Single candle**
+
+- Use **only the low, neutral candle** shown in the catalogue reference
+- Candle vessel must remain **simple, minimal, and unlabeled**
+- No additional candles or groupings
+
+### **Orientation & Placement (Critical Refinement)**
+
+**Magazine Placement**
+
+- Place the *Luxury Portfolio* magazine **flat on the table surface**
+- Orient the magazine so the **binding edge faces the side of the table aligned with the two chairs**
+- The **“LUXURY PORTFOLIO MAGAZINE” spine text must be clearly legible** from this seating position
+- This orientation should read as **naturally accessible from the paired seating side**
+- Maintain clear negative space around the magazine
+
+**Floral Arrangement Placement**
+
+- Position the **white hydrangea floral arrangement centered on the table**
+- The arrangement should act as the **visual anchor** of the composition
+- Ensure the height and mass **do not interrupt sightlines to the fireplace**
+
+**Candle Placement**
+
+- Place the **single low candle on the left side of the table**, closest to the full sofa
+- Candle should sit **slightly offset from center**, balancing the magazine and floral mass
+- Keep the candle **low-profile and visually secondary**
+
+### **Styling Constraints (Non-Negotiable)**
+
+- Do **not** add any other accessories
+- No additional books or magazines
+- No bowls, trays, sculptural objects, or vessels
+- No greenery beyond the approved floral arrangement
+- No stacking or layering of objects
+- No personal or lifestyle items
+
+### **Intent**
+
+The table styling must read as **professionally staged for a luxury listing** — polished, aspirational, and buyer-neutral.
+The composition should support the **architecture and fireplace as the primary focal points**, while providing editorial warmth and balance without visual clutter.",2026-02-02 23:40:52.277356, ,True
+619300, Living Room,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22815237,"### **Global Lighting Direction — Recessed Fixtures (All Rooms)**
+
+Just a reminder as an overall direction — please ensure that **all recessed lighting throughout the project** uses a **square recessed lighting feature only**. The lighting should read as **fully square in form**.
+
+Please **do not show circular fixtures within square housings**, and eliminate any remaining round trims, lenses, or circular light sources inside square fixtures. All recessed lighting should remain **consistent in shape, scale, and detailing across all rooms**.",2026-02-06 03:52:54.222788, ,True
+619300, Living Room,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22963670,##Q,2026-02-24 10:19:28.651966,PM Dima Lytvynov,False
+619300, Living Room,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22963689,##Q2,2026-02-24 10:20:21.076670,PM Dima Lytvynov,False
+619301,Staircase,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22768715,"## **Stair Feature Wall — Decorative Panel Integration (Execution Brief)**
+
+**Scope**
+Please apply the referenced **wave-pattern decorative wall panel** to the **entire vertical wall plane running alongside the staircase**, from **floor to ceiling**, following the full stair run.
+
+### **Panel Application**
+
+- The decorative panel must:
+    - Cover the **entire stair wall**, uninterrupted
+    - Run **continuously behind all floating treads**
+    - Extend from **finished floor level to upper ceiling line**
+- No breaks, trims, or material changes along the stair run.
+
+### **Panel Orientation & Scale**
+
+- Maintain the **vertical flow** of the wave pattern.
+- **Scale the panel appropriately** so the waves feel:
+    - Architectural and refined
+    - Not overly dense or repetitive
+- Avoid visible tiling, mirroring, or pattern looping.
+- The wall should read as **one continuous sculptural surface**, not individual panels.
+
+### **Material & Finish**
+
+- Finish: **soft matte white / off-white**
+- No gloss or high-sheen reflection.
+- Surface should read as **plaster-like or sculptural**, not plastic or decorative.
+
+### **Lighting Integration**
+
+- Preserve and enhance the **existing stair tread lighting** so it softly grazes the textured surface.
+- Allow light to **wash across the wave relief**, emphasizing depth and shadow.
+- Avoid harsh highlights or blown-out whites.
+
+### **Stair + Wall Relationship**
+
+- The panel should sit **flush behind the stair structure**.
+- No gaps between treads and wall.
+- The decorative wall must remain visually dominant while allowing the floating stair to feel light and intentional.
+
+### **Overall Intent**
+
+This wall should read as a **quiet luxury feature**:
+
+- Sculptural
+- Minimal
+- Elevated
+- Timeless
+
+The goal is for the stair wall to feel **architectural and gallery-like**, not ornamental.",2026-02-02 03:50:07.027053, ,True
+619301,Staircase,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22789864,"## STAIRCASE — FINAL ROUND REFINEMENT NOTES
+
+*(Please reference the attached plan as the POV guide for this view.)*
+
+### Front Door & Stair Relationship (Critical)
+
+Please adjust the front door placement so it does not open directly onto the staircase.
+
+This revision should establish a more intentional and realistic arrival sequence, allowing the stair to be revealed gradually rather than immediately upon entry.
+
+### Camera Adjustment — Stair View
+
+Please revise the camera position using the attached plan as the point-of-view reference.
+
+The camera should originate from the foyer entry zone indicated in the plan and be oriented to clearly communicate the relationship between the front door, foyer depth, and stair approach.
+
+The view should feel grounded and architectural, clearly expressing circulation, depth, and spatial flow — not reading as a purely sculptural stair vignette.
+
+### Powder Room Door Visibility + Foyer Depth
+
+Please ensure the second powder room door is visible within this view to accurately reflect the floor plan and circulation flow, particularly in relation to the front door.
+
+At present, the foyer reads slightly condensed. Please extend the perceived foyer depth so the entry sequence feels more generous and realistic, with clearer separation between the front door zone, circulation path, and stair approach.
+
+Door placement and scale should feel natural, resolved, and integrated — not forced into the composition. Please follow the attached plan with the highlighted reference markers for relative positioning.
+
+### Styling Adjustments
+
+Please remove the existing table and floral arrangement currently shown in the stair view.
+
+This element will be replaced with the table specified in the Foyer notes. No temporary or alternative styling should be introduced at this stage.
+
+Please also update the stair wall to include the selected integrated panel treatment.
+
+### Integrated Stair Lighting (Critical)
+
+The integrated stair lighting is currently too visually apparent.
+
+Please retain the soft ambient glow while further concealing the light source within the wood stair construction. The lighting element itself should not be visible.
+
+The effect should feel subtle, embedded, and architectural — light washing the wood rather than emitting from a readable source.
+
+### Kitchen Entry Wall Alignment
+
+Please adjust the drop-down wall at the kitchen entry so it aligns flush with the pantry wall.
+
+This transition should read as clean, aligned, and fully resolved, with no stepped planes, offsets, or misalignments.
+
+### Mirror Reflection Correction
+
+Please remove the reflection of the ribbon artwork from the great room as seen in the foyer mirror.
+
+The mirror should reflect only appropriate foyer and stair elements, maintaining spatial accuracy and avoiding visual confusion.
+
+### Flooring Realism
+
+*(Please reference Living Room notes for additional guidance.)*
+
+- Introduce subtle tonal and grain variation in the wood flooring to avoid uniform repetition
+- Slightly reduce overall floor brightness so it does not overpower furnishings or architectural elements
+- Add soft, proportional contact shadows where furniture and architectural elements meet the floor
+- Ensure floor reflections remain subtle and uneven, avoiding any mirror-like sheen
+
+",2026-02-03 18:38:00.402100, ,True
+619301,Staircase,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22789903,"### Staircase Framing Confirmation
+
+From the proposed camera position, please confirm whether the **entire staircase can be captured within this view** without compromising perspective, scale, or architectural clarity.
+
+If full stair inclusion is not achievable from this angle, please advise on a refined camera adjustment that maintains the intended arrival sequence while preserving the full stair composition??",2026-02-03 18:39:18.346014, ,True
+619301,Staircase,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22815239,"### **Global Lighting Direction — Recessed Fixtures (All Rooms)**
+
+Just a reminder as an overall direction — please ensure that **all recessed lighting throughout the project** uses a **square recessed lighting feature only**. The lighting should read as **fully square in form**.
+
+Please **do not show circular fixtures within square housings**, and eliminate any remaining round trims, lenses, or circular light sources inside square fixtures. All recessed lighting should remain **consistent in shape, scale, and detailing across all rooms**.",2026-02-06 03:53:36.589038, ,True
+619301,Staircase,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22976988,##A1,2026-02-25 11:06:58.522598,PM Dima Lytvynov,False
+619303,Primary Bedroom (Upper Level) with Ensuite Bath and Terrace,4845,Vera Duhina,21296,PM Dima Lytvynov,22598949,"## Primary Bedroom – Upper Level with Ensuite Bath & Terrace - Refinement Notes 
+
+Please refine this rendering with the following adjustments to further elevate clarity, realism, and buyer comprehension:
+
+### **Framing, Angle & Composition (Critical)**
+
+- Please **reframe the secodary primary bedroom view using the attached floor plan reference**, adjusting the camera orientation to align with the **indicated angle shown on the plan**.
+- This angle should guide the direction of the **first image of this room**, ensuring the rendering accurately reflects the intended spatial orientation and circulation shown in the architectural drawings.
+- In conjunction with this angle adjustment, please **zoom out drastically** within the existing space to capture a significantly wider field of view.
+- The goal is to fully reveal **flooring, wall planes, circulation paths**, and the relationship between the **bedroom, ensuite, and terrace**, allowing the layout to be immediately understood at first glance.
+- This should feel like a **deliberate step back and realignment**, not a minor framing tweak.
+
+### **Bedroom Detailing**
+
+- Remove the **visible electrical outlet above the left-side nightstand** to maintain a clean, uninterrupted wall composition suitable for luxury marketing.
+- Remove the **mirror wall adjacent to the bed**.
+- Ensure the **nightstand lighting fixtures match in length** and emit a **consistent, soft glow** for balance and cohesion.
+- Wall surfaces should read **seamless and intentional**, without unnecessary visual interruptions.
+- Please see the attached Lighting fixture for the lighting above the bed. 
+
+### **Fireplace & Lighting**
+
+- **Soften the fireplace flame and firebox glow** so it emits a calm, ambient warmth.
+- Avoid high contrast or dramatic flame effects—the fireplace should enhance atmosphere without becoming a visual focal distraction.
+- Revise all **recessed (high-hat) lighting to square fixtures throughout** for a more modern, architectural expression.
+
+### **Ensuite Visibility & Spatial Clarity**
+
+- Leave the **ensuite bathroom door slightly open** to clearly communicate layout and circulation.
+- This reinforces that the space reads as **fully realized and livable**, not conceptual.
+
+### **Ensuite Bath – Lighting, Fixtures & Cabinetry**
+
+- Introduce **softer, more diffused lighting within the ensuite bath**, maintaining a tranquil, spa-like atmosphere.
+- Lighten the **overall tone of the bathroom fixtures and finishes**, avoiding heavy or overly dark contrasts so the space reads brighter and more serene.
+- Adjust **sink detailing** so the faucet and controls are positioned on the **far side of the sink**, not on the left or right edge.
+- Convert the **lower portion of the vanity to enclosed drawers for additional storage**, relocating any open shelving beneath. 
+- Update the bathroom flooring to a **lighter-toned tile** to further enhance brightness and calm.
+- Remove the **existing rug within the ensuite bath**.
+
+### **Overall Intent**
+
+- The final image should feel **serene, refined, and editorial**.
+- Emphasis should be placed on **clarity of layout, natural light**, and the relationship between the **bedroom, ensuite, and terrace**, accurately reflecting the architectural plan.
+- The space should read as **effortless, intentional, and fully livable**, ideal for luxury marketing presentation.
+
+Thank you.",2026-01-12 20:39:05.096576, ,True
+619303,Primary Bedroom (Upper Level) with Ensuite Bath and Terrace,35432,Artur Kovhan,21296,PM Dima Lytvynov,22598949,"## Primary Bedroom – Upper Level with Ensuite Bath & Terrace - Refinement Notes 
+
+Please refine this rendering with the following adjustments to further elevate clarity, realism, and buyer comprehension:
+
+### **Framing, Angle & Composition (Critical)**
+
+- Please **reframe the secodary primary bedroom view using the attached floor plan reference**, adjusting the camera orientation to align with the **indicated angle shown on the plan**.
+- This angle should guide the direction of the **first image of this room**, ensuring the rendering accurately reflects the intended spatial orientation and circulation shown in the architectural drawings.
+- In conjunction with this angle adjustment, please **zoom out drastically** within the existing space to capture a significantly wider field of view.
+- The goal is to fully reveal **flooring, wall planes, circulation paths**, and the relationship between the **bedroom, ensuite, and terrace**, allowing the layout to be immediately understood at first glance.
+- This should feel like a **deliberate step back and realignment**, not a minor framing tweak.
+
+### **Bedroom Detailing**
+
+- Remove the **visible electrical outlet above the left-side nightstand** to maintain a clean, uninterrupted wall composition suitable for luxury marketing.
+- Remove the **mirror wall adjacent to the bed**.
+- Ensure the **nightstand lighting fixtures match in length** and emit a **consistent, soft glow** for balance and cohesion.
+- Wall surfaces should read **seamless and intentional**, without unnecessary visual interruptions.
+- Please see the attached Lighting fixture for the lighting above the bed. 
+
+### **Fireplace & Lighting**
+
+- **Soften the fireplace flame and firebox glow** so it emits a calm, ambient warmth.
+- Avoid high contrast or dramatic flame effects—the fireplace should enhance atmosphere without becoming a visual focal distraction.
+- Revise all **recessed (high-hat) lighting to square fixtures throughout** for a more modern, architectural expression.
+
+### **Ensuite Visibility & Spatial Clarity**
+
+- Leave the **ensuite bathroom door slightly open** to clearly communicate layout and circulation.
+- This reinforces that the space reads as **fully realized and livable**, not conceptual.
+
+### **Ensuite Bath – Lighting, Fixtures & Cabinetry**
+
+- Introduce **softer, more diffused lighting within the ensuite bath**, maintaining a tranquil, spa-like atmosphere.
+- Lighten the **overall tone of the bathroom fixtures and finishes**, avoiding heavy or overly dark contrasts so the space reads brighter and more serene.
+- Adjust **sink detailing** so the faucet and controls are positioned on the **far side of the sink**, not on the left or right edge.
+- Convert the **lower portion of the vanity to enclosed drawers for additional storage**, relocating any open shelving beneath. 
+- Update the bathroom flooring to a **lighter-toned tile** to further enhance brightness and calm.
+- Remove the **existing rug within the ensuite bath**.
+
+### **Overall Intent**
+
+- The final image should feel **serene, refined, and editorial**.
+- Emphasis should be placed on **clarity of layout, natural light**, and the relationship between the **bedroom, ensuite, and terrace**, accurately reflecting the architectural plan.
+- The space should read as **effortless, intentional, and fully livable**, ideal for luxury marketing presentation.
+
+Thank you.",2026-01-12 20:39:05.096576, ,True
+619303,Primary Bedroom (Upper Level) with Ensuite Bath and Terrace,35432,Artur Kovhan,21296,PM Dima Lytvynov,22656524,##BT тут не сгорело ждал другие рендеры в других задачах,2026-01-19 20:53:01.889983,PM Dima Lytvynov,False
+619303,Primary Bedroom (Upper Level) with Ensuite Bath and Terrace,4845,Vera Duhina,21296,PM Dima Lytvynov,22656524,##BT тут не сгорело ждал другие рендеры в других задачах,2026-01-19 20:53:01.889983,PM Dima Lytvynov,False
+619303,Primary Bedroom (Upper Level) with Ensuite Bath and Terrace,35432,Artur Kovhan,21296,PM Dima Lytvynov,22815240,"### **Global Lighting Direction — Recessed Fixtures (All Rooms)**
+
+Just a reminder as an overall direction — please ensure that **all recessed lighting throughout the project** uses a **square recessed lighting feature only**. The lighting should read as **fully square in form**.
+
+Please **do not show circular fixtures within square housings**, and eliminate any remaining round trims, lenses, or circular light sources inside square fixtures. All recessed lighting should remain **consistent in shape, scale, and detailing across all rooms**.",2026-02-06 03:54:35.849269, ,True
+619303,Primary Bedroom (Upper Level) with Ensuite Bath and Terrace,4845,Vera Duhina,21296,PM Dima Lytvynov,22815240,"### **Global Lighting Direction — Recessed Fixtures (All Rooms)**
+
+Just a reminder as an overall direction — please ensure that **all recessed lighting throughout the project** uses a **square recessed lighting feature only**. The lighting should read as **fully square in form**.
+
+Please **do not show circular fixtures within square housings**, and eliminate any remaining round trims, lenses, or circular light sources inside square fixtures. All recessed lighting should remain **consistent in shape, scale, and detailing across all rooms**.",2026-02-06 03:54:35.849269, ,True
+619303,Primary Bedroom (Upper Level) with Ensuite Bath and Terrace,4845,Vera Duhina,21296,PM Dima Lytvynov,22815246,"## **See Kitchen Comments for the Flooring — Specification & Execution Requirements**
+
+### **Material Expression**
+
+- Light oak tone **precisely as shown** in the approved reference.
+- No deviation warmer, cooler, or more saturated at any stage.
+- The overall read must remain **clean, neutral, and architectural**, serving as a quiet backdrop rather than a decorative surface.
+
+### **Grain Character**
+
+- Grain expression must be **calm, refined, and predominantly linear**.
+- Exclude cathedral grain, knots, mineral streaking, or pronounced character marks.
+- Grain variation should be **deliberate, subtle, and evenly distributed**, avoiding visual noise or focal interruptions.
+
+### **Plank Format**
+
+- **Wide-plank format is required** to reinforce a seamless, contemporary luxury aesthetic.
+- Plank scale should feel **expansive, intentional, and proportionally balanced** within the double-height volume.
+- Avoid plank dimensions that read residentially scaled or visually segmented.
+
+### **Layout & Direction**
+
+- Maintain **one uninterrupted plank direction** throughout the entire space and all visually connected areas.
+- No changes in orientation, borders, insets, offsets, or pattern articulation.
+- The floor should reinforce spatial flow and architectural clarity.
+
+### **Seamlessness & Continuity**
+
+- Minimize visible seams, repetition, and texture cycling.
+- Avoid tiling artifacts, looping textures, or rhythm breaks typical of rendered surfaces.
+- Flooring should read as a **continuous architectural plane**, not an assembly of individual components.
+
+### **Finish Quality**
+
+- Matte to low-sheen finish only.
+- Surface reflectivity must remain **soft, diffuse, and natural**.
+- No gloss, specular highlights, or artificial polish that detracts from the material authenticity.
+
+### **Hierarchy Control**
+
+- Flooring must remain **visually subordinate** to cabinetry, furniture, and architectural features.
+- It should ground the space quietly, functioning as a **foundational architectural element**, never a focal point or feature surface.
+
+### **Design Intent Summary**
+
+The flooring is intended to convey **modern luxury through restraint** — seamless, calm, and timeless. Its role is to support the architecture and interior composition without drawing attention to itself.",2026-02-06 03:55:46.679865, ,True
+619303,Primary Bedroom (Upper Level) with Ensuite Bath and Terrace,35432,Artur Kovhan,21296,PM Dima Lytvynov,22815246,"## **See Kitchen Comments for the Flooring — Specification & Execution Requirements**
+
+### **Material Expression**
+
+- Light oak tone **precisely as shown** in the approved reference.
+- No deviation warmer, cooler, or more saturated at any stage.
+- The overall read must remain **clean, neutral, and architectural**, serving as a quiet backdrop rather than a decorative surface.
+
+### **Grain Character**
+
+- Grain expression must be **calm, refined, and predominantly linear**.
+- Exclude cathedral grain, knots, mineral streaking, or pronounced character marks.
+- Grain variation should be **deliberate, subtle, and evenly distributed**, avoiding visual noise or focal interruptions.
+
+### **Plank Format**
+
+- **Wide-plank format is required** to reinforce a seamless, contemporary luxury aesthetic.
+- Plank scale should feel **expansive, intentional, and proportionally balanced** within the double-height volume.
+- Avoid plank dimensions that read residentially scaled or visually segmented.
+
+### **Layout & Direction**
+
+- Maintain **one uninterrupted plank direction** throughout the entire space and all visually connected areas.
+- No changes in orientation, borders, insets, offsets, or pattern articulation.
+- The floor should reinforce spatial flow and architectural clarity.
+
+### **Seamlessness & Continuity**
+
+- Minimize visible seams, repetition, and texture cycling.
+- Avoid tiling artifacts, looping textures, or rhythm breaks typical of rendered surfaces.
+- Flooring should read as a **continuous architectural plane**, not an assembly of individual components.
+
+### **Finish Quality**
+
+- Matte to low-sheen finish only.
+- Surface reflectivity must remain **soft, diffuse, and natural**.
+- No gloss, specular highlights, or artificial polish that detracts from the material authenticity.
+
+### **Hierarchy Control**
+
+- Flooring must remain **visually subordinate** to cabinetry, furniture, and architectural features.
+- It should ground the space quietly, functioning as a **foundational architectural element**, never a focal point or feature surface.
+
+### **Design Intent Summary**
+
+The flooring is intended to convey **modern luxury through restraint** — seamless, calm, and timeless. Its role is to support the architecture and interior composition without drawing attention to itself.",2026-02-06 03:55:46.679865, ,True
+619303,Primary Bedroom (Upper Level) with Ensuite Bath and Terrace,35432,Artur Kovhan,21296,PM Dima Lytvynov,22824544,"### **Window Treatment Implementation (Shadow Box Integration)**
+
+Please implement the selected window treatments in the primary bedroom ensuite with the **curtain tracks fully concealed within a recessed shadow box**.
+
+**Shadow Box & Track Integration**
+
+- All curtain tracks are to be **integrated within the hidden shadow box** at the ceiling.
+- The shadow box should fully conceal the track and hardware so no components are visible from any angle.
+- The reveal should remain **clean, minimal, and continuous**, aligning with the ceiling cove and architectural lines.
+
+**Curtain Composition**
+
+- Use a **layered system**:
+    - Inner **sheer curtain** for light diffusion
+    - Outer **drapery panel** for privacy and softness
+- Both layers to be **full-height**, extending from the shadow box to the finished floor.
+
+**Placement**
+
+- Curtains to be installed **only at glazing locations** (windows and sliding doors).
+- Do **not** introduce curtains on curved wall surfaces or non-glazing walls.
+- Panels should align precisely with the glazing openings and retract fully into the shadow box when open.
+
+**Fullness & Drape**
+
+- Maintain **refined, restrained fullness** — soft pleating, no heavy gathers.",2026-02-06 23:12:58.687833, ,True
+619303,Primary Bedroom (Upper Level) with Ensuite Bath and Terrace,4845,Vera Duhina,21296,PM Dima Lytvynov,22824544,"### **Window Treatment Implementation (Shadow Box Integration)**
+
+Please implement the selected window treatments in the primary bedroom ensuite with the **curtain tracks fully concealed within a recessed shadow box**.
+
+**Shadow Box & Track Integration**
+
+- All curtain tracks are to be **integrated within the hidden shadow box** at the ceiling.
+- The shadow box should fully conceal the track and hardware so no components are visible from any angle.
+- The reveal should remain **clean, minimal, and continuous**, aligning with the ceiling cove and architectural lines.
+
+**Curtain Composition**
+
+- Use a **layered system**:
+    - Inner **sheer curtain** for light diffusion
+    - Outer **drapery panel** for privacy and softness
+- Both layers to be **full-height**, extending from the shadow box to the finished floor.
+
+**Placement**
+
+- Curtains to be installed **only at glazing locations** (windows and sliding doors).
+- Do **not** introduce curtains on curved wall surfaces or non-glazing walls.
+- Panels should align precisely with the glazing openings and retract fully into the shadow box when open.
+
+**Fullness & Drape**
+
+- Maintain **refined, restrained fullness** — soft pleating, no heavy gathers.",2026-02-06 23:12:58.687833, ,True
+619303,Primary Bedroom (Upper Level) with Ensuite Bath and Terrace,35432,Artur Kovhan,21296,PM Dima Lytvynov,22825268,"### **Primary Bedroom (Upper Level) — Bedding Direction**
+
+Please revise the primary bedroom bedding to closely **match the look, layering, and softness shown in the provided reference images**.
+
+The bedding should read **elevated, calm, and tailored**, with a refined hotel-level finish.
+
+**Color & Tone**
+
+- Bedding color to be **pearl white** — light, luminous, and warm.
+- Avoid tones that read gray, beige-heavy, or muted.
+- The overall impression should be **bright and airy**, never flat or dull.
+
+**Bedding Composition**
+
+- Use a **clean, layered composition** with:
+    - A smooth pearl-white duvet
+    - Minimal, intentional pillow layering (not over-styled)
+    - Subtle texture through fabric weave rather than contrast
+- Avoid excessive pillows, busy arrangements, or decorative clutter.
+
+**Fabric & Finish**
+
+- Fabric should read **soft, natural, and matte**, with a gentle weave visible at close range.
+- No sheen, heavy quilting, or pronounced patterning.
+- Bedding should appear **anti-wrinkled and lightly tailored**, not overly pressed or stiff.
+
+**Overall Intent**
+The bed should feel **inviting, serene, and editorial**, echoing the reference imagery while integrating seamlessly with the room’s architectural language. The bedding should support the space — not compete with it — reinforcing a sense of quiet luxury and restraint.",2026-02-07 04:54:31.804718, ,True
+619303,Primary Bedroom (Upper Level) with Ensuite Bath and Terrace,4845,Vera Duhina,21296,PM Dima Lytvynov,22825268,"### **Primary Bedroom (Upper Level) — Bedding Direction**
+
+Please revise the primary bedroom bedding to closely **match the look, layering, and softness shown in the provided reference images**.
+
+The bedding should read **elevated, calm, and tailored**, with a refined hotel-level finish.
+
+**Color & Tone**
+
+- Bedding color to be **pearl white** — light, luminous, and warm.
+- Avoid tones that read gray, beige-heavy, or muted.
+- The overall impression should be **bright and airy**, never flat or dull.
+
+**Bedding Composition**
+
+- Use a **clean, layered composition** with:
+    - A smooth pearl-white duvet
+    - Minimal, intentional pillow layering (not over-styled)
+    - Subtle texture through fabric weave rather than contrast
+- Avoid excessive pillows, busy arrangements, or decorative clutter.
+
+**Fabric & Finish**
+
+- Fabric should read **soft, natural, and matte**, with a gentle weave visible at close range.
+- No sheen, heavy quilting, or pronounced patterning.
+- Bedding should appear **anti-wrinkled and lightly tailored**, not overly pressed or stiff.
+
+**Overall Intent**
+The bed should feel **inviting, serene, and editorial**, echoing the reference imagery while integrating seamlessly with the room’s architectural language. The bedding should support the space — not compete with it — reinforcing a sense of quiet luxury and restraint.",2026-02-07 04:54:31.804718, ,True
+619304, Regular Bedroom (Upper Level),4845,Vera Duhina,21296,PM Dima Lytvynov,22598479,"## **Regular Upstairs Bedroom – Refinement & Layout Alignment Notes** 
+
+Please refine this upstairs bedroom rendering with the following adjustments:
+
+### **Framing & Composition (Critical)**
+
+- Please execute a **drastic zoom out** to capture a significantly wider field of view.
+- The intent is to **fully establish scale, spatial clarity, and indoor–outdoor connection**, allowing the bed, circulation paths, terrace access, windows, and ceiling planes to be read together.
+- This should feel like a **deliberate step back** to show the room in its entirety, not a minor framing adjustment.
+- Maintain the **existing camera height and perspective**—no lens change or wide-angle distortion. Proportions must remain natural and refined.
+
+### **Bed Orientation & Layout (Plan Alignment)**
+
+- Based on the architectural plans and outdoor access, the current layout appears to be **oriented in reverse**.
+- Please **rotate and reorient the bed** so it faces the correct direction, aligning with the intended plan and emphasizing **direct access to the terrace/outdoor space**.
+- The outdoor connection should read as a **primary extension of the bedroom experience**, not secondary or implied.
+
+### **Visual Connection to Bathroom**
+
+- Please leave the **bathroom door open or softly ajar** within the bedroom view.
+- This connection should feel **intentional, natural, and inviting**, reinforcing a cohesive suite experience.
+
+### **Lighting – Fixtures & Atmosphere**
+
+- **Revise all recessed (high-hat) lighting to square fixtures** for a clean, architectural expression.
+- Maintain a **daylight-forward scene**, with soft, warm interior lighting layered subtly for depth.
+- Lighting should enhance materiality and calm, without shifting toward a dramatic or evening mood.
+
+### **Color & Material Adjustment**
+
+- Please **soften the green color palette slightly** so it reads calmer, more muted, and elevated.
+- The color should complement the natural light and materials rather than dominate the composition.
+
+### **Styling & Atmosphere**
+
+- Keep bed styling **clean, composed, and symmetrical**; pillows and throws should feel intentional.
+- Materials and textures should continue to read **layered, warm, and residential**.
+
+### **Overall Intent**
+
+- This bedroom should feel **complete, intuitive, and livable**, clearly communicating circulation, use, and indoor–outdoor flow.
+- The final image should read as a **polished luxury bedroom hero**, with strong spatial clarity and a refined, calm presence.
+
+Thank you.",2026-01-12 19:47:12.961711, ,True
+619304, Regular Bedroom (Upper Level),35432,Artur Kovhan,21296,PM Dima Lytvynov,22598479,"## **Regular Upstairs Bedroom – Refinement & Layout Alignment Notes** 
+
+Please refine this upstairs bedroom rendering with the following adjustments:
+
+### **Framing & Composition (Critical)**
+
+- Please execute a **drastic zoom out** to capture a significantly wider field of view.
+- The intent is to **fully establish scale, spatial clarity, and indoor–outdoor connection**, allowing the bed, circulation paths, terrace access, windows, and ceiling planes to be read together.
+- This should feel like a **deliberate step back** to show the room in its entirety, not a minor framing adjustment.
+- Maintain the **existing camera height and perspective**—no lens change or wide-angle distortion. Proportions must remain natural and refined.
+
+### **Bed Orientation & Layout (Plan Alignment)**
+
+- Based on the architectural plans and outdoor access, the current layout appears to be **oriented in reverse**.
+- Please **rotate and reorient the bed** so it faces the correct direction, aligning with the intended plan and emphasizing **direct access to the terrace/outdoor space**.
+- The outdoor connection should read as a **primary extension of the bedroom experience**, not secondary or implied.
+
+### **Visual Connection to Bathroom**
+
+- Please leave the **bathroom door open or softly ajar** within the bedroom view.
+- This connection should feel **intentional, natural, and inviting**, reinforcing a cohesive suite experience.
+
+### **Lighting – Fixtures & Atmosphere**
+
+- **Revise all recessed (high-hat) lighting to square fixtures** for a clean, architectural expression.
+- Maintain a **daylight-forward scene**, with soft, warm interior lighting layered subtly for depth.
+- Lighting should enhance materiality and calm, without shifting toward a dramatic or evening mood.
+
+### **Color & Material Adjustment**
+
+- Please **soften the green color palette slightly** so it reads calmer, more muted, and elevated.
+- The color should complement the natural light and materials rather than dominate the composition.
+
+### **Styling & Atmosphere**
+
+- Keep bed styling **clean, composed, and symmetrical**; pillows and throws should feel intentional.
+- Materials and textures should continue to read **layered, warm, and residential**.
+
+### **Overall Intent**
+
+- This bedroom should feel **complete, intuitive, and livable**, clearly communicating circulation, use, and indoor–outdoor flow.
+- The final image should read as a **polished luxury bedroom hero**, with strong spatial clarity and a refined, calm presence.
+
+Thank you.",2026-01-12 19:47:12.961711, ,True
+619304, Regular Bedroom (Upper Level),35432,Artur Kovhan,21296,PM Dima Lytvynov,22669361,##BT Не по вине спека,2026-01-21 10:07:42.876626,PM Dima Lytvynov,False
+619304, Regular Bedroom (Upper Level),4845,Vera Duhina,21296,PM Dima Lytvynov,22669361,##BT Не по вине спека,2026-01-21 10:07:42.876626,PM Dima Lytvynov,False
+619304, Regular Bedroom (Upper Level),4845,Vera Duhina,21296,PM Dima Lytvynov,22724799,##BT - тут сгорело по моей вине,2026-01-27 15:06:58.741386,PM Dima Lytvynov,False
+619304, Regular Bedroom (Upper Level),35432,Artur Kovhan,21296,PM Dima Lytvynov,22724799,##BT - тут сгорело по моей вине,2026-01-27 15:06:58.741386,PM Dima Lytvynov,False
+619304, Regular Bedroom (Upper Level),35432,Artur Kovhan,21296,PM Dima Lytvynov,22815248,"## **See Kitchen Comments for the Flooring — Specification & Execution Requirements**
+
+### **Material Expression**
+
+- Light oak tone **precisely as shown** in the approved reference.
+- No deviation warmer, cooler, or more saturated at any stage.
+- The overall read must remain **clean, neutral, and architectural**, serving as a quiet backdrop rather than a decorative surface.
+
+### **Grain Character**
+
+- Grain expression must be **calm, refined, and predominantly linear**.
+- Exclude cathedral grain, knots, mineral streaking, or pronounced character marks.
+- Grain variation should be **deliberate, subtle, and evenly distributed**, avoiding visual noise or focal interruptions.
+
+### **Plank Format**
+
+- **Wide-plank format is required** to reinforce a seamless, contemporary luxury aesthetic.
+- Plank scale should feel **expansive, intentional, and proportionally balanced** within the double-height volume.
+- Avoid plank dimensions that read residentially scaled or visually segmented.
+
+### **Layout & Direction**
+
+- Maintain **one uninterrupted plank direction** throughout the entire space and all visually connected areas.
+- No changes in orientation, borders, insets, offsets, or pattern articulation.
+- The floor should reinforce spatial flow and architectural clarity.
+
+### **Seamlessness & Continuity**
+
+- Minimize visible seams, repetition, and texture cycling.
+- Avoid tiling artifacts, looping textures, or rhythm breaks typical of rendered surfaces.
+- Flooring should read as a **continuous architectural plane**, not an assembly of individual components.
+
+### **Finish Quality**
+
+- Matte to low-sheen finish only.
+- Surface reflectivity must remain **soft, diffuse, and natural**.
+- No gloss, specular highlights, or artificial polish that detracts from the material authenticity.
+
+### **Hierarchy Control**
+
+- Flooring must remain **visually subordinate** to cabinetry, furniture, and architectural features.
+- It should ground the space quietly, functioning as a **foundational architectural element**, never a focal point or feature surface.
+
+### **Design Intent Summary**
+
+The flooring is intended to convey **modern luxury through restraint** — seamless, calm, and timeless. Its role is to support the architecture and interior composition without drawing attention to itself.",2026-02-06 03:56:14.497029, ,True
+619304, Regular Bedroom (Upper Level),4845,Vera Duhina,21296,PM Dima Lytvynov,22815248,"## **See Kitchen Comments for the Flooring — Specification & Execution Requirements**
+
+### **Material Expression**
+
+- Light oak tone **precisely as shown** in the approved reference.
+- No deviation warmer, cooler, or more saturated at any stage.
+- The overall read must remain **clean, neutral, and architectural**, serving as a quiet backdrop rather than a decorative surface.
+
+### **Grain Character**
+
+- Grain expression must be **calm, refined, and predominantly linear**.
+- Exclude cathedral grain, knots, mineral streaking, or pronounced character marks.
+- Grain variation should be **deliberate, subtle, and evenly distributed**, avoiding visual noise or focal interruptions.
+
+### **Plank Format**
+
+- **Wide-plank format is required** to reinforce a seamless, contemporary luxury aesthetic.
+- Plank scale should feel **expansive, intentional, and proportionally balanced** within the double-height volume.
+- Avoid plank dimensions that read residentially scaled or visually segmented.
+
+### **Layout & Direction**
+
+- Maintain **one uninterrupted plank direction** throughout the entire space and all visually connected areas.
+- No changes in orientation, borders, insets, offsets, or pattern articulation.
+- The floor should reinforce spatial flow and architectural clarity.
+
+### **Seamlessness & Continuity**
+
+- Minimize visible seams, repetition, and texture cycling.
+- Avoid tiling artifacts, looping textures, or rhythm breaks typical of rendered surfaces.
+- Flooring should read as a **continuous architectural plane**, not an assembly of individual components.
+
+### **Finish Quality**
+
+- Matte to low-sheen finish only.
+- Surface reflectivity must remain **soft, diffuse, and natural**.
+- No gloss, specular highlights, or artificial polish that detracts from the material authenticity.
+
+### **Hierarchy Control**
+
+- Flooring must remain **visually subordinate** to cabinetry, furniture, and architectural features.
+- It should ground the space quietly, functioning as a **foundational architectural element**, never a focal point or feature surface.
+
+### **Design Intent Summary**
+
+The flooring is intended to convey **modern luxury through restraint** — seamless, calm, and timeless. Its role is to support the architecture and interior composition without drawing attention to itself.",2026-02-06 03:56:14.497029, ,True
+619304, Regular Bedroom (Upper Level),4845,Vera Duhina,21296,PM Dima Lytvynov,22815249,"### **Global Lighting Direction — Recessed Fixtures (All Rooms)**
+
+Just a reminder as an overall direction — please ensure that **all recessed lighting throughout the project** uses a **square recessed lighting feature only**. The lighting should read as **fully square in form**.
+
+Please **do not show circular fixtures within square housings**, and eliminate any remaining round trims, lenses, or circular light sources inside square fixtures. All recessed lighting should remain **consistent in shape, scale, and detailing across all rooms**.",2026-02-06 03:56:34.749259, ,True
+619304, Regular Bedroom (Upper Level),35432,Artur Kovhan,21296,PM Dima Lytvynov,22815249,"### **Global Lighting Direction — Recessed Fixtures (All Rooms)**
+
+Just a reminder as an overall direction — please ensure that **all recessed lighting throughout the project** uses a **square recessed lighting feature only**. The lighting should read as **fully square in form**.
+
+Please **do not show circular fixtures within square housings**, and eliminate any remaining round trims, lenses, or circular light sources inside square fixtures. All recessed lighting should remain **consistent in shape, scale, and detailing across all rooms**.",2026-02-06 03:56:34.749259, ,True
+619305,Primary Bedroom (Lower Level) & Ensuite Bath,35432,Artur Kovhan,21296,PM Dima Lytvynov,22596986,"## **Lower Level Primary Bedroom & Ensuite – Suggested Refinement Notes (ARCHICGI)**
+
+Please consider the following refinements to further elevate the primary bedroom and ensuite sequence:
+
+### **Framing & Composition – Primary Bedroom**
+
+- Please execute a **more aggressive zoom out** within the existing space to capture a significantly wider field of view.
+- The goal is to clearly establish **scale, spatial depth, and architectural volume**, with generous breathing room around the bed, flooring, and ceiling planes.
+- This should feel like a **deliberate step back** to showcase the room as a whole, not a subtle adjustment.
+
+### **Fireplace Integration & Seating Flow**
+
+- Please integrate the **fireplace fully into the wall plane** so it reads as built-in rather than applied.
+- The fireplace feature should **extend all the way to the ceiling**, per the builder’s direction.
+- There should be **no wall space between the fireplace and the adjacent millwork/bar area**.
+- Please **remove the existing dresser and replace it with a built-in bar**, integrated seamlessly into the wall composition (bar selection to be provided from the catalogue).
+- The intent is a **continuous architectural focal wall**, with the solid wall area reconfigured so that **approximately half is dedicated to the fireplace and half to the built-in bar**.
+- This composition should visually anchor the seating area and enhance the overall sense of scale.
+
+### **Styling Refinement – Bed**
+
+- Please **center the accent pillow** between the two primary pillows so the bed styling reads symmetrical, composed, and intentional.
+
+### **Visual Connection to Ensuite**
+
+- If possible, please keep the **doors to the ensuite bath open or softly ajar** to strengthen the visual and spatial connection between the bedroom and bathroom.
+- This connection should feel **intentional and fluid**, reinforcing the suite-like experience.
+
+### **Ensuite Bath – Tub, Vanity & Shower Refinements**
+
+- In the primary bath rendering, ensure the **tub is clearly framed** and reads as a primary feature, not cropped or secondary.
+- Please include a **vanity centered between both windows** to provide additional enclosed storage (selection to be provided from the product catalogue).
+- The **double-sink vanity** should include **double drawers**, and any open shelving should be removed in favor of enclosed storage.
+- The **steam shower glass should extend fully to the ceiling**; please reference the provided image and adjust hardware accordingly to support this configuration.
+
+### **Lighting & Atmosphere**
+
+- Maintain the **soft, warm interior lighting** and tranquil mood.
+- Lighting should enhance **material depth and texture** without becoming dramatic or evening-focused.
+- Introduce a **soft “on” glow** to indicate interior lighting is active—ambient and restrained, not dramatic.
+- Maintain a **daylight-forward scene**, layering in subtle interior warmth to add depth.
+- **Revise all recessed (high-hat) lighting to square fixtures throughout** for a more modern, architectural expression.
+
+### **Overall Intent**
+
+- The primary suite should read as **serene, refined, and cohesive**, with a strong sense of spatial clarity and flow between bedroom and bath.
+- The final images should feel **editorial, calm, and luxury-driven**—inviting without appearing over-styled.
+
+Thank you.",2026-01-12 17:46:07.598367, ,True
+619305,Primary Bedroom (Lower Level) & Ensuite Bath,35432,Artur Kovhan,21296,PM Dima Lytvynov,22636753,"##ALERT можу не встигнути відрендерити, якщо не буде світла в офісі",2026-01-16 11:32:17.906690,Anastasiia  Poda,False
+619305,Primary Bedroom (Lower Level) & Ensuite Bath,35432,Artur Kovhan,21296,PM Dima Lytvynov,22656519,##BT не по вине спека,2026-01-19 20:52:17.518956,PM Dima Lytvynov,False
+619305,Primary Bedroom (Lower Level) & Ensuite Bath,35432,Artur Kovhan,21296,PM Dima Lytvynov,22748103,"##ALERT
+
+тут трохи затримаюсь, потрібно перерендерити картинки",2026-01-29 14:05:51.998928,Oleksandr  Todoriko,False
+619305,Primary Bedroom (Lower Level) & Ensuite Bath,35432,Artur Kovhan,21296,PM Dima Lytvynov,22804588,"## **PRIMARY BEDROOM – LOWER LEVEL**
+
+### **GLOBAL REFINEMENT & RENDERING DIRECTION**
+
+## **Flooring — Specification & Execution Requirements (See LIving Room Comment #1)**
+
+### **Material Expression**
+
+- Light oak tone **precisely as shown** in the approved reference.
+- No deviation warmer, cooler, or more saturated at any stage.
+- The overall read must remain **clean, neutral, and architectural**, serving as a quiet backdrop rather than a decorative surface.
+
+### **Grain Character**
+
+- Grain expression must be **calm, refined, and predominantly linear**.
+- Exclude cathedral grain, knots, mineral streaking, or pronounced character marks.
+- Grain variation should be **deliberate, subtle, and evenly distributed**, avoiding visual noise or focal interruptions.
+
+### **Plank Format**
+
+- **Wide-plank format is required** to reinforce a seamless, contemporary luxury aesthetic.
+- Plank scale should feel **expansive, intentional, and proportionally balanced** within the double-height volume.
+- Avoid plank dimensions that read residentially scaled or visually segmented.
+
+### **Layout & Direction**
+
+- Maintain **one uninterrupted plank direction** throughout the entire space and all visually connected areas.
+- No changes in orientation, borders, insets, offsets, or pattern articulation.
+- The floor should reinforce spatial flow and architectural clarity.
+
+### **Seamlessness & Continuity**
+
+- Minimize visible seams, repetition, and texture cycling.
+- Avoid tiling artifacts, looping textures, or rhythm breaks typical of rendered surfaces.
+- Flooring should read as a **continuous architectural plane**, not an assembly of individual components.
+
+### **Finish Quality**
+
+- Matte to low-sheen finish only.
+- Surface reflectivity must remain **soft, diffuse, and natural**.
+- No gloss, specular highlights, or artificial polish that detracts from the material authenticity.
+
+### **Hierarchy Control**
+
+- Flooring must remain **visually subordinate** to cabinetry, furniture, and architectural features.
+- It should ground the space quietly, functioning as a **foundational architectural element**, never a focal point or feature surface.
+
+### **Design Intent Summary**
+
+The flooring is intended to convey **modern luxury through restraint** — seamless, calm, and timeless. Its role is to support the architecture and interior composition without drawing attention to itself.
+
+### **Overall Light Quality (Critical)**
+
+This room currently reads darker than the rest of the interiors and must be adjusted.
+
+- Increase natural light exposure and overall ambient brightness to match the lightness and softness of the other bedrooms and living spaces.
+- Maintain a consistent daylight tone throughout the home.
+- Avoid any space reading heavier or moodier than intended.
+
+### **Camera & Lens Standard (Critical – All Still Images)**
+
+All interior still renderings must be captured at **26mm focal length (±2mm max)**.
+
+- The current lens reads slightly too wide and introduces spatial distortion.
+- A 26mm lens better reflects true proportions and architectural realism.
+- This focal length must be applied consistently across all still images.
+
+**All compositions should:**
+
+- Preserve verticals (no keystoning)
+- Emphasize depth without exaggeration
+- Avoid wide-angle distortion
+- Maintain accurate scale and balance
+
+Please treat this as a **global rendering standard**.
+
+### **Wall Removal Between Bar & Fireplace (Critical)**
+
+- Completely remove the wall separating the bar area and the fireplace.
+- Reposition the fireplace and push it back to create a more open, fluid relationship between the bar, seating area, and sleeping zone.
+- Once adjusted, the fireplace must read as fully integrated, not segmented or confined.
+- The seating area should remain visually connected to both the fireplace and bar.
+
+**360° View**
+
+- Position the camera near the edge of the fireplace to capture all major elements of the room once interior–exterior alignment is corrected.
+
+### **Fireplace & Stone Alignment (Critical)**
+
+- Align the top of the stone cladding precisely with the opening above the fireplace.
+- Stone should read as a clean, uninterrupted vertical plane.
+- Avoid stepped transitions or misalignment between stone, firebox, and upper opening.
+
+### **Bar Area – Clarification**
+
+- The unit adjacent to the fireplace is intended strictly as a bar, not a display shelf.
+- Remove all decorative accessories from the bar shelving.
+- Eliminate the cabinet below the bar so the area reads lighter and more architectural.
+- Terminate the bar cleanly with a fry reglet.
+- Position the fireplace directly adjacent to the bar with **no wood paneling or millwork between**.
+
+The bar should read subtle, restrained, and architectural.
+
+### **Ceiling & Lighting**
+
+- Introduce concealed recessed ceiling lighting consistent with the lighting strategy used in the other bedrooms.
+- Lighting should feel integrated and indirect.
+
+### **Window Treatments**
+
+- Lighten the drapery: softer fabric, reduced opacity, relaxed fall.
+- Window treatments should enhance daylight, not mute it.
+
+### **Exterior View & Pool Placement (Critical)**
+
+- Correct the exterior environment visible from this room.
+- Adjust pool placement and exterior layout to reflect the site plan and intended relationship to the bedroom.
+- The view should feel intentional, calm, and architecturally aligned.
+
+### **Walls, Windows & Sliders (Critical)**
+
+- Rework wall, window, and sliding door placement to create a more generous, breathable layout.
+- Increase clear space between the bedding wall and the window/slider system.
+- Ensure comfortable circulation and a strong interior–exterior connection.
+
+The sleeping area should feel open and well-proportioned, not compressed.",2026-02-05 04:26:09.144196, ,True
+619305,Primary Bedroom (Lower Level) & Ensuite Bath,35432,Artur Kovhan,21296,PM Dima Lytvynov,22811443,"### **Bar Area — Floating Shelf Integration**
+
+Please introduce **one single floating shelf** within the bar recess to support the bar function.
+
+The shelf should be **thin, clean-lined, and fully concealed**, with no brackets or visible hardware. It must read as an **integrated architectural element**, not decorative shelving.
+
+Position the shelf **within the mirror field**, ensuring the mirror remains the dominant surface. Do not introduce multiple shelves.
+
+**Alignment is critical:**
+Please align the floating shelf **precisely with the horizontal separation line of the adjacent bedroom cabinet doors**. The shelf height must be driven by this existing datum so the bar reads as fully integrated with the surrounding millwork and architectural rhythm.
+
+Avoid arbitrary or eye-level placement. Continuity and precision are essential.
+
+**Shelf Thickness**
+Please construct the floating bar shelf at **one inch total thickness**.
+
+**Shelf Material Relationship**
+The shelf material should **reference the fireplace stone in tone and finish**, creating a subtle material dialogue without directly matching or competing with it.
+
+The shelf should feel **stone-adjacent and complementary**, not dominant. It must read as a restrained architectural extension rather than a decorative accent or feature shelf.",2026-02-05 15:54:02.971104, ,True
+619305,Primary Bedroom (Lower Level) & Ensuite Bath,35432,Artur Kovhan,21296,PM Dima Lytvynov,22814993,"## **PRIMARY BEDROOM – LOWER LEVEL ENSUITE BATH**
+
+### **Window Treatments & Tub Area**
+
+- Please remove **all visible drapery** around the tub area.
+- Window treatments should be resolved using a **concealed shadow box**, maintaining a **clean, architectural, curtain-free appearance**.
+
+### **Vanity & Storage Alignment**
+
+- The closet / adjacent storage zone should be **repositioned to sit flush with the adjacent wall**.
+- This element should **not read as a full-height storage unit**.
+- Treat this area as a **vanity with integrated storage**, consistent with the **previously selected vanity from the catalog**.
+- Please **reduce the apparent thickness of the vanity**, as it is currently reading heavier than intended.
+
+### **Glass, Doors & Hardware Consistency**
+
+- Change the door adjacent to the shower to **wood**, using the **same wood species, grain, and finish** as the door used to enter the bathroom.
+- Please ensure **all hardware throughout the space is consistent and matching** in finish, scale, and style.
+
+### **Sinks & Vanity Accessories**
+
+- Please **adjust sink sizes** so both basins are **proportionally equal**, maintaining symmetry.
+- Replace **all bath accessories currently shown**.
+    - Final accessory selections will be provided from the catalog.
+    - Accessories should be **placed centrally between the two sinks**.
+- Add a **floating shelf below the vanity and drawers**, maintaining a **light, refined expression**.
+
+### **Shower Reflections & Glass Detailing**
+
+- Please **correct the reflection within the steam shower**.
+- The door leading to the bidet/toilet area currently reads too prominently in the shower reflection and should be **softened or removed** to preserve visual calm.
+- Relocate the **shower glass support hardware** from the center of the panel to the **edge of the glass closest to the tub** for a cleaner, more intentional detail.
+- Adjust the **glass shower door opening (handle side)** so it aligns **precisely with the tile joint/groove**.
+    - I will mark the exact alignment location on the whiteboard for clarity.
+- Please **adjust the shower head height and position** so it is more **centered on the wall**.
+
+### **Bedroom / Bath Interface**
+
+- Please **lower the bedroom slider to floor level**.
+- The **bathroom entry door** must match the **same wood tone and finish** as the door with the diagonal detailing.
+
+### **Under-Window Seating Area**
+
+- Please add a **seating area beneath the window** by extending the **same shelf material used below the vanity**.
+- This extension should function as a **built-in seating bench**.
+- Paneling should remain **angled**, and the **extended seating area should align cleanly beneath the window**, maintaining architectural continuity.
+
+### **Camera & Image Composition (Render-Critical)**
+
+- Please adjust the camera to a **26mm lens equivalent** to correct perspective distortion.
+- Avoid wide-angle exaggeration.
+- Ensure accurate proportions and a balanced, architectural read across all elements.",2026-02-06 01:18:07.880521, ,True
+619305,Primary Bedroom (Lower Level) & Ensuite Bath,35432,Artur Kovhan,21296,PM Dima Lytvynov,22815187,"### **Expanded Bedroom View — Camera Position, Lens & Exterior Update (Render Direction)**
+
+- Please position the **360° camera with its back directly against the wall that sits opposite the fireplace**.
+    - The camera should be **backed up to this wall**, not floating in the room.
+    - This position is critical to achieve a true, comprehensive spatial read.
+- From this fixed position, **orient the camera toward the bedroom**, with the view slightly favoring the fireplace edge rather than isolating the seating area.
+- **Lock the camera to a 26mm lens equivalent**.
+    - This lens must be used to **reduce distortion**, maintain **accurate proportions**, and allow the space to read **balanced and architectural**.
+    - Avoid ultra-wide exaggeration or compressed perspectives.
+- The intent is to capture an **expanded, sweeping 360° view** that clearly communicates:
+    - the **bar area**
+    - the **fireplace**
+    - the **seating area**
+    - the **spatial relationship and visual connection to the bathroom and closet**
+    - and the **connection to the outdoor area**
+- This view must communicate the **overall layout, flow, and hierarchy of the space**, not a single vignette.
+With the fireplace repositioned, the entire room should be legible within this **single, continuous 360° bedroom view**.
+- Please also **update all exterior views visible through the glazing** so they **accurately reflect the actual exterior conditions, materials, and proportions**.
+Avoid placeholder or generic exterior imagery.",2026-02-06 02:43:29.472081, ,True
+619305,Primary Bedroom (Lower Level) & Ensuite Bath,35432,Artur Kovhan,21296,PM Dima Lytvynov,22815233,"### **Global Lighting Direction — Recessed Fixtures (All Rooms)**
+
+Just a reminder as an overall direction — please ensure that **all recessed lighting throughout the project** uses a **square recessed lighting feature only**. The lighting should read as **fully square in form**.
+
+Please **do not show circular fixtures within square housings**, and eliminate any remaining round trims, lenses, or circular light sources inside square fixtures. All recessed lighting should remain **consistent in shape, scale, and detailing across all rooms**.",2026-02-06 03:48:43.101472, ,True
+619305,Primary Bedroom (Lower Level) & Ensuite Bath,35432,Artur Kovhan,21296,PM Dima Lytvynov,22953996,"##ALERT дуже багато правок, потрібно перепровірити щоб нічого не пропустити, можу не встигнути до 19",2026-02-23 14:39:04.884984,Anastasiia  Poda,False
+619305,Primary Bedroom (Lower Level) & Ensuite Bath,35432,Artur Kovhan,21296,PM Dima Lytvynov,22959627,##T1,2026-02-23 20:31:03.889306,PM Dima Lytvynov,False
+619306, Wine Tasting Room & Wine Display,35432,Artur Kovhan,21296,PM Dima Lytvynov,22607831,"## **Wine Room Rendering – Plan-Based Revisions**
+
+Please revise the wine room rendering using the **attached architectural plan reference** as the primary guide for layout, circulation, enclosure, and lighting.
+
+### **Plan Alignment & Spatial Accuracy**
+
+Please adjust the wine room layout to accurately reflect the configuration shown in the referenced drawing.
+
+- The tasting area, circulation paths, and wine cellar location should align precisely with the plan proportions and orientation.
+- Ensure the rendered perspective clearly communicates the intended spatial relationship between the tasting area and the wine cellar.
+
+### **Bar Location Adjustment**
+
+- A built-in bar is already part of the design.
+- Please relocate the bar area to the location indicated by the **pink oval** in the attached floor plan screenshot.
+
+### **Flooring**
+
+- Introduce **polished concrete flooring** throughout this lower-level space to accurately reflect material intent and level designation.
+
+### **Wine Cellar Enclosure (Builder Direction)**
+
+Per the builder, the wine cellar will **no longer feature a full wrap-around glazed enclosure**.
+
+- The cellar should read as an **airtight, secure storage environment**.
+- Final door selections will be provided from the product catalogue and attached separately.
+
+### **Wine Cellar Doors**
+
+- Please replace the existing door condition with **pull-out / pull-open doors**, still within the fully transparent design. 
+- Door detailing should be clean, minimal, and consistent with a high-end, secure cellar aesthetic.
+- In the interim, please model a refined **placeholder door condition** that supports this intent.
+
+### **Wine Storage – Visibility & Function**
+
+Please incorporate **freestanding shelving within the wine cellar, according to the builder the wine shelving will no longer be. full wrp around shelving section, as noted in the referenced image attached, there will be free standing shelving a** to ensure bottle visibility from multiple angles. (Again I will choose the product front the catlogue)
+
+- The goal is to allow the collection to be appreciated from both within the cellar and from adjacent viewpoints, while maintaining a secure, climate-controlled environment.
+
+### **Lighting – Fixtures & Atmosphere**
+
+- Revise all recessed (high-hat) lighting to **square fixtures throughout** for a more modern, architectural expression.
+- Maintain a warm, refined ambient glow that complements the wine display and tasting experience without becoming dramatic or overly decorative.
+- Lighting should enhance material depth, bottle texture, and architectural rhythm while remaining hospitality-driven and intimate.
+- The **current lighting fixture above the wine tasting table** should be **relocated and utilized as pendant lighting above the bar area**.
+- A separate lighting fixture will be attached and should be used **above the wine tasting table seating area**.
+
+### **Overall Intent**
+
+The revised wine room should read as:
+
+- Architecturally accurate to plan
+- Secure and purposeful in function
+- Elevated, immersive, and editorial in presentation
+
+The balance should feel **luxury-forward and experiential**, without sacrificing realism or buildability.
+
+Thank you.",2026-01-13 16:51:13.073068, ,True
+619306, Wine Tasting Room & Wine Display,35432,Artur Kovhan,21296,PM Dima Lytvynov,22815241,"### **Global Lighting Direction — Recessed Fixtures (All Rooms)**
+
+Just a reminder as an overall direction — please ensure that **all recessed lighting throughout the project** uses a **square recessed lighting feature only**. The lighting should read as **fully square in form**.
+
+Please **do not show circular fixtures within square housings**, and eliminate any remaining round trims, lenses, or circular light sources inside square fixtures. All recessed lighting should remain **consistent in shape, scale, and detailing across all rooms**.",2026-02-06 03:54:44.870210, ,True
+619306, Wine Tasting Room & Wine Display,35432,Artur Kovhan,21296,PM Dima Lytvynov,22815247,"## **See Kitchen Comments for the Flooring — Specification & Execution Requirements**
+
+### **Material Expression**
+
+- Light oak tone **precisely as shown** in the approved reference.
+- No deviation warmer, cooler, or more saturated at any stage.
+- The overall read must remain **clean, neutral, and architectural**, serving as a quiet backdrop rather than a decorative surface.
+
+### **Grain Character**
+
+- Grain expression must be **calm, refined, and predominantly linear**.
+- Exclude cathedral grain, knots, mineral streaking, or pronounced character marks.
+- Grain variation should be **deliberate, subtle, and evenly distributed**, avoiding visual noise or focal interruptions.
+
+### **Plank Format**
+
+- **Wide-plank format is required** to reinforce a seamless, contemporary luxury aesthetic.
+- Plank scale should feel **expansive, intentional, and proportionally balanced** within the double-height volume.
+- Avoid plank dimensions that read residentially scaled or visually segmented.
+
+### **Layout & Direction**
+
+- Maintain **one uninterrupted plank direction** throughout the entire space and all visually connected areas.
+- No changes in orientation, borders, insets, offsets, or pattern articulation.
+- The floor should reinforce spatial flow and architectural clarity.
+
+### **Seamlessness & Continuity**
+
+- Minimize visible seams, repetition, and texture cycling.
+- Avoid tiling artifacts, looping textures, or rhythm breaks typical of rendered surfaces.
+- Flooring should read as a **continuous architectural plane**, not an assembly of individual components.
+
+### **Finish Quality**
+
+- Matte to low-sheen finish only.
+- Surface reflectivity must remain **soft, diffuse, and natural**.
+- No gloss, specular highlights, or artificial polish that detracts from the material authenticity.
+
+### **Hierarchy Control**
+
+- Flooring must remain **visually subordinate** to cabinetry, furniture, and architectural features.
+- It should ground the space quietly, functioning as a **foundational architectural element**, never a focal point or feature surface.
+
+### **Design Intent Summary**
+
+The flooring is intended to convey **modern luxury through restraint** — seamless, calm, and timeless. Its role is to support the architecture and interior composition without drawing attention to itself.",2026-02-06 03:56:01.112033, ,True
+619306, Wine Tasting Room & Wine Display,35432,Artur Kovhan,21296,PM Dima Lytvynov,22954060,"##ALERT дуже багато правок, потрібно перепровірити щоб нічого не пропустити, можу не встигнути до 19
+
+",2026-02-23 14:41:56.331284,Anastasiia  Poda,False
+619306, Wine Tasting Room & Wine Display,35432,Artur Kovhan,21296,PM Dima Lytvynov,22963192,##T1,2026-02-24 09:47:50.267965,PM Dima Lytvynov,False
+619308, Exterior Rendering with surrounding,35432,Artur Kovhan,21296,PM Dima Lytvynov,22610228,"## **Exterior Renderings – Refinement Notes** 
+
+Thank you again for the strong work to date. The following notes are intended as **refinements only**, focused on elevating realism, spatial clarity, and luxury presentation—aligned with a **refined Hamptons estate aesthetic** suitable for high-end marketing.
+
+### **Framing & Perspective (Critical)**
+
+- Please **drastically zoom out** for the pool house and primary exterior renderings to capture the **full site layout and architectural context**.
+- The camera positioned slightly above the property to clearly showcase:
+    - Overall grounds
+    - Landscape composition
+    - Pool, tennis court, and outdoor living areas
+    - Circulation paths
+
+This aerial view should feel **editorial and composed**, not diagrammatic or technical.
+
+### **Arrival & Front Elevation**
+
+- The front of the property should read **formal, welcoming, and intentional**.
+- Please **relocate the sunken seating area to the side/ rear of the property**, allowing the front elevation to focus on arrival, symmetry, and architectural presence.
+- Refine the approach so **landscaping, pathways, and lighting gently frame the entry**, reinforcing a clear sense of arrival.
+*(Lighting fixtures will be selected from the catalogue.)*
+
+### **Side Elevations & Fireplace Projection**
+
+For all fireplace conditions:
+
+- Great Room (front)
+- Lower-Level Primary Bedroom (rear)
+- Upper-Level Primary Bedroom (side)
+
+Please **extend each fireplace mass approximately 6–8 inches from the façade**, allowing the stucco to return on both sides for proper depth and architectural continuity.
+Please reference the **whiteboard commentary** for additional clarity.
+
+### **Upper-Level Terrace**
+
+- Clearly reflect and **extended upper-level terrace above the gym**, ensuring it reads as:
+    - Intentional
+    - Usable
+    - Proportionally correct
+- Incorporate the **terrace furniture and accessories** referenced within the upper-level primary suite materials.
+- Introduce **wood / Trex decking** for the terrace.
+- The terrace should **extend to the edge of the upper roof area**, allowing direct access from the upstairs regular bedroom.
+
+### **Landscaping, Walkways & Decking**
+
+- Adjust the wooden decking surrounding pool so it aligns **flush with the backyard patio height**.
+- Level surrounding ground to meet the patio cleanly.
+- Replace orange-toned foliage trees with **softer green varieties**.
+- Introduce **olive trees as intentional focal elements**, framed and centered rather than dispersed.
+- Add **lavender thoughtfully** for texture and subtle color; consider reducing **Feather Reed (Greens-8796)** for a lighter, more refined landscape composition.
+- Plantings around the pool and walkways should feel **composed and framed**, not evenly or randomly distributed.
+- Refine the lawn so it reads **lush, manicured, and consistent throughout**, with particular attention to correcting the unmanicured front section.
+- Enhance **landscape and pathway lighting** to reinforce circulation and nighttime legibility.
+- Please **remove the additional pathway and sunken seating area at the front of the property**.
+
+### **Pool Area Refinements**
+
+- Use **white marble dust pool tile**, matching the patio finish, extending continuously into the pool.
+- Update pool seating pillows to **white** for a clean, elevated look.
+- Reposition plantings so **stone elements intentionally frame the pool**, avoiding scattered placement.
+- Remove the Swirly abstract foundtain within the pool, but leave the half circle foundtain. 
+
+### **BBQ & Outdoor Dining Area/ Extention of the Dining Space (Rear)**
+
+- Incorporate a **BBQ area with sink** adjacent to the dining area.
+- This should align cleanly with the **patio overhang** for both functional and visual consistency.
+
+### **Terrace & Roof Detailing**
+
+- Please reference **pages 8–11** for the curbs and decks  on roof.  It's currently flat, and not supposed to be flat. There should be a boarder for the posts to go into.(attached).
+- While the roof is structurally flat, it should **not read visually flat**—introduce perimeter borders to accommodate post placement.
+- Use tile **matching the patio color** around the roof perimeter.
+- Patio overhang risers should be **stucco**, consistent with stair risers.
+
+### **Additional Tennis Court**
+
+- Please reference the **attached survey** for correct **tennis court placement and orientation**.
+- The court should be positioned **lengthwise**, aligned with the pool axis.
+- A **refined walkway** should lead from the rear of the property to the tennis court.  
+
+### **Siding Coloration**
+
+- The siding of the home should read as **Aged Yellow Alaskan Cedar**, refined and consistent with a luxury Hamptons aesthetic.
+- A color reference has been attached; a product catalogue reference will be provided if available.
+
+### **Overall Intent**
+
+The final exterior images should feel:
+
+- **Serene**
+- **Editorial**
+- **Fully realized**
+
+With a strong emphasis on:
+
+- Material integrity
+- Landscape composition
+- A refined, Hamptons-style sense of arrival
+
+These renderings should be **luxury-forward, immersive, and marketing-ready**.
+
+Thank you.",2026-01-13 20:01:12.615940, ,True
+619308, Exterior Rendering with surrounding,35432,Artur Kovhan,21296,PM Dima Lytvynov,22631113,"### **Arrival Sequence & Front Sculpture (Final Detail)** @PM Dima Lytvynov
+
+Please replace the current front sculpture with JUST the **horse sculpture** to scale. 
+
+- The horse should be rendered in a **patinated bronze finish** (not gold).
+- Position it prominently at the **front of the property**, aligned with the arrival axis.
+- The sculpture should anchor the approach and act as a focal moment upon entry.
+- Use a **simple, dark stone or charcoal plinth**—minimal and refined.
+
+The sculpture should feel collected and timeless, reinforcing the estate presence rather than reading as a decorative accent.",2026-01-15 17:33:43.097286, ,True
+619308, Exterior Rendering with surrounding,35432,Artur Kovhan,21296,PM Dima Lytvynov,22755174,"## **EXTERIOR / SITE — FINAL REFINEMENT NOTES (FINAL ROUND)**
+
+### **Material Consistency**
+
+- All exterior wood finishes are to be **Alaskan Yellow Cedar**, consistent with the original exterior design intent. See the attached 1st draft for reference. 
+-  No alternate wood species, stains, tones, or finishes are to be introduced anywhere on the property.
+
+### **Site Orientation, Survey & Overall Layout**
+
+- Correct the property orientation to align **exactly** with the attached survey, including the driveway’s position, curvature, and direction of approach.
+- The house faces **Northeast (NE)**.
+- The lot is MORE rectangular, with the **front façade extending along the shorter side** of the rectangle.
+- The driveway must enter on a **curved approach**, precisely as shown on the survey.
+
+## **Driveway & Planting — Final Execution Brief (Rounded Hedge System Only)**
+
+**Driveway Geometry**
+
+- **The driveway shall be formed as one continuous sweeping curve from site entry through arrival.**
+- **The curve must feel fluid, calm, and intentional.**
+- **No straight segments, segmented arcs, or compound curves are permitted.**
+- **Once initiated, the curve must remain uninterrupted until it terminates at the parking court.**
+
+**Parking Court Geometry**
+
+- **The parking court shall be strictly rectangular and orthogonal.**
+- **The curved driveway must terminate cleanly and precisely into the court.**
+- **No softened edges or curvilinear geometry are permitted within the court.**
+
+
+**Planting Strategy — Two-Layer System**
+
+- **Planting is organized in clear horizontal bands parallel to the driveway edge, reinforcing order, legibility, and restraint.**
+
+**Layer 1: Primary Hedge Structure**
+
+### **Curved Driveway Condition**
+
+- **Only discrete, rounded hedge forms are permitted.**
+- **Hedges must be:**
+
+    - **Fully detached**
+    - **Sculptural and softly rounded**
+    - **Uniform in size and shape**
+    - **Evenly spaced to establish rhythm and clarity**
+
+- **While individual, spacing must be tight and deliberate, allowing hedges to read as a continuous visual procession, not a mass or clipped ribbon.**
+- **Hedge height shall remain low and controlled, always subordinate to the architecture and below window sill height.**
+- **This hedge layer defines the geometry of the curved approach through repetition rather than physical connection.**
+
+**Parking Court Condition**
+
+- **Hedge language shall remain rounded, reinforcing architectural order.**
+- **Hedges shall be:**
+    - **Identical in size and form**
+    - **Evenly spaced**
+    - **Aligned orthogonally with the parking court geometry**
+
+**Layer 2: Flowering Plants *(Secondary accents only)***
+
+- **Flowering plants (per approved selections) shall be used as secondary accent elements only.**
+- **Planting shall:**
+    - **Run parallel to the driveway geometry**
+    - **Be grouped in low, mounded clusters**
+    - **Remain visually subordinate to the hedge forms**
+- **Mature height must remain below hedge height.**
+- **Forms shall be soft, horizontal, and restrained.**
+- **Color palette shall remain cohesive and aligned with approved selections**
+
+**Seasonal Accent — White Tulips**
+
+- **White tulips shall be planted between the rounded boxwood hedge forms along the curved driveway only.**
+- **Tulips shall:**
+    - **Be used as a seasonal, ephemeral layer, not a permanent planting element**
+    - **Remain low and delicate, never obscuring hedge geometry**
+    - **Reinforce rhythm without introducing visual clutter**
+
+**Overall Design Intent**
+
+- **The driveway is conceived as a landscape-driven arrival sequence that transitions into a formal, architectural parking court. This transition must be immediately legible through geometry, spacing, and planting hierarchy, with planting reinforcing — not competing with — the architecture.**
+- **Arrival Sequence: Sweeping landscape curve → Architectural pause (rectangular parking court)**
+
+### **Front Yard — Circulation & Walkways**
+
+- Remove any walkways that do not lead to a clear or intentional destination within the front yard (refer to whiteboard markup).
+
+## **Front Yard — Free-Standing Sculpture**
+
+- Reintroduce the **phoenix sculpture** on a **substantial concrete base or plinth**, designed to clearly feature and elevate the artwork.
+- The base shall reference either the **backyard patio material** or serve as a **material continuation of the driveway**, ensuring cohesion across the site.
+- Increase the **scale and mass** of the base so the sculpture reads as **grounded, intentional, and fully integrated** into the front lawn composition.
+- Proportions shall feel deliberate and architectural, not decorative.
+- Refer to the **AI-generated reference image** for appropriate scale, massing, and overall proportion. 
+
+## **Front Yard Stair Transition — Landscape Feature**
+
+- Introduce a continuous **in-ground planting zone** that traces the stair descent and railing alignment, creating a softened, landscaped transition from upper grade to lower approach.
+- **Planting Composition : Primary Species Black-eyed Susan (Rudbeckia) see attached catalog selection**
+
+
+**Placement & Spacing Guidelines**
+
+- Black-eyed Susans shall be planted **continuously along both sides of the stair railing**, fully outlining the descent.
+- Plants shall be arranged in **soft, overlapping drifts**, not rigid rows.
+- **Spacing:** 18–22 inches on center (tight enough for fullness, loose enough to remain natural)
+- Drifts should subtly **widen and contract** along the stair run to avoid uniformity.
+
+**Design & Installation Rules**
+
+- Planting shall remain **entirely in-ground**, flush with adjacent lawn or soil grade.
+- **No additional hardscape elements** (edging, curbs, stone borders) are permitted.
+- Planting height shall remain **below handrail height**, ensuring safety, visibility, and architectural clarity.
+- Mulch or soil finish shall match the surrounding driveway planting beds for consistency.
+- The planting is intended to **soften and define the stair transition**, guiding movement and adding seasonal color without competing with the architecture or introducing visual clutter.
+-  The effect should feel **natural, calm, and integrated**, not decorative or formal.
+
+*Black-eyed Susans should be read as a continuous flowering gesture that traces the stair descent, reinforcing movement and transition rather than acting as a focal feature.*
+
+### **Front / Left Side Yard Features — Sunken Seating**
+
+- Relocate the existing **side-yard sunken seating area** to the **rear of the house**, see specifications below. 
+- Reconfigure the seating from **circular to square** (see attached survey reference for exact placement).
+- Remove the walkway previously leading to the side-yard sunken seating, as it is no longer required.
+
+### **Front Yard to Pool Walkway — Refinement**
+
+- Introduce a **direct and intentional walkway** connecting the front yard to the pool area (refer to whiteboard markup for alignment).
+- Adjust, reduce, or relocate existing plantings that currently block **visibility and circulation**.(shift them back further away from the housing structure) 
+
+Walkway design requirements:
+
+- Outline the path using the **same smaller round hedges** used along the driveway
+- Carry this hedge language consistently along the **entire route to the pool**
+- Introduce **flowering plants between the hedges, white tulips**
+- Maintain **clear sightlines** to the pool area from the front yard
+
+### **Back Yard Exterior Kitchen / Dining Terrace**
+
+- Placement must match the **attached referenced plan exactly**.
+- Remove the grill on wheels.
+- The **only grill shown** should be the **built-in Wolf/Sub-Zero grill**, per plan specifications.
+- Rendering refinements:
+- Lighten shadows to clearly showcase built-in elements and exterior kitchen detailing
+
+Patio lighting revision:
+
+- Revise the concrete patio so **all circular lighting fixtures are fully concealed**
+- Incorporate an overhang to hide all fixtures
+- No exposed light sources should be visible from the sides (refer to whiteboard markup)
+
+### **Front & Back Yard Lighting Consistency**
+
+- Standardize exterior lighting fixtures across the entire property,  — with the **sole exception of designated round accent fixtures**, you may also include more of these round fixtures —
+- Use the **backyard lighting fixtures as the reference** and apply this language consistently throughout.
+- Lighting should feel **warm, balanced, and intentional**, enhancing architecture and amenities without overpowering them.
+
+### **Pool Area & Landscaping**
+
+- Reduce overall planting density — the current pool area reads as **over-planted and visually busy**.
+- Remove sunken seating within the pool structure and continue the **rectangular pool form**.
+    - If a raised pool element is present within the pool, such as where the black planters are resting on, Ensure that this the ledge above the raised water section **matches the white marble dust pool color exactly**
+    - Incorporate a **waterfall feature** flowing into the pool
+
+Additional refinements:
+
+- Correct pool water color — remove any green tint; water should read **fresh and clean**
+- Raise pool decking slightly to allow for **integrated planting or green elements**
+- Remove trees blocking view of the pool house (see whiteboard markup)
+
+## **Backyard Pool & Pool House View — Camera, Composition & Landscape Integration**
+
+Reposition the camera toward the **corner where the first planter appears** to establish a stronger architectural frame and foreground depth.
+
+The following elements must be **clearly visible within the same composition**:
+
+- Pool house
+- Waterfall feature
+- Walkway to the tennis court
+- Sunken seating area within the yard
+- Pool
+- Tennis court
+
+### **Landscape Integration — Pool House Wall**
+
+Introduce **white iris planting** at the base of the pool house wall, positioned to **stand vertically against the architecture** and provide a crisp, elegant counterpoint to the façade.
+
+- Iris shall be used in **controlled, linear groupings** aligned with the pool house wall.
+- Color shall remain **white only**.
+- Planting shall read as **architectural and upright**, not loose or meadow-like.Height and density shall remain balanced so the iris **accentuates the wall without obscuring it**.
+
+**Material Refinement**
+
+Consider updating **planter bases to a darker finish** to introduce contrast, grounding the planting elements and enhancing overall refinement within the scene.
+
+## **Back Yard — New Feature Integration — Sunken Seating**
+
+- Introduce a **square sunken seating area / firepit** at the center of the rear walkway, positioned between the pool and tennis court (refer to attached file).
+- The seating area shall be **precisely aligned with mid-court access** to reinforce symmetry, axial clarity, and continuity of movement across the rear yard.
+- A **low, restrained landscape buffer** shall be introduced along the **outer perimeter** of the sunken seating area to soften transitions between hardscape and lawn while preserving the geometry of the space.
+
+### **Landscape Direction**
+
+- Planting shall remain **secondary** to the seating and firepit geometry.Palette shall be **predominantly white and green**, consistent with the broader backyard planting language.Plant height shall remain **low and unobtrusive**, maintaining open sightlines between the pool, seating area, and tennis court.Planting layout shall follow the **square geometry** of the sunken seating, with no loose curves or meadow-style arrangements.
+- No expressive or high-contrast flowering plants are permitted within or immediately adjacent to the sunken seating area.
+
+### **Planting Intent** *(Exact Plant Selections)*
+
+- Planting shall function as a **soft architectural buffer**, framing the sunken seating area without enclosing it or introducing visual noise. The palette is intentionally restrained and limited to **white, green, and subtle texture**.
+
+**PRIMARY PLANT SELECTIONS for sunken firepit**
+
+### **1. White Hydrangea arborescens** *(Outer perimeter anchors only)*
+
+**Recommended varieties:**
+
+- ‘Annabelle’
+- ‘Incrediball’
+
+**Use:**
+
+- Place at the **outer corners and midpoints** of the sunken seating perimeter
+- Do **not** form a continuous hedge
+
+**Mature size:**
+
+- 4–5 ft H × 4–5 ft W
+
+**Spacing:**
+
+- 42–48 inches O.C.
+
+**Purpose:**
+
+- Provides softness and scale
+- Visually anchors the seating area
+- Maintains estate-level elegance
+
+**2. Carex (Evergreen Sedge)**
+
+*(Primary continuous buffer layer)*
+
+**Recommended varieties:**
+
+- Carex oshimensis ‘Everillo’ *(green-neutral varieties preferred over gold)*
+- Carex ‘Ice Dance’
+
+**Use:**
+
+- Continuous planting along the **straight edges** of the sunken seating perimeter
+- Forms the primary low, architectural buffer
+
+**Mature size:**
+
+- 18–24 inches H × 18–24 inches W
+
+**Spacing:**
+
+- 18–24 inches O.C.
+
+**Purpose:**
+
+- Clean, linear texture
+- Year-round structure
+- Keeps geometry crisp without feeling rigid
+
+
+**3. White Astilbe**
+
+*(Secondary softening layer — optional but recommended)*
+
+**Recommended varieties:**
+
+- ‘Deutschland’
+- ‘White Gloria’
+- **Use:**
+
+- Interspersed between Carex in select zones
+- Focus on **pool-facing sides only**
+
+**Mature size:**
+
+- 24–30 inches H
+
+**Spacing:**
+
+- 24–30 inches O.C.
+
+**Purpose:**
+
+- Adds softness and seasonal interest
+- Keeps palette light and quiet
+- Avoids floral competition
+
+
+**STRICT EXCLUSIONS (DO NOT USE HERE)**
+
+- Tulips
+- Black-eyed Susans
+- Lavender
+- IrisDaisies
+- Any yellow, pink, or purple flowering plants. 
+- These belong elsewhere in the landscape narrative.
+
+**Overall Design Intent**
+
+- The sunken seating area should read as a **calm architectural pause** within the landscape—clearly framed, subtly softened, and seamlessly integrated into the overall backyard circulation and symmetry.
+
+### **Back Yard Tennis Court Landscaping**
+
+- Remove all lighting poles surrounding the tennis court.
+- Introduce **crepe myrtles** behind the tennis court seating, placed in front of the hedges, alternating between **pink and white**.
+- Tennis court seating will be selected separately from the product catalogue.
+
+### **Back Yard Materials & Artwork**
+
+- Remove all **fish artwork** from exterior scenes (refer to whiteboard markup for clarification).
+
+## **Upper Level Terrace — Design Adjustments**
+
+- Remove the existing **pavilion structure** from the upper terrace.
+- Replace with a **low-profile integrated planter / seating element**, selected from the approved catalogue and aligned with the planting color palette outlined below.
+
+**Furniture Consistency**
+
+- All seating and lounge furnishings shall be **fully consistent with the approved catalogue selections** in both form and finish. No alternate chair styles, materials, or finishes are permitted.
+- Refer also to the **approved floral selections for table centerpieces**, which shall be used as specified to maintain overall design cohesion.
+
+**Terrace Garden & Railing Integration**
+
+- Introduce a continuous **garden / planter zone** along the **front edge of the terrace**, extending fully to the terrace perimeter.
+- Planters shall be designed to **align cleanly and flush with the terrace edge**, reinforcing a composed, architectural boundary.
+- The **railing shall continue uninterrupted around the entire upper terrace**, maintaining visual consistency and safety, with no interruption from planting elements.
+
+**Planter Planting Composition**
+
+### **Yellow Accent Layer — Highly Controlled**
+
+Select **one** yellow note only per grouping:
+
+- Soft butter-yellow violas
+- Pale yellow ranunculus
+- Golden thyme *(preferred subtle foliage option)*
+- Avoid all golden-orange or highly saturated yellow tones.
+
+**Planter Composition Rule** 
+
+Each planter shall include:
+
+1. **One structural element** *(small olive tree, small rounded boxwood, or ornamental grass)*
+2. **One white flowering or soft filler plant**
+3. **One restrained yellow accent**, used sparingly *(Yellow may be omitted in select planters to maintain balance.)*
+
+Not every planter is required to include yellow—**variation is intentional and essential to achieving a refined, elevated aesthetic**.
+
+**Design Intent**
+
+The upper terrace planting should feel **light, curated, and sun-washed**, introducing warmth and seasonal interest while remaining secondary to the architecture, furnishings, and surrounding views.
+
+## **Tree Placement Hierarchy**
+
+### **Holly Trees — Structural Backdrop** 
+
+- **Place along the rear yard perimeter and lawn edges, and behind sunken seating at a distance.**
+- **Use loose, rhythmic spacing (not a hedge); maintain visible trunks.**
+- **Keep offset from focal elements (firepit, pool).**
+- **Always behind olive trees and behind or between crape myrtles.**
+- **Do not mix directly with olives in the same bed. Role: Year-round structure and quiet framing.**
+
+**Olive Trees — Architectural Focal Moments**
+
+- **Place near the house, terraces, arrival views, and seating areas.**
+- **Keep intentional spacing; use viola ground cover beneath.**
+- **Always in front of holly trees.Do not mix with crape myrtles or bury in background planting. Role: Sculptural, lifestyle-driven accents.**
+
+**Crape Myrtles — Seasonal Backdrop**
+
+- **Place behind the tennis court and along rear yard edges in open light.**
+- **Use white dominant, pink as accent; space loosely to allow canopies to breathe.**
+- **Keep away from house and terraces.**
+- **Position in front of holly trees with air between; separate from olives. Role: Soft seasonal bloom without competing with architecture.**
+
+**Overall Intent**
+
+- **Olives lead the experience, crape myrtles soften the view, hollies hold the frame.**
+
+### **Pool House Representation — Clarification Required**
+
+Please clarify intent:
+
+- If this rendering represents the **pool house**, the **interior must be visible**.
+- If it is meant to be **purely exterior**, adjust composition to avoid duplication.
+
+If neither applies, we will need to **discuss scope and pricing before proceeding**.",2026-01-30 01:15:08.380425, ,True
+619793,Room 8 - Epos Brown ash - Catalog,35543,Kseniia Kukuiashna,21296,PM Dima Lytvynov,22698268,"##ALERT @PM Дмитрий Литвинов тут фш, скоро будет ",2026-01-23 15:38:39.374520,Kseniia Kukuiashna,False
+619793,Room 8 - Epos Brown ash - Catalog,35543,Kseniia Kukuiashna,21296,PM Dima Lytvynov,22700886,##T1 @Kseniia Kukuiashna,2026-01-23 18:24:32.338991,PM Dima Lytvynov,False
+619795,Room 9 - Epos black ash - Catalog,35543,Kseniia Kukuiashna,21296,PM Dima Lytvynov,22628732,"##ALERT @PM Дмитрий Литвинов тут рендерю, не было света ни в офисе, ни дома 
+
+в течение двух часов залью рез, если не будет отключений",2026-01-15 15:27:52.247574,Kseniia Kukuiashna,False
+619795,Room 9 - Epos black ash - Catalog,35543,Kseniia Kukuiashna,21296,PM Dima Lytvynov,22707801,"##ALERT @PM Дмитрий Литвинов тут возникли технические проблем с рендерингом на моей стороне, пробую ставить на ферму ",2026-01-26 10:35:08.463932,Kseniia Kukuiashna,False
+620230,SSR: pavers,13012,Vladyslav Karas,21296,PM Dima Lytvynov,22588973,"##ALERT у меня все готово было еще в пятницу, оставалось только постинг сделать. Но у меня накрылся ssd, пока сисадмин разбирается",2026-01-12 10:10:14.505609,Anastasiia  Poda,False
+620230,SSR: pavers,13012,Vladyslav Karas,21296,PM Dima Lytvynov,22636734,"##ALERT поставила на рендер, але в офісі може не бути світла, тому можу не встигнути до 16:00. Тут буде 2 рендери",2026-01-16 11:30:18.007137,Anastasiia  Poda,False
+620630,Chef Kitchen,15320,Tanya Rybalova,21296,PM Dima Lytvynov,22626182,"##ALERT
+
+Світла немає в офісі(",2026-01-15 12:09:43.756735,Khrystyna Tertytsia,False
+620630,Chef Kitchen,31646,Khrystyna Tertytsia,21296,PM Dima Lytvynov,22626182,"##ALERT
+
+Світла немає в офісі(",2026-01-15 12:09:43.756735,Khrystyna Tertytsia,False
+620630,Chef Kitchen,15320,Tanya Rybalova,21296,PM Dima Lytvynov,22626202,"##ALLERT
+
+Світла немає в офісі(",2026-01-15 12:11:50.334678,Khrystyna Tertytsia,False
+620630,Chef Kitchen,31646,Khrystyna Tertytsia,21296,PM Dima Lytvynov,22626202,"##ALLERT
+
+Світла немає в офісі(",2026-01-15 12:11:50.334678,Khrystyna Tertytsia,False
+620688,Set 1: (Bedroom),13012,Vladyslav Karas,21296,PM Dima Lytvynov,22592956,##ALERT,2026-01-12 14:24:21.462108,Mariia Hrebinnyk,False
+621467,Interior Design,1410,Irina Kovalenko,21296,PM Dima Lytvynov,23005536,"##ALERT буде до 17, самоперевірка",2026-02-27 13:37:03.245819,Irina Kovalenko,False
+621467,Interior Design,1410,Irina Kovalenko,21296,PM Dima Lytvynov,23327435,##BT,2026-04-07 20:27:41.196072,PM Dima Lytvynov,False
+621467,Interior Design,1410,Irina Kovalenko,21296,PM Dima Lytvynov,23464464,##Q1,2026-04-27 12:04:34.081536,PM Dima Lytvynov,False
+621467,Interior Design,1410,Irina Kovalenko,21296,PM Dima Lytvynov,23515849,"##ALERT ставила довго на ферму анімацію, тут буде до 19 ",2026-05-04 12:20:37.389258,Irina Kovalenko,False
+621767,SSR1: kitchen floor,13012,Vladyslav Karas,21296,PM Dima Lytvynov,22592218,##ALERT  трішки фотошопу лишилось. Трошки на 10 хвилин затримка. ,2026-01-12 13:48:27.620372,Arsen Andriadi,False
+621767,SSR1: kitchen floor,13012,Vladyslav Karas,21296,PM Dima Lytvynov,22592232,"## ##ALERT @PM Tania Zykova, трішки фотошопу лишилось. Трошки на 10 хвилин затримка.",2026-01-12 13:49:00.354237,Arsen Andriadi,False
+621767,SSR1: kitchen floor,13012,Vladyslav Karas,21296,PM Dima Lytvynov,22592374,##OT,2026-01-12 13:55:44.938568,PM Tania Zykova,False
+622068,Clay - ADD ON,15320,Tanya Rybalova,21296,PM Dima Lytvynov,22651244,"##ALERT відправка оновлених результатів в день правок, бо клієнт вже і фінали хоче) буде впродовж години",2026-01-19 13:59:26.828566,Tanya Rybalova,False
+622069,Rizo - ADD ON,15320,Tanya Rybalova,21296,PM Dima Lytvynov,22606794,"##ALERT 
+тут фш, скоро будет",2026-01-13 15:54:08.341570,Kseniia Kukuiashna,False
+622069,Rizo - ADD ON,35543,Kseniia Kukuiashna,21296,PM Dima Lytvynov,22606794,"##ALERT 
+тут фш, скоро будет",2026-01-13 15:54:08.341570,Kseniia Kukuiashna,False
+622154,SSR: Cafe ,1410,Irina Kovalenko,21296,PM Dima Lytvynov,22535181,##T1,2026-01-05 10:12:54.155436,PM Dima Lytvynov,False
+622154,SSR: Cafe ,13012,Vladyslav Karas,21296,PM Dima Lytvynov,22535181,##T1,2026-01-05 10:12:54.155436,PM Dima Lytvynov,False
+622154,SSR: Cafe ,13012,Vladyslav Karas,21296,PM Dima Lytvynov,22669362,##ALERT на всяк випадок,2026-01-21 10:07:53.410178,Irina Kovalenko,False
+622154,SSR: Cafe ,1410,Irina Kovalenko,21296,PM Dima Lytvynov,22669362,##ALERT на всяк випадок,2026-01-21 10:07:53.410178,Irina Kovalenko,False
+622471,Sofitel Porto MICE 5 Views,4482,Tetiana Opich,21296,PM Dima Lytvynov,22610678,"##ALERT
+
+Добавилась еще одна зона (изначально не было в тз) а дедлайн был от клиента",2026-01-13 21:10:23.285367,Tetiana Opich,False
+623180,Mojo Church,4482,Tetiana Opich,21296,PM Dima Lytvynov,23046076,"##ALERT
+
+сжатые сроки от клиента",2026-03-04 16:55:47.651435,Tetiana Opich,False
+623268,Bay villa,5881,Mykola Stepanov,21296,PM Dima Lytvynov,22842126,##C,2026-02-10 10:06:20.777841,PM Dima Lytvynov,False
+623268,Bay villa,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22842126,##C,2026-02-10 10:06:20.777841,PM Dima Lytvynov,False
+623269,"Luxury Suite 1st floor
+Diamond Suite",1410,Irina Kovalenko,21296,PM Dima Lytvynov,22869047,##A1,2026-02-12 15:07:13.107483,PM Dima Lytvynov,False
+623269,"Luxury Suite 1st floor
+Diamond Suite",3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22869047,##A1,2026-02-12 15:07:13.107483,PM Dima Lytvynov,False
+623269,"Luxury Suite 1st floor
+Diamond Suite",3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22869092,##A1CANCEL,2026-02-12 15:09:48.287772,PM Dima Lytvynov,False
+623269,"Luxury Suite 1st floor
+Diamond Suite",1410,Irina Kovalenko,21296,PM Dima Lytvynov,22869092,##A1CANCEL,2026-02-12 15:09:48.287772,PM Dima Lytvynov,False
+623270,"Corner Suite
+Gold Suite",3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22673041,"##ALERT вчора не було світла в офісі, від скачків напруги згорів ссдшнік ",2026-01-21 13:48:43.080732,Kristina  Kvach,False
+624741,Sendero,15320,Tanya Rybalova,21296,PM Dima Lytvynov,22640113,"##ALERT 
+великий обїем, не стигаю",2026-01-16 15:46:43.170734,Anastasia Mishustina,False
+624741,Sendero,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22640113,"##ALERT 
+великий обїем, не стигаю",2026-01-16 15:46:43.170734,Anastasia Mishustina,False
+626478,SSR: Hotel bar backsplash,31646,Khrystyna Tertytsia,21296,PM Dima Lytvynov,22626176,"##ALERT
+
+Світла немає в офісі(",2026-01-15 12:09:21.557519,Khrystyna Tertytsia,False
+626478,SSR: Hotel bar backsplash,31646,Khrystyna Tertytsia,21296,PM Dima Lytvynov,22723324,"##ALERT
+на 15 хв запізнююсь з відправкою резу",2026-01-27 13:57:10.107304,Khrystyna Tertytsia,False
+626479,SSR: High end retail space store floor,32258,Alexander Barsukov ,21296,PM Dima Lytvynov,22775145,##BT сгорела не по вине спека,2026-02-02 15:22:09.892848,PM Dima Lytvynov,False
+626479,SSR: High end retail space store floor,32258,Alexander Barsukov ,21296,PM Dima Lytvynov,23309737,"##ALERT  , на всякий, ренедерятся финалы + еще задача с дедлайном на сегодня. до 19.00 постараюсь отдать ",2026-04-06 11:50:34.691050,Alexander Barsukov ,False
+626741,"Bedroom / Roller blackout / white, alabaster, grey fabric, white blackout",15320,Tanya Rybalova,21296,PM Dima Lytvynov,22625713,"##Allert @PM Dima Lytvynov в офісі нема світла,  порендерю як тіки увімкнуть",2026-01-15 11:30:12.346824,Tanya Rybalova,False
+626854,Bantry Bay House,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22626185,"##ALERT
+
+Нема живлення в офісі",2026-01-15 12:10:08.946476,Anastasia Mishustina,False
+627094,Halton Padel Project,32258,Alexander Barsukov ,21296,PM Dima Lytvynov,22695371,##ALERT ,2026-01-23 13:11:40.305771,Alexander Barsukov ,False
+627094,Halton Padel Project,32258,Alexander Barsukov ,21296,PM Dima Lytvynov,22700925,##T1 @Alexander Barsukov,2026-01-23 18:28:17.015332,PM Dima Lytvynov,False
+627151,Kitchen,31646,Khrystyna Tertytsia,21296,PM Dima Lytvynov,22650388,"##ALERT
+наванатаження велике, трішки пізніше кину тут ",2026-01-19 13:04:58.194407,Khrystyna Tertytsia,False
+627152,Powder Room,31646,Khrystyna Tertytsia,21296,PM Dima Lytvynov,22650395,"##ALERT
+наванатаження велике, трішки пізніше кину тут",2026-01-19 13:05:06.887124,Khrystyna Tertytsia,False
+627152,Powder Room,31646,Khrystyna Tertytsia,21296,PM Dima Lytvynov,22656558,##BT тут не сгорело,2026-01-19 20:56:38.897817,PM Dima Lytvynov,False
+627153,Master Bathroom,31646,Khrystyna Tertytsia,21296,PM Dima Lytvynov,22683898,"##ALERT
+тут будет позже 4, стараюсь разгребать после вторника задачи, чуть из-за этого не успеваю ",2026-01-22 12:56:36.473878,Khrystyna Tertytsia,False
+627244,Autumn Leaves,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22687823,"##ALERT внесла правки від пм-а, довгий рендер",2026-01-22 16:34:46.301477,Maria Voitushenko,False
+627260,[high] 6 new collections (10 including subs) for valentines and uk mothers day,4845,Vera Duhina,21296,PM Dima Lytvynov,22724341,##Q1.3 @Vera Duhina,2026-01-27 14:45:20.121625,PM Dima Lytvynov,False
+627621,White Lighter,27257,Krystyna Stan,21296,PM Dima Lytvynov,22770613,##Q1.3 @Ivan Ivashchenko ,2026-02-02 10:34:16.434378,PM Dima Lytvynov,False
+627621,White Lighter,6776,Ivan Ivashchenko,21296,PM Dima Lytvynov,22770613,##Q1.3 @Ivan Ivashchenko ,2026-02-02 10:34:16.434378,PM Dima Lytvynov,False
+627621,White Lighter,6776,Ivan Ivashchenko,21296,PM Dima Lytvynov,22770616,##Q1.5 @Ivan Ivashchenko ,2026-02-02 10:34:22.120855,PM Dima Lytvynov,False
+627621,White Lighter,27257,Krystyna Stan,21296,PM Dima Lytvynov,22770616,##Q1.5 @Ivan Ivashchenko ,2026-02-02 10:34:22.120855,PM Dima Lytvynov,False
+627621,White Lighter,27257,Krystyna Stan,21296,PM Dima Lytvynov,22774967,##ALERT Вношу правки для повышения качества рендера по комментариям выше. ,2026-02-02 15:12:06.191739,Ivan Ivashchenko,False
+627621,White Lighter,6776,Ivan Ivashchenko,21296,PM Dima Lytvynov,22774967,##ALERT Вношу правки для повышения качества рендера по комментариям выше. ,2026-02-02 15:12:06.191739,Ivan Ivashchenko,False
+627633,Main Dining & Mian bar visualization,27257,Krystyna Stan,21296,PM Dima Lytvynov,22772025,##Q1.3 @Krystyna Stan ,2026-02-02 12:16:00.570489,PM Dima Lytvynov,False
+627633,Main Dining & Mian bar visualization,27257,Krystyna Stan,21296,PM Dima Lytvynov,22774790,"##ALERT делаю правки, думаю отправлю после 19(",2026-02-02 15:03:54.142076,Krystyna Stan,False
+627633,Main Dining & Mian bar visualization,27257,Krystyna Stan,21296,PM Dima Lytvynov,22805450,"### 1. Камеры и композиция
+
+- Изменить ракурсы камер:
+— показать больше бара и зоны с «губами»
+— убрать лишние / отвлекающие элементы
+- Проверить читаемость ключевых зон в каждом виде
+
+### 2. Мебель
+
+- Заменить обеденные стулья согласно предоставленному референсу
+- Проверить масштаб и пропорции мебели
+
+### 3. Полы
+
+- Исправить рисунок пола (шеврон):
+— скорректировать направление
+— проверить количество досок в паттерне
+- Убедиться, что шов и ритм выглядят реалистично
+
+### 4. Освещение
+
+- Сделать общее освещение более приглушённым
+- Использовать тёплую температуру света ~ **2200K**
+- Свериться с архитектурным световым планом
+- Проверить акцентное освещение (арки, сцена, бар)
+
+### 5. Потолок
+
+- Изменить цвет потолка на **матовый чёрный**
+- Проверить отсутствие бликов и пересветов
+
+### 6. Светильники и детали
+
+- Сделать рамки светильников более толстыми
+- Проверить корректность масштаба всех осветительных приборов
+
+### 7. Стены и отделка
+
+- Скорректировать масштаб обоев
+- Проверить читаемость паттерна на расстоянии
+- Уточнить цвет и материал софитов
+
+### 8. Сцена и акценты
+
+- Исправить фон сцены
+- Проверить подсветку сцены и декоративных элементов
+
+### 9. Дерево и шпон
+
+- Исправить направление текстуры шпона
+- Проверить реалистичность рисунка дерева
+
+### 10. LED и скрытая подсветка
+
+- Проверить корректность strip lighting
+- Убедиться, что свет мягкий и не «режет» глаз
+
+### 11. Финальная проверка
+
+- Общая атмосфера: тёплая, вечерняя
+- Материалы выглядят реалистично
+- Нет пересветов, шумов и «плоского» света",2026-02-05 08:58:34.671698,Krystyna Stan,False
+627796,Close Up Image,5881,Mykola Stepanov,21296,PM Dima Lytvynov,22683380,"### **Scene 1: Desert/Dry Region (e.g., Arizona)**
+
+- **Season/Time of Year:** Spring
+- **Region:** Desert or dry climate (Arizona, USA)
+- **Window Style:** Use the same window design as previously provided (clear, unobstructed glass).
+- **Interior Design:** Modern style with an active family lifestyle focus. Include subtle lifestyle elements that reflect a family of five, with minor untidiness (e.g., backpacks, toys, family items) without making the scene look messy.
+- **Environment View:**
+    - **Landscaping:** Subtle desert landscaping with dry, sandy terrain and sparse vegetation.
+    - **Foliage:** Minimal, dry grasses, and occasional desert plants like cacti or succulents.
+    - **Terrain:** Open, flat land with mountains or distant terrain visible in the background.
+- **Additional Notes:**
+    - Ensure the environment feels bright, with clear skies and direct sunlight. The view should be clear, avoiding any clouds or objects that obscure the glass.
+    - Showcase a clean, bright spring atmosphere with subtle warmth in the lighting.
+
+### **Scene 2: Mountain Region (e.g., Denver, CO)**
+
+- **Season/Time of Year:** Spring
+- **Region:** Mountainous area (e.g., Denver, Colorado, USA)
+- **Window Style:** Same window style as the previous one.
+- **Interior Design:** Modern style with an active family lifestyle. Include similar elements of family life, such as casual clothing, backpacks, and items showing an active lifestyle, but maintain tidiness.
+- **Environment View:**
+    - **Landscaping:** Springtime, with blooming flowers, green grass, and lush vegetation in the foreground.
+    - **Foliage:** Green foliage, trees starting to bloom, and other spring-related plant life.
+    - **Terrain:** Mountains in the background with only snow on the mountain tops. The lower part of the mountains should be green with vegetation and clear skies.
+- **Additional Notes:**
+    - Ensure bright, clear spring lighting, with natural sunlight filtering through the window.
+    - Keep the view clear and unobstructed, with no elements blocking the glass.
+
+### **General Notes for Both Scenes:**
+
+- **Depth of Field:** Use a narrow depth of field to keep the product in sharp focus while slightly blurring the foreground and background. The product should remain the main focal point of the image.
+- **Lighting & Colors:** The lighting should reflect spring/summer warmth. Natural sunlight, soft shadows, and clear skies should dominate both scenes. Ensure the views outside are bright and unobstructed.
+- **Seasonal/Regional Cues:**
+    - For the desert scene, showcase the dry, arid landscape with desert plants and minimal greenery.
+    - For the mountain scene, focus on spring with lush green landscapes and blooming vegetation, but keep the snow limited to the mountain tops.
+- **Product Focus:** The product should remain sharp and clear in both images, with the interior details supporting the overall theme of an active family lifestyle.
+
+### **Deliverables:**
+
+- **Two final renders** with the following details:
+    - **Scene 1 (Desert/Dry Region)** showcasing a spring desert landscape with white interior windows.
+    - **Scene 2 (Mountain Region)** showing a spring mountain landscape with snow on the mountain tops.
+- Both images should include subtle lifestyle cues that reflect an active family of five, with minor untidiness.
+- Ensure that the images are ready for detailed review and commentary on framing, proportions, and regional cues.",2026-01-22 12:13:05.900288,PM Dima Lytvynov,True
+627796,Close Up Image,5881,Mykola Stepanov,21296,PM Dima Lytvynov,22842134,##Q3,2026-02-10 10:06:45.837330,PM Dima Lytvynov,False
+627860,19 Davis Revisions,27257,Krystyna Stan,21296,PM Dima Lytvynov,22683475,##Q1.5 @Krystyna Stan,2026-01-22 12:22:50.062135,PM Dima Lytvynov,False
+628422,Environment 2,35432,Artur Kovhan,21296,PM Dima Lytvynov,22736709,"##ALERT
+
+Ще працюю на д лсками",2026-01-28 14:32:27.891746,Oleksandr  Todoriko,False
+628422,Environment 2,35432,Artur Kovhan,21296,PM Dima Lytvynov,22741162,##ОТ термінова задача ,2026-01-28 19:58:04.211194,PM Tania Zykova,False
+628422,Environment 2,35432,Artur Kovhan,21296,PM Dima Lytvynov,22844606,"##ALERT
+
+трохи не встигаю через великий загальний чвс рендеру",2026-02-10 13:16:11.822302,Oleksandr  Todoriko,False
+628422,Environment 2,35432,Artur Kovhan,21296,PM Dima Lytvynov,22845199,##OT довгий рендер,2026-02-10 13:57:46.915579,PM Tania Zykova,False
+628422,Environment 2,35432,Artur Kovhan,21296,PM Dima Lytvynov,22900120,"##alert
+
+рано себе дуже погно почував, так що трохи затримаю результат",2026-02-17 12:08:30.140465,Oleksandr  Todoriko,False
+628422,Environment 2,35432,Artur Kovhan,21296,PM Dima Lytvynov,22900539,##OT,2026-02-17 12:42:09.421873,PM Tania Zykova,False
+628422,Environment 2,35432,Artur Kovhan,21296,PM Dima Lytvynov,22952412,"##ALERT
+
+ще працюю над результатом",2026-02-23 13:11:26.880854,Oleksandr  Todoriko,False
+628422,Environment 2,35432,Artur Kovhan,21296,PM Dima Lytvynov,22952539,##OT дедлайн,2026-02-23 13:18:43.077697,PM Tania Zykova,False
+628422,Environment 2,35432,Artur Kovhan,21296,PM Dima Lytvynov,23087513,"##alert
+
+ферма вночі не працювала, не встиг до кінця все прорендерити",2026-03-10 11:28:05.088309,Oleksandr  Todoriko,False
+628422,Environment 2,35432,Artur Kovhan,21296,PM Dima Lytvynov,23090677,##OT ПРОБЛЕМИ З ФЕРМОЮ,2026-03-10 14:28:08.004938,PM Tania Zykova,False
+628423,Environment 3,35543,Kseniia Kukuiashna,21296,PM Dima Lytvynov,22736252,"##ALERT
+
+тут еще работаю",2026-01-28 14:02:41.588698,Kseniia Kukuiashna,False
+628423,Environment 3,35543,Kseniia Kukuiashna,21296,PM Dima Lytvynov,22740743,##T1,2026-01-28 19:09:55.750302,PM Dima Lytvynov,False
+628804,SSR: High end commercial feature wall or bar,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22760850,"##ALERT сдам до 19, доводила до кращого резльтату, щоб не віддавати ""сирий"" результат клієнту",2026-01-30 14:31:48.430775,Anastasia Mishustina,False
+628804,SSR: High end commercial feature wall or bar,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22914446,##Q!,2026-02-18 14:30:54.807776,PM Dima Lytvynov,False
+628804,SSR: High end commercial feature wall or bar,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,22914449,##Q1,2026-02-18 14:30:58.386252,PM Dima Lytvynov,False
+628808,SSR: entry way floor,1410,Irina Kovalenko,21296,PM Dima Lytvynov,22736883,##A1 @Irina Kovalenko,2026-01-28 14:41:56.235698,PM Dima Lytvynov,False
+628808,SSR: entry way floor,1410,Irina Kovalenko,21296,PM Dima Lytvynov,22736930,##alert буде о 21,2026-01-28 14:44:51.965698,Irina Kovalenko,False
+628808,SSR: entry way floor,1410,Irina Kovalenko,21296,PM Dima Lytvynov,22868747,##Q1,2026-02-12 14:51:24.569656,PM Dima Lytvynov,False
+628808,SSR: entry way floor,1410,Irina Kovalenko,21296,PM Dima Lytvynov,22868958,"##alert буде після 20, в мене запис лікаря",2026-02-12 15:04:04.821027,Irina Kovalenko,False
+629475,SSR: bathroom floor & WAll - (reopen),1410,Irina Kovalenko,21296,PM Dima Lytvynov,22744530,"##alert  буде  о 20, здаю іншу термінову задачу",2026-01-29 09:34:32.848454,Irina Kovalenko,False
+629603,Interior,5881,Mykola Stepanov,21296,PM Dima Lytvynov,22926527,##Q1,2026-02-19 13:52:43.945143,PM Dima Lytvynov,False
+629604,Exterior,1410,Irina Kovalenko,21296,PM Dima Lytvynov,22925271,"##ALERT  буде до 18, ще потрібно доробити деталі",2026-02-19 12:38:54.192350,Irina Kovalenko,False
+629604,Exterior,1410,Irina Kovalenko,21296,PM Dima Lytvynov,23066260,##ALERT буде до 18 ще фотошоплю,2026-03-06 13:47:36.752308,Irina Kovalenko,False
+629605,Animation,35432,Artur Kovhan,21296,PM Dima Lytvynov,23138032,"##ALERT тут буде пізніше, була пів дня у лікаря",2026-03-16 13:14:26.156687,Irina Kovalenko,False
+629605,Animation,1410,Irina Kovalenko,21296,PM Dima Lytvynov,23138032,"##ALERT тут буде пізніше, була пів дня у лікаря",2026-03-16 13:14:26.156687,Irina Kovalenko,False
+629605,Animation,1410,Irina Kovalenko,21296,PM Dima Lytvynov,23142308,##T1,2026-03-16 17:03:19.257181,PM Dima Lytvynov,False
+629605,Animation,35432,Artur Kovhan,21296,PM Dima Lytvynov,23142308,##T1,2026-03-16 17:03:19.257181,PM Dima Lytvynov,False
+629605,Animation,1410,Irina Kovalenko,21296,PM Dima Lytvynov,23159060,##T1,2026-03-18 09:39:04.217805,PM Dima Lytvynov,False
+629605,Animation,35432,Artur Kovhan,21296,PM Dima Lytvynov,23159060,##T1,2026-03-18 09:39:04.217805,PM Dima Lytvynov,False
+629605,Animation,35432,Artur Kovhan,21296,PM Dima Lytvynov,23452780,"##ALERT тут буде к 18-19,  ще вношу правки",2026-04-24 12:36:47.394502,Irina Kovalenko,False
+629605,Animation,1410,Irina Kovalenko,21296,PM Dima Lytvynov,23452780,"##ALERT тут буде к 18-19,  ще вношу правки",2026-04-24 12:36:47.394502,Irina Kovalenko,False
+629605,Animation,1410,Irina Kovalenko,21296,PM Dima Lytvynov,23456592,##C ,2026-04-24 16:36:17.706506,PM Dima Lytvynov,False
+629605,Animation,35432,Artur Kovhan,21296,PM Dima Lytvynov,23456592,##C ,2026-04-24 16:36:17.706506,PM Dima Lytvynov,False
+629605,Animation,1410,Irina Kovalenko,21296,PM Dima Lytvynov,23473886,"##ALERT буде до 18, бо правка з сьогодні на сьогодні",2026-04-28 11:20:05.338355,Irina Kovalenko,False
+629605,Animation,35432,Artur Kovhan,21296,PM Dima Lytvynov,23473886,"##ALERT буде до 18, бо правка з сьогодні на сьогодні",2026-04-28 11:20:05.338355,Irina Kovalenko,False
+629605,Animation,35432,Artur Kovhan,21296,PM Dima Lytvynov,23536196,"##ALert ще мажу косяки, буде після 16",2026-05-06 12:18:37.006475,Irina Kovalenko,False
+629605,Animation,1410,Irina Kovalenko,21296,PM Dima Lytvynov,23536196,"##ALert ще мажу косяки, буде після 16",2026-05-06 12:18:37.006475,Irina Kovalenko,False
+629833,Neighbourhood Summerset,35432,Artur Kovhan,21296,PM Dima Lytvynov,23150446,"##ALERT Скину после 21:00. Из за болезни медленно работаю 
+
+",2026-03-17 13:18:11.026655,Ivan Ivashchenko,False
+629833,Neighbourhood Summerset,6776,Ivan Ivashchenko,21296,PM Dima Lytvynov,23150446,"##ALERT Скину после 21:00. Из за болезни медленно работаю 
+
+",2026-03-17 13:18:11.026655,Ivan Ivashchenko,False
+629833,Neighbourhood Summerset,35432,Artur Kovhan,21296,PM Dima Lytvynov,23268299,##A1,2026-03-31 13:16:26.470908,PM Dima Lytvynov,False
+629833,Neighbourhood Summerset,6776,Ivan Ivashchenko,21296,PM Dima Lytvynov,23268299,##A1,2026-03-31 13:16:26.470908,PM Dima Lytvynov,False
+629833,Neighbourhood Summerset,6776,Ivan Ivashchenko,21296,PM Dima Lytvynov,23289893,##Q1,2026-04-02 10:45:11.944525,PM Dima Lytvynov,False
+629833,Neighbourhood Summerset,35432,Artur Kovhan,21296,PM Dima Lytvynov,23289893,##Q1,2026-04-02 10:45:11.944525,PM Dima Lytvynov,False
+629833,Neighbourhood Summerset,35432,Artur Kovhan,21296,PM Dima Lytvynov,23302728,##Q2,2026-04-03 15:29:50.092096,PM Dima Lytvynov,False
+629833,Neighbourhood Summerset,6776,Ivan Ivashchenko,21296,PM Dima Lytvynov,23302728,##Q2,2026-04-03 15:29:50.092096,PM Dima Lytvynov,False
+630244,0104-12 Animation ,4482,Tetiana Opich,21296,PM Dima Lytvynov,22858503,##M,2026-02-11 16:10:01.243710,Tetiana Opich,False
+630455,Cruz Locust Closet,5881,Mykola Stepanov,21296,PM Dima Lytvynov,23445266,##ALERT долний рендер,2026-04-23 16:30:22.496078,Mykola Stepanov,False
+630455,Cruz Locust Closet,15320,Tanya Rybalova,21296,PM Dima Lytvynov,23445266,##ALERT долний рендер,2026-04-23 16:30:22.496078,Mykola Stepanov,False
+630666,SSR: Bathroom,1410,Irina Kovalenko,21296,PM Dima Lytvynov,23043310,##ALERT вношу правки від тл,2026-03-04 14:16:15.442430,Irina Kovalenko,False
+630666,SSR: Bathroom,15320,Tanya Rybalova,21296,PM Dima Lytvynov,23043310,##ALERT вношу правки від тл,2026-03-04 14:16:15.442430,Irina Kovalenko,False
+630921,134. Lawn Care,5881,Mykola Stepanov,21296,PM Dima Lytvynov,22833340,"### 1. Мета зображення
+
+Створити рекламне зображення, яке:
+
+- демонструє **догляд за газоном і ландшафтом у сезон**
+- акцентує увагу на **ключових товарах для догляду за газоном**
+- формує асоціацію з **швидкістю та доступною ціною** (CVP)
+
+### 2. Ключове повідомлення (Key Message)
+
+Показати клієнтам **hero-товари сезону**, пов’язані з:
+
+- доглядом за газоном
+- підтримкою та ростом рослин
+- благоустроєм прибудинкової території
+
+Зображення має виглядати як **реальна житлова сцена**, а не постановочний каталог.
+
+### 3. Ціннісна пропозиція (CVP)
+
+Обрати **не більше двох**:
+
+- ✔ Швидкість
+- ✔ Ціна
+
+Ці характеристики мають зчитуватись через:
+
+- доступні, зрозумілі інструменти
+- готовність до використання
+- акуратну, доглянуту територію
+
+### 4. Опис сцени / композиція (Image Request Details)
+
+#### Загальний план:
+
+- Приватний житловий будинок
+- Охайний передній двір
+- Денне освітлення, приємна погода
+
+#### Обовʼязкові елементи сцени:
+
+1. **Газонокосарка**
+    - Розмістити **праворуч**
+    - Стоїть на траві поруч із доріжкою
+    - Вигляд — готова до роботи
+2. **Доріжка**
+    - Проходить через газон до будинку
+    - Уздовж доріжки — **садові світильники**
+3. **Рослини та озеленення**
+    - Кущі та дерева на передньому плані
+    - Використати:
+        - гортензії
+        - декоративні кущі
+    - Все виглядає доглянутим і живим
+4. **Товари для догляду за рослинами**
+    - Розмістити **біля ландшафтної зони, на ґрунті**
+    - Обовʼязково включити:
+        - добриво для рослин
+        - садовий шланг
+        - хімічні засоби / спрей для догляду
+5. **Меблі**
+    - Bistro-набір (стіл + стільці)
+    - Розмістити **перед будинком**
+    - Створює відчуття житлового комфорту
+
+### 5. Стиль і настрій
+
+- Фотореалістичний
+- Житловий, не комерційно-каталожний
+- Чистий, охайний, сезонний
+- Відчуття «готово до використання тут і зараз»
+
+### 6. Обмеження та вимоги
+
+- Без зайвого тексту на зображенні
+- Без агресивної реклами
+- Без нереалістичних кольорів
+- Усі елементи мають виглядати логічно розміщеними
+
+### 7. Референси
+
+- Орієнтуватися на надане зображення як **композиційний та стилістичний референс**
+- Допускається адаптація, але зі збереженням логіки сцени",2026-02-09 13:33:39.541870,Arsen Andriadi,False
+630923,136. Outdoor Cooking Lifestyle,31646,Khrystyna Tertytsia,21296,PM Dima Lytvynov,23267507,"##ALERT
+
+тут через відключення світла в офісі може на хвилин 20 запізнюсь з відправкою резів, треба архіви допакувати",2026-03-31 12:35:21.108290,Khrystyna Tertytsia,False
+631035,13698363162 remodeling,27257,Krystyna Stan,21296,PM Dima Lytvynov,23475061,##QA/FailedMyLib Cancel,2026-04-28 12:54:52.540018,Viktoriia Dihtiarenko,False
+632500,Mettere Ceiling Tile Render 01,6776,Ivan Ivashchenko,21296,PM Dima Lytvynov,22924298,##Q1,2026-02-19 11:30:44.885648,PM Dima Lytvynov,False
+632666,SSR: Shower,32258,Alexander Barsukov ,21296,PM Dima Lytvynov,23258741,##Q1 ,2026-03-30 16:06:16.366572,PM Dima Lytvynov,False
+632824,[high] rendering new small orchids,4845,Vera Duhina,21296,PM Dima Lytvynov,23010075,##OT,2026-02-27 19:10:40.839625,PM Dima Lytvynov,False
+633016,Web animation,35432,Artur Kovhan,21296,PM Dima Lytvynov,23015379,"##A1 
+",2026-03-02 09:58:35.919639,PM Dima Lytvynov,False
+633016,Web animation,35432,Artur Kovhan,21296,PM Dima Lytvynov,23048178,##C1 @PM Dima Lytvynov,2026-03-04 20:04:42.144107,PM Dima Lytvynov,False
+633443,666 Post Task,6776,Ivan Ivashchenko,21296,PM Dima Lytvynov,22980585,##Q1,2026-02-25 14:58:44.036029,PM Dima Lytvynov,False
+633652,luxe 14,4482,Tetiana Opich,21296,PM Dima Lytvynov,22942335,"##ALERT
+
+тут не было дедлайна на сегодня",2026-02-20 16:22:00.617047,Tetiana Opich,False
+633810,S5675X Warrington_A_B_C_Kitchen,27257,Krystyna Stan,21296,PM Dima Lytvynov,23008056,"##ALERT, роблю правки до 7 скину ",2026-02-27 15:51:53.261204,Kristina  Kvach,False
+633810,S5675X Warrington_A_B_C_Kitchen,35432,Artur Kovhan,21296,PM Dima Lytvynov,23008056,"##ALERT, роблю правки до 7 скину ",2026-02-27 15:51:53.261204,Kristina  Kvach,False
+633811,S5675X Warrington_A_B_C_Gather,27257,Krystyna Stan,21296,PM Dima Lytvynov,23019849,"##Alert скину около семи, еще рендерю",2026-03-02 14:36:44.332714,Artem Glukhov,False
+633815,S5675X Warrington_A_B_Primary Bathroom,32258,Alexander Barsukov ,21296,PM Dima Lytvynov,23085169,##A1,2026-03-10 08:39:33.491582,PM Dima Lytvynov,False
+633815,S5675X Warrington_A_B_Primary Bathroom,27257,Krystyna Stan,21296,PM Dima Lytvynov,23085169,##A1,2026-03-10 08:39:33.491582,PM Dima Lytvynov,False
+633816,S5675X Warrington_A_Bedroom 2,27257,Krystyna Stan,21296,PM Dima Lytvynov,23021463,"##ALERT 
+
+",2026-03-02 15:57:39.087129,Oleh  Tarasov,False
+633816,S5675X Warrington_A_Bedroom 2,27257,Krystyna Stan,21296,PM Dima Lytvynov,23104843,"##ALERT 
+ночью слетел рендер 8к , в течении получаса будет ",2026-03-11 15:56:27.456038,Oleh  Tarasov,False
+635275,727095850,5881,Mykola Stepanov,21296,PM Dima Lytvynov,23064229,##T1,2026-03-06 11:02:26.863335,PM Sergii Koynov,False
+635817,Library (Option A & B),15320,Tanya Rybalova,21296,PM Dima Lytvynov,23198989,"##ALERT 
+правки от Тим лида",2026-03-23 14:46:17.102950,Anastasia Mishustina,False
+635817,Library (Option A & B),3958,Anastasia Mishustina,21296,PM Dima Lytvynov,23198989,"##ALERT 
+правки от Тим лида",2026-03-23 14:46:17.102950,Anastasia Mishustina,False
+635817,Library (Option A & B),15320,Tanya Rybalova,21296,PM Dima Lytvynov,23363353,"##ALERT
+трошки не встигаю- хворію і менш продуктивна, але до 19 буду старатись здати",2026-04-14 10:49:39.616625,Anastasia Mishustina,False
+635817,Library (Option A & B),3958,Anastasia Mishustina,21296,PM Dima Lytvynov,23363353,"##ALERT
+трошки не встигаю- хворію і менш продуктивна, але до 19 буду старатись здати",2026-04-14 10:49:39.616625,Anastasia Mishustina,False
+636073,Bagatelle Beach Club Exterior Renderings,5881,Mykola Stepanov,21296,PM Dima Lytvynov,23117264,##Q1,2026-03-12 15:39:50.113390,PM Dima Lytvynov,False
+636073,Bagatelle Beach Club Exterior Renderings,5881,Mykola Stepanov,21296,PM Dima Lytvynov,23135705,##A1,2026-03-16 10:53:51.082504,PM Dima Lytvynov,False
+636468,Tambour Bedroom & Kitchen Island,27257,Krystyna Stan,21296,PM Dima Lytvynov,23106191,##Q1,2026-03-11 17:16:26.916741,PM Dima Lytvynov,False
+636468,Tambour Bedroom & Kitchen Island,27257,Krystyna Stan,21296,PM Dima Lytvynov,23124525,##Q1Cancel,2026-03-13 11:02:20.258693,PM Dima Lytvynov,False
+636843,Bagatelle interior renderings,4845,Vera Duhina,21296,PM Dima Lytvynov,23314699,"##A1 
+",2026-04-06 17:43:11.633469,PM Dima Lytvynov,False
+637033,Group 1,6776,Ivan Ivashchenko,21296,PM Dima Lytvynov,23150478,"##ALERT Скину после 21:00. Из за болезни медленно работаю 
+
+",2026-03-17 13:19:25.306841,Ivan Ivashchenko,False
+637043,160365 Brio 2,4482,Tetiana Opich,21296,PM Dima Lytvynov,23475931,##Q1,2026-04-28 13:47:28.312672,PM Dima Lytvynov,False
+637675,The Oxbow,5881,Mykola Stepanov,21296,PM Dima Lytvynov,23294936,##ALERT срочные правки на другом клиенте WallMart,2026-04-02 16:28:21.761337,Mykola Stepanov,False
+637855,Group 4,6776,Ivan Ivashchenko,21296,PM Dima Lytvynov,23314688,##C1,2026-04-06 17:41:00.310535,PM Dima Lytvynov,False
+637869, Lifestyle 3 : Modo / Silos Used in “Education Setting”,4482,Tetiana Opich,21296,PM Dima Lytvynov,23242767,##ALERT Мисскомуникация в проекте (Моделлер - ПМ - Визер) ,2026-03-27 13:45:33.303012,PM Dima Lytvynov,False
+637869, Lifestyle 3 : Modo / Silos Used in “Education Setting”,4482,Tetiana Opich,21296,PM Dima Lytvynov,23242769,##C @PM Dima Lytvynov,2026-03-27 13:45:44.416316,PM Dima Lytvynov,False
+638359,Rory Medicine Cabinet,5881,Mykola Stepanov,21296,PM Dima Lytvynov,23544405,##A1,2026-05-07 09:18:12.868201,PM Dima Lytvynov,False
+638359,Rory Medicine Cabinet,15320,Tanya Rybalova,21296,PM Dima Lytvynov,23544405,##A1,2026-05-07 09:18:12.868201,PM Dima Lytvynov,False
+638363,Scene Reopen,35543,Kseniia Kukuiashna,21296,PM Dima Lytvynov,23398058,"##ALERT @PM Дмитрий Литвинов тут будет задержка, потому что занимаюсь созданием глб ",2026-04-17 13:00:20.137615,Kseniia Kukuiashna,False
+638414,Rowan Vanity,35543,Kseniia Kukuiashna,21296,PM Dima Lytvynov,23323923,"##ALERT тут скоро будет, вылетел фотошоп, не сохранились изменения(",2026-04-07 14:50:59.969441,Kseniia Kukuiashna,False
+638414,Rowan Vanity,15320,Tanya Rybalova,21296,PM Dima Lytvynov,23323923,"##ALERT тут скоро будет, вылетел фотошоп, не сохранились изменения(",2026-04-07 14:50:59.969441,Kseniia Kukuiashna,False
+638414,Rowan Vanity,15320,Tanya Rybalova,21296,PM Dima Lytvynov,23528335,"##ALERT @PM Дмитрий Литвинов тут задерживаюсь, в фотошопе прихорашиваю картинки ",2026-05-05 14:56:11.771088,Kseniia Kukuiashna,False
+638414,Rowan Vanity,35543,Kseniia Kukuiashna,21296,PM Dima Lytvynov,23528335,"##ALERT @PM Дмитрий Литвинов тут задерживаюсь, в фотошопе прихорашиваю картинки ",2026-05-05 14:56:11.771088,Kseniia Kukuiashna,False
+638415,Corbin Vanity,15320,Tanya Rybalova,21296,PM Dima Lytvynov,23512746,##T1 @PM Dima Lytvynov,2026-05-04 07:47:47.769996,PM Dima Lytvynov,False
+638415,Corbin Vanity,4482,Tetiana Opich,21296,PM Dima Lytvynov,23512746,##T1 @PM Dima Lytvynov,2026-05-04 07:47:47.769996,PM Dima Lytvynov,False
+638415,Corbin Vanity,4482,Tetiana Opich,21296,PM Dima Lytvynov,23568607,"##ALERT 
+
+внутрішня перевірка",2026-05-11 16:13:38.649077,Tetiana Opich,False
+638415,Corbin Vanity,15320,Tanya Rybalova,21296,PM Dima Lytvynov,23568607,"##ALERT 
+
+внутрішня перевірка",2026-05-11 16:13:38.649077,Tetiana Opich,False
+638515,171. 2026 BTS Wellness OLD,32258,Alexander Barsukov ,21296,PM Dima Lytvynov,23326688,##Q2,2026-04-07 18:33:06.048062,PM Tania Zykova,False
+638585,SSR: Outdoor 1 Dog Wash,27257,Krystyna Stan,21296,PM Dima Lytvynov,23292407,##Q1,2026-04-02 13:50:44.236621,PM Dima Lytvynov,False
+638696,Palmilla Visualization 2 (views) ,4482,Tetiana Opich,21296,PM Dima Lytvynov,23283553,"##ALERT
+
+чекала модельки",2026-04-01 15:53:51.144793,Tetiana Opich,False
+638696,Palmilla Visualization 2 (views) ,4482,Tetiana Opich,21296,PM Dima Lytvynov,23304680,"##ALERT
+
+термінові строки для клієнта",2026-04-03 18:49:26.547272,Tetiana Opich,False
+638968,SSR: Bathroom 2 Master Bathroom Wall/ Floor,3958,Anastasia Mishustina,21296,PM Dima Lytvynov,23229232,"##ALERT не успею до 16, плохо себя чувствую, до 19 постараюсь успеть",2026-03-26 11:27:31.483992,Anastasia Mishustina,False
+638971,SSR: Outdoor 1 rooftop,32258,Alexander Barsukov ,21296,PM Dima Lytvynov,23230570,##Q1,2026-03-26 13:11:41.951263,PM Dima Lytvynov,False
+639014,Animation,35432,Artur Kovhan,21296,PM Dima Lytvynov,23302731,##C1,2026-04-03 15:30:25.093523,PM Dima Lytvynov,False
+639285,Airport scene,32258,Alexander Barsukov ,21296,PM Dima Lytvynov,23268911,##C1,2026-03-31 13:49:09.720076,PM Dima Lytvynov,False
+639833,KITCHEN_01 - Liberty,35543,Kseniia Kukuiashna,21296,PM Dima Lytvynov,23497322,"##ALERT тут еще работаю, настраиваю цвета",2026-04-30 14:55:51.691633,Kseniia Kukuiashna,False
+639833,KITCHEN_01 - Liberty,15320,Tanya Rybalova,21296,PM Dima Lytvynov,23497322,"##ALERT тут еще работаю, настраиваю цвета",2026-04-30 14:55:51.691633,Kseniia Kukuiashna,False
+640639,Bali Solar Sliding Panels,31646,Khrystyna Tertytsia,21296,PM Dima Lytvynov,23456714,##BT,2026-04-24 16:47:55.363691,PM Dima Lytvynov,False
+640721,Deck Outdoor,27257,Krystyna Stan,21296,PM Dima Lytvynov,23363222,##Q1,2026-04-14 10:38:03.509719,PM Dima Lytvynov,False
+640859,Rhett Vanity,32258,Alexander Barsukov ,21296,PM Dima Lytvynov,23377822,"##ALERT на всякий случай, скинул не до 16.00 на проверку а в 17.00 , если будут правки от пм и тим лида ,возможн не успею до 18.00 сделать ",2026-04-15 14:20:19.674129,Alexander Barsukov ,False
+640859,Rhett Vanity,15320,Tanya Rybalova,21296,PM Dima Lytvynov,23377822,"##ALERT на всякий случай, скинул не до 16.00 на проверку а в 17.00 , если будут правки от пм и тим лида ,возможн не успею до 18.00 сделать ",2026-04-15 14:20:19.674129,Alexander Barsukov ,False
+640859,Rhett Vanity,15320,Tanya Rybalova,21296,PM Dima Lytvynov,23411799,"##ALERT на всякий случай, рендер отдам через 15 мин,   если будут правки от пм и тим лида ,возможн не успею до 18.00 сделать",2026-04-20 14:22:33.202161,Alexander Barsukov ,False
+640859,Rhett Vanity,32258,Alexander Barsukov ,21296,PM Dima Lytvynov,23411799,"##ALERT на всякий случай, рендер отдам через 15 мин,   если будут правки от пм и тим лида ,возможн не успею до 18.00 сделать",2026-04-20 14:22:33.202161,Alexander Barsukov ,False
+640859,Rhett Vanity,32258,Alexander Barsukov ,21296,PM Dima Lytvynov,23423884,##A1,2026-04-21 16:32:18.165925,PM Dima Lytvynov,False
+640859,Rhett Vanity,15320,Tanya Rybalova,21296,PM Dima Lytvynov,23423884,##A1,2026-04-21 16:32:18.165925,PM Dima Lytvynov,False
+640859,Rhett Vanity,15320,Tanya Rybalova,21296,PM Dima Lytvynov,23591269,### [Corbin Vanity - Messages | Archivizer](https://archivizer.com/tasks/JDKAENUY) вот теперь наш стандарт,2026-05-13 16:38:33.368680,PM Dima Lytvynov,False
+640859,Rhett Vanity,32258,Alexander Barsukov ,21296,PM Dima Lytvynov,23591269,### [Corbin Vanity - Messages | Archivizer](https://archivizer.com/tasks/JDKAENUY) вот теперь наш стандарт,2026-05-13 16:38:33.368680,PM Dima Lytvynov,False
+643143,Yeadon Affordable Housing ,4482,Tetiana Opich,21296,PM Dima Lytvynov,23519885,##ALERT внутренние правки,2026-05-04 17:58:59.616425,Tetiana Opich,False
+644234,T2810_A_Kitchens,27257,Krystyna Stan,21296,PM Dima Lytvynov,23518047,##Q1,2026-05-04 14:58:49.763971,PM Dima Lytvynov,False
+644234,T2810_A_Kitchens,31646,Khrystyna Tertytsia,21296,PM Dima Lytvynov,23518047,##Q1,2026-05-04 14:58:49.763971,PM Dima Lytvynov,False
+644446,Grillez 01 tile visualization,32258,Alexander Barsukov ,21296,PM Dima Lytvynov,23537880,"##ALERT на всякий случай , если будут правки не успею до 6 ",2026-05-06 14:16:58.841820,Alexander Barsukov ,False
+644924,Outdoor Grill ,27257,Krystyna Stan,21296,PM Dima Lytvynov,23546653,##Q1,2026-05-07 12:05:12.211317,PM Dima Lytvynov,False

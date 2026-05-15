@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ARCHI Gantt — Archivizer Style Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing:border-box; margin:0; padding:0; }
+
+:root {
+  --bg:       #F3F5F8;
+  --surface:  #FFFFFF;
+  --nav:      #161E2D;
+  --nav2:     #1F2D3D;
+  --accent:   #4A7BF7;
+  --accent-h: #3A6AE6;
+  --text:     #1A2035;
+  --sub:      #6B7A90;
+  --dim:      #9AA5B4;
+  --border:   #E2E8F0;
+  --border2:  #EDF0F5;
+  --hover:    #F7F9FC;
+  --shadow:   0 1px 3px rgba(0,0,0,.07), 0 1px 2px rgba(0,0,0,.04);
+  --shadow-m: 0 4px 16px rgba(0,0,0,.08), 0 1px 4px rgba(0,0,0,.05);
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 13px;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Nav ── */
+nav {
+  height: 52px;
+  background: var(--nav);
+  display: flex; align-items: center;
+  padding: 0 20px; gap: 14px;
+  box-shadow: 0 1px 0 rgba(255,255,255,.06);
+  position: sticky; top: 0; z-index: 100;
+}
+.logo-icon {
+  width: 26px; height: 26px; border-radius: 7px;
+  background: var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700; color: #fff;
+  flex-shrink: 0; letter-spacing: -.3px;
+}
+.logo-text { font-size: 13px; font-weight: 600; color: #fff; letter-spacing: -.2px; }
+.logo-text span { color: #7AAAF0; font-weight: 400; }
+.logo-sub { font-size: 10px; color: rgba(255,255,255,.3); margin-top: 1px; }
+
+.nav-tabs {
+  display: flex;
+  background: rgba(255,255,255,.07);
+  border-radius: 7px; padding: 3px; gap: 1px;
+}
+.nav-tab {
+  padding: 4px 14px; border-radius: 5px;
+  font-size: 12px; font-weight: 500;
+  cursor: pointer; color: rgba(255,255,255,.45);
+  border: none; background: transparent;
+  transition: all .15s; letter-spacing: -.1px;
+  font-family: inherit;
+}
+.nav-tab.on { background: var(--accent); color: #fff; }
+.nav-back {
+  padding: 5px 12px; border-radius: 6px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: transparent; color: rgba(255,255,255,.45);
+  font-size: 11px; text-decoration: none; font-family: inherit;
+}
+
+/* ── Filter bar ── */
+.filter-bar {
+  background: var(--surface);
+  margin: 12px 18px 0;
+  border-radius: 10px;
+  padding: 8px 14px;
+  display: flex; gap: 8px; align-items: center; flex-wrap: wrap;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+.flbl { font-size: 10px; font-weight: 600; text-transform: uppercase; color: var(--dim); letter-spacing: .5px; }
+.pill {
+  padding: 3px 10px; border-radius: 5px;
+  font-size: 11px; font-weight: 500;
+  border: 1.5px solid var(--border);
+  color: var(--sub); cursor: pointer;
+  transition: all .12s; background: transparent;
+  font-family: inherit;
+}
+.pill.on { background: var(--nav2); border-color: var(--nav2); color: #fff; }
+.sep { width: 1px; height: 18px; background: var(--border); flex-shrink: 0; }
+.srch {
+  padding: 5px 10px; border-radius: 6px;
+  border: 1.5px solid var(--border);
+  background: var(--bg); color: var(--text);
+  font-size: 12px; outline: none; width: 155px;
+  font-family: inherit;
+}
+.srch::placeholder { color: var(--dim); }
+.cnt { margin-left: auto; font-size: 11px; color: var(--dim); }
+
+/* ── Content ── */
+.content { padding: 12px 18px 28px; }
+
+/* ── Status pills ── */
+.sp {
+  display: inline-block; padding: 3px 9px; border-radius: 5px;
+  font-size: 11px; font-weight: 500; letter-spacing: -.1px;
+}
+.sp-ip   { background: #EEF4FF; color: #3A6AE6; }
+.sp-qa   { background: #F3EEFF; color: #7640D4; }
+.sp-rfa  { background: #ECFBF1; color: #1A9645; }
+.sp-done { background: #E8F8EE; color: #157A38; }
+.sp-paus { background: #FFF2EC; color: #C05A20; }
+
+/* ── GANTT ── */
+.gantt-wrap {
+  background: var(--surface);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.g-hdr {
+  display: flex;
+  background: var(--nav2);
+}
+.g-fixed-hdr { width: 520px; flex-shrink: 0; display: flex; background: var(--nav2); }
+.g-col {
+  padding: 0 12px; height: 40px;
+  display: flex; align-items: center;
+  font-size: 10px; font-weight: 600;
+  color: rgba(255,255,255,.5);
+  text-transform: uppercase; letter-spacing: .5px;
+  border-right: 1px solid rgba(255,255,255,.08);
+}
+.g-months { flex:1; display: flex; align-items: center; padding: 0 12px; }
+.g-mlbl { font-size: 11px; font-weight: 500; color: rgba(255,255,255,.5); }
+
+.g-group {
+  display: flex;
+  background: #F8FAFC;
+  border-top: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+}
+.g-glbl {
+  width: 520px; flex-shrink: 0;
+  padding: 5px 12px;
+  font-size: 11px; font-weight: 600; color: var(--nav2);
+}
+
+.g-row {
+  display: flex; border-top: 1px solid var(--border2);
+  min-height: 34px; align-items: center;
+  transition: background .1s; cursor: default;
+}
+.g-row:hover { background: var(--hover); }
+.g-row.ov { border-left: 3px solid #E05050; }
+
+.g-fixed { width: 520px; flex-shrink: 0; display: flex; align-items: center; }
+.g-task {
+  width: 260px; padding: 0 12px;
+  font-size: 11px; font-weight: 500; color: var(--accent);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  border-right: 1px solid var(--border2); text-decoration: none;
+}
+.g-task:hover { text-decoration: underline; }
+.g-task.red { color: #C04040; }
+.g-who { width: 130px; padding: 0 12px; font-size: 11px; color: var(--sub); border-right: 1px solid var(--border2); }
+.g-sc  { width: 130px; padding: 0 12px; }
+
+.g-tl { flex:1; position: relative; height: 34px; display: flex; align-items: center; overflow: hidden; }
+
+.seg {
+  position: absolute; height: 20px; border-radius: 4px;
+  display: flex; align-items: center;
+  font-size: 9px; font-weight: 500; padding: 0 6px;
+  overflow: hidden; white-space: nowrap;
+}
+.seg-ip   { background: #DBEAFE; color: #1D4ED8; border: 1px solid #BFDBFE; }
+.seg-qa   { background: #EDE9FE; color: #6D28D9; border: 1px solid #DDD6FE; }
+.seg-rfa  { background: #DCFCE7; color: #166534; border: 1px solid #BBF7D0; }
+.seg-done { background: #D1FAE5; color: #064E3B; border: 1px solid #A7F3D0; }
+.seg-paus { background: #FFEDD5; color: #9A3412; border: 1px solid #FED7AA; }
+.seg-set  { background: #F1F5F9; color: #64748B; border: 1px solid #E2E8F0; }
+
+.today-ln {
+  position: absolute; top: 3px; bottom: 3px; width: 1.5px;
+  background: var(--accent); opacity: .7; z-index: 5;
+}
+.today-dot {
+  position: absolute; top: -3px; left: -3px;
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--accent);
+}
+
+/* ── Cards table ── */
+.c-wrap { background: var(--surface); border-radius: 12px; border: 1px solid var(--border); box-shadow: var(--shadow); overflow: hidden; }
+.c-hdr {
+  display: grid; grid-template-columns: 1fr 140px 155px 90px 90px 170px;
+  padding: 0 16px;
+  background: var(--nav2);
+}
+.c-hc { padding: 9px 7px; font-size: 10px; font-weight: 600; color: rgba(255,255,255,.5); text-transform: uppercase; letter-spacing: .5px; }
+
+.c-row {
+  display: grid; grid-template-columns: 1fr 140px 155px 90px 90px 170px;
+  padding: 0 16px; min-height: 46px; align-items: center;
+  border-top: 1px solid var(--border2);
+  border-left: 3px solid transparent;
+  transition: background .1s; cursor: pointer;
+}
+.c-row:hover { background: var(--hover); }
+.c-row.ov { border-left-color: #E05050; background: #FFF8F8; }
+.c-row.bn { border-left-color: #E07830; background: #FFFAF6; }
+
+.c-tname { font-size: 11px; color: var(--accent); font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.c-tname.red { color: #C04040; }
+.c-proj  { font-size: 10px; color: var(--dim); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.c-who   { font-size: 11px; color: var(--sub); }
+
+.dl-ov { font-size: 11px; font-weight: 600; color: #C04040; }
+.dl-bn { font-size: 11px; font-weight: 600; color: #C07030; }
+.dl-ok { font-size: 11px; color: var(--sub); }
+.dl-s  { font-size: 10px; opacity: .7; }
+
+.ret-0 { font-size: 11px; color: var(--dim); }
+.ret-1 { font-size: 11px; font-weight: 600; color: #C07030; }
+.ret-2 { font-size: 11px; font-weight: 600; color: #C04040; }
+
+.prog-row { display: flex; align-items: center; gap: 6px; }
+.prog-bg  { flex:1; height: 5px; border-radius: 3px; background: var(--border); overflow: hidden; }
+.prog-f   { height: 100%; border-radius: 3px; }
+.prog-bl  { background: var(--accent); }
+.prog-gr  { background: #22C55E; }
+.prog-or  { background: #F97316; }
+.prog-rd  { background: #EF4444; }
+.prog-pct { font-size: 10px; color: var(--dim); width: 28px; text-align: right; }
+
+/* Tooltip */
+.tip {
+  position: absolute; right: 14px; top: 50%; transform: translateY(-50%);
+  width: 240px; padding: 12px 13px;
+  border-radius: 10px; z-index: 20;
+  background: var(--nav);
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 12px 40px rgba(0,0,0,.2), 0 2px 8px rgba(0,0,0,.12);
+}
+.tip-name { font-size: 11px; font-weight: 600; color: #fff; margin-bottom: 7px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tip-row  { display: flex; justify-content: space-between; padding: 2.5px 0; border-top: 1px solid rgba(255,255,255,.06); font-size: 10px; }
+.tip-k    { color: rgba(255,255,255,.4); }
+.tip-v    { color: rgba(255,255,255,.85); font-weight: 500; }
+.tip-segs { display: flex; gap: 3px; flex-wrap: wrap; margin-top: 7px; }
+
+/* ── Analytics ── */
+.srt-bar { display: flex; gap: 6px; margin-bottom: 12px; align-items: center; flex-wrap: wrap; }
+.srt-p {
+  padding: 3px 10px; border-radius: 5px;
+  font-size: 11px; font-weight: 500;
+  border: 1.5px solid var(--border);
+  color: var(--sub); cursor: pointer;
+  transition: all .12s; background: transparent; font-family: inherit;
+}
+.srt-p.on { background: var(--nav2); border-color: var(--nav2); color: #fff; }
+
+.sub-tabs {
+  display: flex; background: var(--bg); border-radius: 7px; padding: 3px; gap: 1px;
+  border: 1px solid var(--border);
+}
+.sub-tab {
+  padding: 4px 14px; border-radius: 5px;
+  font-size: 11px; font-weight: 500;
+  cursor: pointer; color: var(--sub);
+  border: none; background: transparent; font-family: inherit;
+  transition: all .15s;
+}
+.sub-tab.on { background: var(--surface); color: var(--text); box-shadow: var(--shadow); }
+
+.bento { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+
+/* rank badge */
+.rank-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 20px; height: 20px; border-radius: 5px;
+  font-size: 10px; font-weight: 700; color: #fff;
+  flex-shrink: 0;
+}
+
+.wcard {
+  background: var(--surface);
+  border-radius: 12px; border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  overflow: hidden; height: 100%;
+  transition: box-shadow .2s, transform .15s;
+}
+.wcard:hover { box-shadow: var(--shadow-m); transform: translateY(-1px); }
+
+.wc-head {
+  padding: 12px 14px;
+  background: var(--nav2);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.wc-head.hero {
+  padding: 14px 16px;
+  background: linear-gradient(135deg, #1F2D3D 0%, #24354A 100%);
+}
+.wc-name { font-weight: 600; color: #fff; font-size: 13px; }
+.wc-name.lg { font-size: 15px; }
+.wc-cnt {
+  font-size: 10px; color: rgba(255,255,255,.4);
+  background: rgba(255,255,255,.07);
+  padding: 2px 7px; border-radius: 4px;
+}
+.wc-bar { display: flex; height: 4px; border-radius: 2px; overflow: hidden; margin-top: 10px; gap: 1px; }
+.b-ip   { background: #4A7BF7; }
+.b-qa   { background: #8B46FF; }
+.b-rfa  { background: #22C55E; }
+.b-done { background: #16A34A; }
+.b-p    { background: #F97316; }
+.b-set  { background: #94A3B8; }
+
+.wc-leg { display: flex; gap: 7px; margin-top: 5px; flex-wrap: wrap; }
+.wc-li  { font-size: 10px; color: rgba(255,255,255,.4); display: flex; align-items: center; gap: 3px; }
+.dot    { display: inline-block; width: 6px; height: 6px; border-radius: 2px; }
+
+.wc-stats { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; border-bottom: 1px solid var(--border); background: #EEF2F8; }
+.wc-stat  { padding: 9px 7px; text-align: center; border-right: 1px solid #DDE4EE; }
+.wc-stat:last-child { border-right: none; }
+.stat-l { font-size: 9px; color: #7A8A9E; text-transform: uppercase; letter-spacing: .4px; margin-bottom: 3px; font-weight: 600; }
+.stat-v { font-size: 14px; font-weight: 700; }
+.stat-s { font-size: 9px; color: #8A99AD; margin-top: 1px; }
+.v-b { color: var(--text); }
+.v-a { color: var(--accent); }
+.v-w { color: #C05A20; }
+.v-d { color: #C04040; }
+.v-g { color: #16A34A; }
+
+.wc-cli { padding: 9px 14px 11px; }
+.cli-t  { font-size: 9px; font-weight: 600; color: var(--dim); text-transform: uppercase; letter-spacing: .4px; margin-bottom: 5px; }
+.cli-r  { display: flex; align-items: center; gap: 7px; padding: 3px 0; border-top: 1px solid var(--border2); }
+.cli-r:first-of-type { border-top: none; }
+.cli-n  { flex:1; font-size: 11px; color: var(--text); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.cli-c  { font-size: 10px; color: var(--dim); }
+.cli-rv { font-size: 10px; font-weight: 600; color: #C07030; }
+.cli-d  { font-size: 10px; color: var(--dim); }
+
+.badges { display: flex; flex-wrap: wrap; gap: 4px; padding: 9px 14px 11px; border-top: 1px solid var(--border2); }
+.badge  { font-size: 10px; font-weight: 500; padding: 2px 7px; border-radius: 4px; border: 1.5px solid; }
+.b-gold { color: #A07820; border-color: #E8C860; background: #FFFBEB; }
+.b-blue { color: #2563EB; border-color: #BFDBFE; background: #EFF6FF; }
+.b-pur  { color: #7C3AED; border-color: #DDD6FE; background: #F5F3FF; }
+.b-gray { color: var(--sub); border-color: var(--border); background: var(--bg); }
+.b-or   { color: #C2550F; border-color: #FED7AA; background: #FFF7ED; }
+
+/* Tab sections */
+.tab-s { display: none; }
+.tab-s.on { display: block; }
+
+.footer {
+  text-align: center; padding: 16px;
+  font-size: 10px; color: var(--dim);
+  margin-top: 16px; letter-spacing: .2px;
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div style="display:flex;align-items:center;gap:9px;flex:1">
+    <div class="logo-icon">A</div>
+    <div>
+      <div class="logo-text">ARCHI <span>Gantt</span></div>
+      <div class="logo-sub">247 задач · preview</div>
+    </div>
+  </div>
+  <div class="nav-tabs">
+    <button class="nav-tab on" onclick="show('gantt',this)">Гант</button>
+    <button class="nav-tab"   onclick="show('cards',this)">Карточки</button>
+    <button class="nav-tab"   onclick="show('anal',this)">Аналитика</button>
+  </div>
+  <a href="#" class="nav-back">← API</a>
+</nav>
+
+<!-- FILTER BAR -->
+<div class="filter-bar" id="fbar">
+  <span class="flbl">Group</span>
+  <span class="pill on">By Worker</span>
+  <span class="pill">By Project</span>
+  <div class="sep"></div>
+  <span class="flbl">Status</span>
+  <span class="pill on" style="background:#EEF4FF;border-color:#BFDBFE;color:#3A6AE6">IP</span>
+  <span class="pill on" style="background:#F3EEFF;border-color:#DDD6FE;color:#7640D4">QA</span>
+  <span class="pill on" style="background:#ECFBF1;border-color:#BBF7D0;color:#1A9645">Ready</span>
+  <span class="pill on" style="background:#FFF2EC;border-color:#FED7AA;color:#C05A20">Paused</span>
+  <span class="pill" style="opacity:.45">Done</span>
+  <div class="sep"></div>
+  <input class="srch" placeholder="🔍 Задача / воркер…">
+  <span class="cnt">183 задачи</span>
+</div>
+
+<!-- ══════ GANTT ══════ -->
+<div class="tab-s on content" id="tab-gantt">
+  <div class="gantt-wrap">
+    <div class="g-hdr">
+      <div class="g-fixed-hdr">
+        <div class="g-col" style="width:260px">Task</div>
+        <div class="g-col" style="width:130px">Assignee</div>
+        <div class="g-col" style="width:130px">Status</div>
+      </div>
+      <div class="g-months">
+        <div class="g-mlbl" style="width:220px;text-align:center">April 2025</div>
+        <div class="g-mlbl" style="width:388px;text-align:center">May 2025</div>
+        <div class="g-mlbl" style="width:280px;text-align:center">June 2025</div>
+      </div>
+    </div>
+
+    <div class="g-group">
+      <div class="g-glbl">▾ Vera Duhina <span style="font-size:10px;font-weight:400;color:var(--dim);margin-left:6px">14 задач</span></div>
+    </div>
+
+    <div class="g-row">
+      <div class="g-fixed">
+        <a class="g-task">Interior Livingroom Walmart #5142</a>
+        <div class="g-who">Vera Duhina</div>
+        <div class="g-sc"><span class="sp sp-qa">QA</span></div>
+      </div>
+      <div class="g-tl">
+        <div class="today-ln" style="left:382px"><div class="today-dot"></div></div>
+        <div class="seg seg-set" style="left:18px;width:50px">Set</div>
+        <div class="seg seg-ip"  style="left:72px;width:138px">In progress</div>
+        <div class="seg seg-qa"  style="left:214px;width:78px">QA</div>
+        <div class="seg seg-ip"  style="left:296px;width:54px">IP</div>
+        <div class="seg seg-qa"  style="left:354px;width:82px">QA</div>
+      </div>
+    </div>
+
+    <div class="g-row" style="background:#FAFBFD">
+      <div class="g-fixed">
+        <a class="g-task">Exterior Facade Walmart #4987</a>
+        <div class="g-who">Vera Duhina</div>
+        <div class="g-sc"><span class="sp sp-rfa">Ready</span></div>
+      </div>
+      <div class="g-tl">
+        <div class="today-ln" style="left:382px"><div class="today-dot"></div></div>
+        <div class="seg seg-ip"  style="left:18px;width:162px">In progress</div>
+        <div class="seg seg-qa"  style="left:184px;width:68px">QA</div>
+        <div class="seg seg-rfa" style="left:256px;width:112px">Ready</div>
+      </div>
+    </div>
+
+    <div class="g-row ov">
+      <div class="g-fixed">
+        <a class="g-task red">Interior Bedroom Lennar #5301</a>
+        <div class="g-who">Vera Duhina</div>
+        <div class="g-sc"><span class="sp sp-ip">IP</span></div>
+      </div>
+      <div class="g-tl">
+        <div class="today-ln" style="left:382px"><div class="today-dot"></div></div>
+        <div class="seg seg-set" style="left:18px;width:40px"></div>
+        <div class="seg seg-ip"  style="left:62px;width:278px">In progress</div>
+        <div class="seg seg-qa"  style="left:344px;width:58px">QA</div>
+        <div class="seg seg-ip"  style="left:406px;width:54px">IP</div>
+      </div>
+    </div>
+
+    <div class="g-group">
+      <div class="g-glbl">▾ Anastasia Mishustina <span style="font-size:10px;font-weight:400;color:var(--dim);margin-left:6px">9 задач</span></div>
+    </div>
+
+    <div class="g-row">
+      <div class="g-fixed">
+        <a class="g-task">Interior Kitchen Whole Foods #4821</a>
+        <div class="g-who">Anastasia M.</div>
+        <div class="g-sc"><span class="sp sp-done">Done</span></div>
+      </div>
+      <div class="g-tl">
+        <div class="today-ln" style="left:382px"><div class="today-dot"></div></div>
+        <div class="seg seg-ip"   style="left:18px;width:108px">In progress</div>
+        <div class="seg seg-qa"   style="left:130px;width:54px">QA</div>
+        <div class="seg seg-ip"   style="left:188px;width:40px">IP</div>
+        <div class="seg seg-qa"   style="left:232px;width:54px">QA</div>
+        <div class="seg seg-rfa"  style="left:290px;width:68px">Ready</div>
+        <div class="seg seg-done" style="left:362px;width:54px">Done</div>
+      </div>
+    </div>
+
+    <div class="g-row" style="background:#FAFBFD">
+      <div class="g-fixed">
+        <a class="g-task">Exterior Rendering Target #5088</a>
+        <div class="g-who">Anastasia M.</div>
+        <div class="g-sc"><span class="sp sp-ip">IP</span></div>
+      </div>
+      <div class="g-tl">
+        <div class="today-ln" style="left:382px"><div class="today-dot"></div></div>
+        <div class="seg seg-set" style="left:116px;width:52px"></div>
+        <div class="seg seg-ip"  style="left:172px;width:210px">In progress</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ CARDS ══════ -->
+<div class="tab-s content" id="tab-cards">
+  <div class="srt-bar">
+    <span class="flbl">Сортировка</span>
+    <span class="srt-p on">Горящие</span>
+    <span class="srt-p">Воркер</span>
+    <span class="srt-p">Дедлайн</span>
+    <span class="srt-p">Прогресс ↓</span>
+    <span class="srt-p">Возвраты ↓</span>
+    <span class="cnt">183 задачи</span>
+  </div>
+  <div class="c-wrap" style="position:relative">
+    <div class="c-hdr">
+      <div class="c-hc">Задача</div>
+      <div class="c-hc">Воркер</div>
+      <div class="c-hc">Статус</div>
+      <div class="c-hc">Дедлайн</div>
+      <div class="c-hc">Возвраты</div>
+      <div class="c-hc">Прогресс</div>
+    </div>
+    <div class="c-row ov">
+      <div style="padding:7px 7px 7px 0">
+        <div class="c-tname red">Interior Bedroom Lennar #5301</div>
+        <div class="c-proj">Lennar · Johnson House</div>
+      </div>
+      <div class="c-who">Vera Duhina</div>
+      <div><span class="sp sp-ip">In progress</span></div>
+      <div class="dl-ov">12 May <span class="dl-s">−2д</span></div>
+      <div><span class="ret-2">↩ 3</span></div>
+      <div class="prog-row"><div class="prog-bg"><div class="prog-f prog-rd" style="width:87%"></div></div><span class="prog-pct" style="color:#C04040">87%</span></div>
+    </div>
+    <div class="c-row bn">
+      <div style="padding:7px 7px 7px 0">
+        <div class="c-tname">Interior Livingroom Walmart #5142</div>
+        <div class="c-proj">Walmart · Store #4421</div>
+      </div>
+      <div class="c-who">Vera Duhina</div>
+      <div><span class="sp sp-qa">QA</span></div>
+      <div class="dl-bn">15 May <span class="dl-s">+1д</span></div>
+      <div><span class="ret-1">↩ 1</span></div>
+      <div class="prog-row"><div class="prog-bg"><div class="prog-f prog-or" style="width:74%"></div></div><span class="prog-pct" style="color:#C07030">74%</span></div>
+    </div>
+    <div class="c-row" style="background:#FAFBFD">
+      <div style="padding:7px 7px 7px 0">
+        <div class="c-tname">Exterior Rendering Target #5088</div>
+        <div class="c-proj">Target · HQ Renovation</div>
+      </div>
+      <div class="c-who">Anastasia M.</div>
+      <div><span class="sp sp-ip">In progress</span></div>
+      <div class="dl-ok">28 May</div>
+      <div><span class="ret-0">—</span></div>
+      <div class="prog-row"><div class="prog-bg"><div class="prog-f prog-bl" style="width:44%"></div></div><span class="prog-pct">44%</span></div>
+    </div>
+    <div class="c-row">
+      <div style="padding:7px 7px 7px 0">
+        <div class="c-tname">Interior Kitchen Whole Foods #4821</div>
+        <div class="c-proj">Whole Foods · Market #12</div>
+      </div>
+      <div class="c-who">Anastasia M.</div>
+      <div><span class="sp sp-rfa">Ready</span></div>
+      <div class="dl-ok">20 May</div>
+      <div><span class="ret-1">↩ 2</span></div>
+      <div class="prog-row"><div class="prog-bg"><div class="prog-f prog-bl" style="width:96%"></div></div><span class="prog-pct">96%</span></div>
+    </div>
+    <div class="c-row" style="background:#FAFBFD">
+      <div style="padding:7px 7px 7px 0">
+        <div class="c-tname">Exterior Facade Walmart #4987</div>
+        <div class="c-proj">Walmart · Distribution Center</div>
+      </div>
+      <div class="c-who">Artur Kovhan</div>
+      <div><span class="sp sp-rfa">Ready</span></div>
+      <div class="dl-ok">22 May</div>
+      <div><span class="ret-0">—</span></div>
+      <div class="prog-row"><div class="prog-bg"><div class="prog-f prog-gr" style="width:100%"></div></div><span class="prog-pct" style="color:#16A34A">100%</span></div>
+    </div>
+    <!-- tooltip -->
+    <div class="tip">
+      <div class="tip-name">Interior Livingroom Walmart #5142</div>
+      <div class="tip-row"><span class="tip-k">Статус</span><span class="tip-v" style="color:#A78BF7">Quality control</span></div>
+      <div class="tip-row"><span class="tip-k">Воркер</span><span class="tip-v">Vera Duhina</span></div>
+      <div class="tip-row"><span class="tip-k">Дедлайн</span><span class="tip-v" style="color:#FB923C">15 May · 1д</span></div>
+      <div class="tip-row"><span class="tip-k">Возвраты QA</span><span class="tip-v">↩ 1</span></div>
+      <div class="tip-row"><span class="tip-k">Клиент вернул</span><span class="tip-v" style="opacity:.4">—</span></div>
+      <div class="tip-segs">
+        <span class="seg seg-set"  style="position:static;height:17px;padding:0 5px">Set</span>
+        <span class="seg seg-ip"   style="position:static;height:17px;padding:0 5px">IP</span>
+        <span class="seg seg-qa"   style="position:static;height:17px;padding:0 5px">QA</span>
+        <span class="seg seg-ip"   style="position:static;height:17px;padding:0 5px">IP</span>
+        <span class="seg seg-qa"   style="position:static;height:17px;padding:0 5px">QA →</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ ANALYTICS ══════ -->
+<div class="tab-s content" id="tab-anal">
+  <div class="srt-bar">
+    <div class="sub-tabs">
+      <button class="sub-tab on">Специалисты (18)</button>
+      <button class="sub-tab">Клиенты (12)</button>
+    </div>
+    <span class="flbl" style="margin-left:4px">Сорт:</span>
+    <span class="srt-p on">Задачи ↓</span>
+    <span class="srt-p">Возвраты ↓</span>
+    <span class="srt-p">Ср.дней ↓</span>
+    <span class="cnt">247 задач · весь период</span>
+  </div>
+
+  <!-- Рейтинг по возвратам на задачу (↓ лучше): #1 Mykola 0.07 → #8 Tanya 0.42 -->
+  <div style="font-size:11px;color:var(--sub);margin-bottom:8px;display:flex;align-items:center;gap:6px">
+    <span>Рейтинг по качеству:</span>
+    <span style="display:inline-flex;align-items:center;gap:3px"><span style="width:10px;height:10px;border-radius:2px;background:#16A34A;display:inline-block"></span>лучший</span>
+    <span style="color:var(--dim)">→</span>
+    <span style="display:inline-flex;align-items:center;gap:3px"><span style="width:10px;height:10px;border-radius:2px;background:#DC2626;display:inline-block"></span>худший</span>
+    <span style="color:var(--dim);margin-left:4px">· критерий: кол-во возвратов / задачу</span>
+  </div>
+  <div class="bento">
+
+    <!-- #1 Mykola Stepanov ↩ 0.07 — #16A34A -->
+    <div class="wcard" style="border-top:3px solid #16A34A">
+      <div class="wc-head">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:6px">
+          <div class="wc-name">Mykola Stepanov</div>
+          <div style="display:flex;align-items:center;gap:5px">
+            <div class="rank-badge" style="background:#16A34A">#1</div>
+            <div class="wc-cnt">14 задач</div>
+          </div>
+        </div>
+        <div class="wc-bar">
+          <div class="b-ip" style="width:43%"></div><div class="b-qa" style="width:21%"></div>
+          <div class="b-rfa" style="width:22%"></div><div class="b-done" style="width:14%"></div>
+        </div>
+        <div class="wc-leg">
+          <span class="wc-li"><span class="dot b-ip"></span>IP 6</span>
+          <span class="wc-li"><span class="dot b-qa"></span>QA 3</span>
+          <span class="wc-li"><span class="dot b-rfa"></span>RFA 3</span>
+          <span class="wc-li"><span class="dot b-done"></span>Done 2</span>
+        </div>
+      </div>
+      <div class="wc-stats">
+        <div class="wc-stat"><div class="stat-l">Возвраты</div><div class="stat-v v-g">↩ 1</div><div class="stat-s">0.07 /зад</div></div>
+        <div class="wc-stat"><div class="stat-l">Ср. дней</div><div class="stat-v v-a">19д</div><div class="stat-s">всего</div></div>
+        <div class="wc-stat"><div class="stat-l">Ср. IP</div><div class="stat-v v-b">12д</div><div class="stat-s">IP</div></div>
+        <div class="wc-stat"><div class="stat-l">Просроч</div><div class="stat-v v-g">0</div><div class="stat-s">—</div></div>
+      </div>
+      <div class="badges">
+        <span class="badge b-gold">MDF+</span>
+        <span class="badge b-pur">MLR int</span><span class="badge b-pur">MLR ext</span><span class="badge b-gray">B1</span>
+      </div>
+    </div>
+
+    <!-- #2 Artur Kovhan ↩ 0.09 — #4ADE80 -->
+    <div class="wcard" style="border-top:3px solid #22C55E">
+      <div class="wc-head">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:6px">
+          <div class="wc-name">Artur Kovhan</div>
+          <div style="display:flex;align-items:center;gap:5px">
+            <div class="rank-badge" style="background:#22C55E">#2</div>
+            <div class="wc-cnt">22 задачи</div>
+          </div>
+        </div>
+        <div class="wc-bar">
+          <div class="b-ip" style="width:45%"></div><div class="b-qa" style="width:18%"></div>
+          <div class="b-rfa" style="width:22%"></div><div class="b-done" style="width:15%"></div>
+        </div>
+        <div class="wc-leg">
+          <span class="wc-li"><span class="dot b-ip"></span>IP 10</span>
+          <span class="wc-li"><span class="dot b-qa"></span>QA 4</span>
+          <span class="wc-li"><span class="dot b-rfa"></span>RFA 5</span>
+          <span class="wc-li"><span class="dot b-done"></span>Done 3</span>
+        </div>
+      </div>
+      <div class="wc-stats">
+        <div class="wc-stat"><div class="stat-l">Возвраты</div><div class="stat-v v-g">↩ 2</div><div class="stat-s">0.09 /зад</div></div>
+        <div class="wc-stat"><div class="stat-l">Ср. дней</div><div class="stat-v v-a">12д</div><div class="stat-s">всего</div></div>
+        <div class="wc-stat"><div class="stat-l">Ср. IP</div><div class="stat-v v-b">8д</div><div class="stat-s">IP</div></div>
+        <div class="wc-stat"><div class="stat-l">Просроч</div><div class="stat-v v-g">0</div><div class="stat-s">—</div></div>
+      </div>
+      <div class="badges">
+        <span class="badge b-gold">Animation+</span><span class="badge b-blue">Animation</span>
+        <span class="badge b-blue">SDC ext</span><span class="badge b-pur">MLR int</span>
+        <span class="badge b-pur">MLR ext</span><span class="badge b-gray">FD</span><span class="badge b-gray">B1</span>
+      </div>
+    </div>
+
+    <!-- #3 Anastasia Mishustina ↩ 0.13 — #84CC16 -->
+    <div class="wcard" style="border-top:3px solid #84CC16">
+      <div class="wc-head">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:6px">
+          <div class="wc-name">Anastasia Mishustina</div>
+          <div style="display:flex;align-items:center;gap:5px">
+            <div class="rank-badge" style="background:#84CC16">#3</div>
+            <div class="wc-cnt">31 задача</div>
+          </div>
+        </div>
+        <div class="wc-bar">
+          <div class="b-ip" style="width:42%"></div><div class="b-qa" style="width:19%"></div>
+          <div class="b-rfa" style="width:22%"></div><div class="b-done" style="width:17%"></div>
+        </div>
+        <div class="wc-leg">
+          <span class="wc-li"><span class="dot b-ip"></span>IP 13</span>
+          <span class="wc-li"><span class="dot b-qa"></span>QA 6</span>
+          <span class="wc-li"><span class="dot b-rfa"></span>RFA 7</span>
+          <span class="wc-li"><span class="dot b-done"></span>Done 5</span>
+        </div>
+      </div>
+      <div class="wc-stats">
+        <div class="wc-stat"><div class="stat-l">Возвраты</div><div class="stat-v v-g">↩ 4</div><div class="stat-s">0.13 /зад</div></div>
+        <div class="wc-stat"><div class="stat-l">Ср. дней</div><div class="stat-v v-a">14д</div><div class="stat-s">всего</div></div>
+        <div class="wc-stat"><div class="stat-l">Ср. IP</div><div class="stat-v v-b">9д</div><div class="stat-s">IP</div></div>
+        <div class="wc-stat"><div class="stat-l">Просроч</div><div class="stat-v v-g">0</div><div class="stat-s">—</div></div>
+      </div>
+      <div class="badges">
+        <span class="badge b-gold">SDC int+</span><span class="badge b-pur">MLR int</span>
+        <span class="badge b-pur">MLR ext</span><span class="badge b-blue">Ps</span>
+        <span class="badge b-gray">Designer</span><span class="badge b-gray">Architect</span><span class="badge b-gray">A2</span>
+      </div>
+    </div>
+
+    <!-- #4 Maksym Solodkyi ↩ 0.13 — #A3E635 -->
+    <div class="wcard" style="border-top:3px solid #A3E635">
+      <div class="wc-head">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:6px">
+          <div class="wc-name">Maksym Solodkyi</div>
+          <div style="display:flex;align-items:center;gap:5px">
+            <div class="rank-badge" style="background:#A3E635;color:#1a2e00">#4</div>
+            <div class="wc-cnt">15 задач</div>
+          </div>
+        </div>
+        <div class="wc-bar">
+          <div class="b-ip" style="width:40%"></div><div class="b-qa" style="width:20%"></div>
+          <div class="b-rfa" style="width:27%"></div><div class="b-done" style="width:13%"></div>
+        </div>
+        <div class="wc-leg">
+          <span class="wc-li"><span class="dot b-ip"></span>IP 6</span>
+          <span class="wc-li"><span class="dot b-qa"></span>QA 3</span>
+          <span class="wc-li"><span class="dot b-rfa"></span>RFA 4</span>
+          <span class="wc-li"><span class="dot b-done"></span>Done 2</span>
+        </div>
+      </div>
+      <div class="wc-stats">
+        <div class="wc-stat"><div class="stat-l">Возвраты</div><div class="stat-v v-g">↩ 2</div><div class="stat-s">0.13 /зад</div></div>
+        <div class="wc-stat"><div class="stat-l">Ср. дней</div><div class="stat-v v-a">17д</div><div class="stat-s">всего</div></div>
+        <div class="wc-stat"><div class="stat-l">Ср. IP</div><div class="stat-v v-b">11д</div><div class="stat-s">IP</div></div>
+        <div class="wc-stat"><div class="stat-l">Просроч</div><div class="stat-v v-g">0</div><div class="stat-s">—</div></div>
+      </div>
+      <div class="badges">
+        <span class="badge b-gold">Ps+</span><span class="badge b-blue">SDC int</span>
+        <span class="badge b-pur">MLR int</span><span class="badge b-pur">MLR ext</span><span class="badge b-gray">B1</span>
+      </div>
+    </div>
+
+    <!-- #5 Andrii Savchuk ↩ 0.18 — #EAB308 -->
+    <div class="wcard" style="border-top:3px solid #EAB308">
+      <div class="wc-head">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:6px">
+          <div class="wc-name">Andrii Savchuk</div>
+          <div style="display:flex;align-items:center;gap:5px">
+            <div class="rank-badge" style="background:#EAB308;color:#3d2e00">#5</div>
+            <div class="wc-cnt">17 задач</div>
+          </div>
+        </div>
+        <div class="wc-bar">
+          <div class="b-ip" style="width:47%"></div><div class="b-qa" style="width:23%"></div>
+          <div class="b-rfa" style="width:18%"></div><div class="b-done" style="width:12%"></div>
+        </div>
+        <div class="wc-leg">
+          <span class="wc-li"><span class="dot b-ip"></span>IP 8</span>
+          <span class="wc-li"><span class="dot b-qa"></span>QA 4</span>
+          <span class="wc-li"><span class="dot b-rfa"></span>RFA 3</span>
+          <span class="wc-li"><span class="dot b-done"></span>Done 2</span>
+        </div>
+      </div>
+      <div class="wc-stats">
+        <div class="wc-stat"><div class="stat-l">Возвраты</div><div class="stat-v" style="color:#C07A10">↩ 3</div><div class="stat-s">0.18 /зад</div></div>
+        <div class="wc-stat"><div class="stat-l">Ср. дней</div><div class="stat-v v-a">15д</div><div class="stat-s">всего</div></div>
+        <div class="wc-stat"><div class="stat-l">Ср. IP</div><div class="stat-v v-b">10д</div><div class="stat-s">IP</div></div>
+        <div class="wc-stat"><div class="stat-l">Просроч</div><div class="stat-v v-g">0</div><div class="stat-s">—</div></div>
+      </div>
+      <div class="badges">
+        <span class="badge b-pur">MLR ext</span><span class="badge b-pur">MLR int</span>
+        <span class="badge b-blue">Ps</span><span class="badge b-gray">FD</span>
+        <span class="badge b-or">BC Lennar</span><span class="badge b-gray">B1</span>
+      </div>
+    </div>
+
+    <!-- #6 Irina Kovalenko ↩ 0.25 — #F97316 -->
+    <div class="wcard" style="border-top:3px solid #F97316">
+      <div class="wc-head">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:6px">
+          <div class="wc-name">Irina Kovalenko</div>
+          <div style="display:flex;align-items:center;gap:5px">
+            <div class="rank-badge" style="background:#F97316">#6</div>
+            <div class="wc-cnt">28 задач</div>
+          </div>
+        </div>
+        <div class="wc-bar">
+          <div class="b-ip" style="width:32%"></div><div class="b-qa" style="width:25%"></div>
+          <div class="b-rfa" style="width:28%"></div><div class="b-done" style="width:15%"></div>
+        </div>
+        <div class="wc-leg">
+          <span class="wc-li"><span class="dot b-ip"></span>IP 9</span>
+          <span class="wc-li"><span class="dot b-qa"></span>QA 7</span>
+          <span class="wc-li"><span class="dot b-rfa"></span>RFA 8</span>
+          <span class="wc-li"><span class="dot b-done"></span>Done 4</span>
+        </div>
+      </div>
+      <div class="wc-stats">
+        <div class="wc-stat"><div class="stat-l">Возвраты</div><div class="stat-v v-w">↩ 7</div><div class="stat-s">0.25 /зад</div></div>
+        <div class="wc-stat"><div class="stat-l">Ср. дней</div><div class="stat-v v-a">16д</div><div class="stat-s">всего</div></div>
+        <div class="wc-stat"><div class="stat-l">Ср. IP</div><div class="stat-v v-b">10д</div><div class="stat-s">IP</div></div>
+        <div class="wc-stat"><div class="stat-l">Просроч</div><div class="stat-v v-g">0</div><div class="stat-s">—</div></div>
+      </div>
+      <div class="badges">
+        <span class="badge b-gold">SDC int+</span><span class="badge b-blue">SDC int</span>
+        <span class="badge b-gold">SDC ext+</span><span class="badge b-pur">MLR int</span>
+        <span class="badge b-pur">MLR ext</span><span class="badge b-blue">Ps</span><span class="badge b-gray">B1</span>
+      </div>
+    </div>
+
+    <!-- #7 Vera Duhina ↩ 0.26 — #EF4444 -->
+    <div class="wcard" style="border-top:3px solid #EF4444">
+      <div class="wc-head">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:6px">
+          <div class="wc-name">Vera Duhina</div>
+          <div style="display:flex;align-items:center;gap:5px">
+            <div class="rank-badge" style="background:#EF4444">#7</div>
+            <div class="wc-cnt">47 задач</div>
+          </div>
+        </div>
+        <div class="wc-bar">
+          <div class="b-ip" style="width:34%"></div><div class="b-qa" style="width:21%"></div>
+          <div class="b-rfa" style="width:19%"></div><div class="b-done" style="width:18%"></div>
+          <div class="b-p" style="width:5%"></div><div class="b-set" style="width:3%"></div>
+        </div>
+        <div class="wc-leg">
+          <span class="wc-li"><span class="dot b-ip"></span>IP 16</span>
+          <span class="wc-li"><span class="dot b-qa"></span>QA 10</span>
+          <span class="wc-li"><span class="dot b-rfa"></span>Ready 9</span>
+          <span class="wc-li"><span class="dot b-done"></span>Done 8</span>
+          <span class="wc-li"><span class="dot b-p"></span>Paused 4</span>
+        </div>
+      </div>
+      <div class="wc-stats">
+        <div class="wc-stat"><div class="stat-l">Возвраты</div><div class="stat-v v-d">↩ 12</div><div class="stat-s">0.26 /зад</div></div>
+        <div class="wc-stat"><div class="stat-l">Ср. дней</div><div class="stat-v v-a">18д</div><div class="stat-s">всего</div></div>
+        <div class="wc-stat"><div class="stat-l">Ср. IP</div><div class="stat-v v-b">11д</div><div class="stat-s">In progress</div></div>
+        <div class="wc-stat"><div class="stat-l">Просроч</div><div class="stat-v v-d">2</div><div class="stat-s">сейчас</div></div>
+      </div>
+      <div class="wc-cli">
+        <div class="cli-t">Топ клиентов</div>
+        <div class="cli-r"><span class="cli-n">Walmart</span><span class="cli-c">18 зад</span><span class="cli-rv">↩5</span><span class="cli-d">16д</span></div>
+        <div class="cli-r"><span class="cli-n">Lennar</span><span class="cli-c">11 зад</span><span class="cli-rv">↩4</span><span class="cli-d">20д</span></div>
+        <div class="cli-r"><span class="cli-n">Target</span><span class="cli-c">8 зад</span><span class="cli-rv" style="color:var(--dim)">—</span><span class="cli-d">14д</span></div>
+      </div>
+      <div class="badges">
+        <span class="badge b-gold">SDC int+</span><span class="badge b-blue">SDC int</span>
+        <span class="badge b-blue">SDC ext</span><span class="badge b-gold">SDC ext+</span>
+        <span class="badge b-pur">MLR int</span><span class="badge b-pur">MLR ext</span>
+        <span class="badge b-blue">Ps</span><span class="badge b-gray">Architect</span><span class="badge b-gray">B1</span>
+      </div>
+    </div>
+
+    <!-- #8 Tanya Rybalova ↩ 0.42 — #DC2626 -->
+    <div class="wcard" style="border-top:3px solid #DC2626">
+      <div class="wc-head">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:6px">
+          <div class="wc-name">Tanya Rybalova</div>
+          <div style="display:flex;align-items:center;gap:5px">
+            <div class="rank-badge" style="background:#DC2626">#8</div>
+            <div class="wc-cnt">19 задач</div>
+          </div>
+        </div>
+        <div class="wc-bar">
+          <div class="b-ip" style="width:37%"></div><div class="b-qa" style="width:21%"></div>
+          <div class="b-rfa" style="width:26%"></div><div class="b-done" style="width:16%"></div>
+        </div>
+        <div class="wc-leg">
+          <span class="wc-li"><span class="dot b-ip"></span>IP 7</span>
+          <span class="wc-li"><span class="dot b-qa"></span>QA 4</span>
+          <span class="wc-li"><span class="dot b-rfa"></span>RFA 5</span>
+          <span class="wc-li"><span class="dot b-done"></span>Done 3</span>
+        </div>
+      </div>
+      <div class="wc-stats">
+        <div class="wc-stat"><div class="stat-l">Возвраты</div><div class="stat-v v-d">↩ 8</div><div class="stat-s">0.42 /зад</div></div>
+        <div class="wc-stat"><div class="stat-l">Ср. дней</div><div class="stat-v v-a">21д</div><div class="stat-s">всего</div></div>
+        <div class="wc-stat"><div class="stat-l">Ср. IP</div><div class="stat-v v-b">13д</div><div class="stat-s">IP</div></div>
+        <div class="wc-stat"><div class="stat-l">Просроч</div><div class="stat-v v-g">0</div><div class="stat-s">—</div></div>
+      </div>
+      <div class="badges">
+        <span class="badge b-blue">SDC int</span><span class="badge b-blue">SDC ext</span>
+        <span class="badge b-pur">MLR int</span><span class="badge b-pur">MLR ext</span>
+        <span class="badge b-blue">Ps</span><span class="badge b-gray">Designer</span><span class="badge b-gray">B1</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="footer">ARCHI Gantt · Archivizer Style Preview · Статический мокап</div>
+
+<script>
+function show(name, btn) {
+  document.querySelectorAll('.tab-s').forEach(el => el.classList.remove('on'));
+  document.getElementById('tab-' + name).classList.add('on');
+  document.querySelectorAll('.nav-tab').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  document.getElementById('fbar').style.display = name === 'anal' ? 'none' : 'flex';
+}
+</script>
+</body>
+</html>

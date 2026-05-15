@@ -1,0 +1,17 @@
+{
+  "Kseniia Kukuiashna":    ["MLR int", "FD", "A2", "MLR ext"],
+  "Artur Kovhan":          ["Animation+", "Animation", "MLR ext", "FD", "MLR int", "SDC ext", "B1"],
+  "Diana Savchuk":         ["Ps", "MLR ext", "MLR int", "A2"],
+  "Alexander Barsukov":    ["FD", "MLR ext", "MLR int", "A2"],
+  "Khrystyna Tertytsia":   ["MLR int", "Ps", "B1"],
+  "Andrii Savchuk":        ["MLR ext", "Ps", "FD", "MLR int", "B1", "BC Lennar"],
+  "Volodymyr Lysak":       ["A2", "MLR ext", "MLR int", "SDC ext+"],
+  "Krystyna Stan":         ["Ps", "A2", "MLR ext", "MLR int", "SDC ext+"],
+  "Tanya Rybalova":        ["SDC int", "SDC ext", "Ps", "MLR ext", "MLR int", "Designer", "B1"],
+  "Ivan Ivashchenko":      ["MDF", "Animation", "MLR ext", "MLR int", "A1"],
+  "Mykola Stepanov":       ["MLR int", "MLR ext", "MDF+", "B1"],
+  "Vera Duhina":           ["SDC int", "SDC int+", "SDC ext", "SDC ext+", "MLR int", "MLR ext", "Ps", "Architect", "B1"],
+  "Tetiana Opich":         ["SDC int", "SDC ext", "MLR int", "MLR ext", "Ps", "Designer", "B1"],
+  "Anastasia Mishustina":  ["SDC int+", "MLR int", "MLR ext", "Ps", "Designer", "Architect", "A2"],
+  "Irina Kovalenko":       ["SDC int", "SDC int+", "SDC ext+", "MLR int", "MLR ext", "Ps", "B1"]
+}
