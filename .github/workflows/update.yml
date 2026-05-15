@@ -31,14 +31,6 @@ jobs:
 
       - run: npm ci
 
-      - name: Fetch Archivizer data
-        env:
-          ARCHIVIZER_EMAIL: ${{ secrets.ARCHIVIZER_EMAIL }}
-          ARCHIVIZER_PASSWORD: ${{ secrets.ARCHIVIZER_PASSWORD }}
-          ARCHIVIZER_EMAIL_TANIA: ${{ secrets.ARCHIVIZER_EMAIL_TANIA }}
-          ARCHIVIZER_PASSWORD_TANIA: ${{ secrets.ARCHIVIZER_PASSWORD_TANIA }}
-        run: node scripts/fetch-data.mjs
-
       - name: Build static export
         env:
           NEXT_EXPORT: "true"
