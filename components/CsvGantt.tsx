@@ -601,7 +601,7 @@ function buildClientStats(tasks: TaskRow[], today: string): ClientStat[] {
   });
 }
 
-function WorkerCard({ stat, rank, totalWorkers, qualifications, actq }: { stat: WorkerStat; rank: number; totalWorkers: number; qualifications: string[]; actq?: { Q: number; A: number; T1: number } }) {
+function WorkerCard({ stat, rank, totalWorkers, qualifications, actq, onDrillDown }: { stat: WorkerStat; rank: number; totalWorkers: number; qualifications: string[]; actq?: { Q: number; A: number; T1: number }; onDrillDown?: () => void }) {
   const rc = rankColor(rank, totalWorkers);
   const rankNum = rank + 1;
   const rankTextColor = rankNum <= 4 ? "#fff" : rankNum <= 6 ? "#3d2e00" : "#fff";
@@ -609,7 +609,7 @@ function WorkerCard({ stat, rank, totalWorkers, qualifications, actq }: { stat: 
     <div className="glow-card" style={{ background:"#fff", borderRadius:12, boxShadow:"0 1px 3px rgba(0,0,0,.07),0 1px 2px rgba(0,0,0,.04)", overflow:"hidden", height:"100%", borderTop:`3px solid ${rc}` }}>
       <div style={{ background:"#1F2D3D", padding:"12px 16px" }}>
         <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", gap:6 }}>
-          <div style={{ fontSize:14, fontWeight:700, color:"#fff", overflow:"hidden", whiteSpace:"nowrap", textOverflow:"ellipsis" }}>{stat.assignee}</div>
+          <div onClick={onDrillDown} style={{ fontSize:14, fontWeight:700, color:"#fff", overflow:"hidden", whiteSpace:"nowrap", textOverflow:"ellipsis", ...(onDrillDown ? { cursor:"pointer", textDecoration:"underline", textDecorationStyle:"dotted", textUnderlineOffset:3 } : {}) }}>{stat.assignee}</div>
           <div style={{ display:"flex", alignItems:"center", gap:5, flexShrink:0 }}>
             <div style={{ width:20, height:20, borderRadius:5, background:rc, display:"flex", alignItems:"center", justifyContent:"center", fontSize:10, fontWeight:700, color:rankTextColor }}>#{rankNum}</div>
             <div style={{ fontSize:11, color:"rgba(255,255,255,.5)", background:"rgba(255,255,255,.08)", padding:"2px 8px", borderRadius:4 }}>{stat.totalTasks} задач</div>
@@ -729,6 +729,7 @@ function AnalyticsView({ tasks, qualifications, actqErrors }: { tasks: TaskRow[]
   const [sub, setSub]   = useState<"workers"|"clients">("workers");
   const [sortW, setSortW] = useState<"quality"|"name"|"tasks"|"returns"|"duration"|"overdue">("quality");
   const [sortC, setSortC] = useState<"name"|"tasks"|"returns">("tasks");
+  const [drilldown, setDrilldown] = useState<string | null>(null);
 
   const workerStats = buildWorkerStats(tasks, today);
   const clientStats = buildClientStats(tasks, today);
@@ -769,6 +770,68 @@ function AnalyticsView({ tasks, qualifications, actqErrors }: { tasks: TaskRow[]
 
   const wSortLabels: Record<string, string> = { quality:"★ Рейтинг", tasks:"Задачи ↓", returns:"Возвраты ↓", duration:"Ср.дней ↓", overdue:"Просроч ↓", name:"Имя" };
   const cSortLabels: Record<string, string> = { tasks:"Задачи ↓", returns:"Возвраты ↓", name:"Имя" };
+
+  if (drilldown) {
+    const workerTasks = tasks.filter(t => t.assignee === drilldown)
+      .sort((a, b) => {
+        const order = ["In progress","Quality control","Ready for acceptance","Paused","Setting task","Pending more info","Done"];
+        return order.indexOf(a.current_status) - order.indexOf(b.current_status);
+      });
+    const stat = workerStats.find(w => w.assignee === drilldown);
+    const rank = qualityRank.get(drilldown) ?? 0;
+    const rc = rankColor(rank, workerStats.length);
+    return (
+      <div style={{ flex:1, overflow:"auto", padding:"12px 20px 20px" }}>
+        <div style={{ display:"flex", alignItems:"center", gap:12, marginBottom:16 }}>
+          <button onClick={() => setDrilldown(null)}
+            style={{ display:"flex", alignItems:"center", gap:6, padding:"5px 14px", borderRadius:8, border:"1.5px solid #D8E0EC", background:"#fff", cursor:"pointer", fontSize:12, fontWeight:600, color:"#4A5568" }}>
+            ← Назад
+          </button>
+          <div style={{ width:22, height:22, borderRadius:6, background:rc, display:"flex", alignItems:"center", justifyContent:"center", fontSize:11, fontWeight:700, color:"#fff" }}>#{rank+1}</div>
+          <span style={{ fontSize:16, fontWeight:700, color:"#1A2035" }}>{drilldown}</span>
+          {stat && <span style={{ fontSize:12, color:"#9AA5B4" }}>{workerTasks.length} задач · ↩ {stat.avgReturns}/зад · {stat.overdue} просроч</span>}
+        </div>
+        <div style={{ background:"#fff", borderRadius:12, boxShadow:"0 1px 3px rgba(0,0,0,.07)", overflow:"hidden" }}>
+          <table style={{ width:"100%", borderCollapse:"collapse", fontSize:13 }}>
+            <thead>
+              <tr style={{ background:"#F8FAFB", borderBottom:"1px solid #E8EEF6" }}>
+                {["Задача","Проект","Статус","↩ возвр.","Дней","Дедлайн"].map(h => (
+                  <th key={h} style={{ padding:"9px 14px", textAlign:"left", fontSize:11, fontWeight:700, color:"#7A8A9E", textTransform:"uppercase", letterSpacing:".3px", whiteSpace:"nowrap" }}>{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {workerTasks.map((t, i) => {
+                const pill = SC_PILL[t.current_status] || SC_PILL["Setting task"];
+                const days = dif(t.start_date, today);
+                const isOverdue = t.planned_end && t.planned_end < today && t.current_status !== "Done";
+                return (
+                  <tr key={t.id} style={{ borderBottom:"1px solid #F3F5F8", background: i % 2 === 0 ? "#fff" : "#FAFBFD" }}>
+                    <td style={{ padding:"9px 14px", maxWidth:260, overflow:"hidden", whiteSpace:"nowrap", textOverflow:"ellipsis" }}>
+                      <span title={t.name} style={{ fontWeight:500, color:"#1A2035" }}>{t.name}</span>
+                    </td>
+                    <td style={{ padding:"9px 14px", color:"#6B7A90", maxWidth:160, overflow:"hidden", whiteSpace:"nowrap", textOverflow:"ellipsis" }}>{t.project}</td>
+                    <td style={{ padding:"9px 14px" }}>
+                      <span style={{ fontSize:11, padding:"2px 8px", borderRadius:5, fontWeight:600, border:"1px solid", background:pill.bg, color:pill.tx, borderColor:pill.border, whiteSpace:"nowrap" }}>
+                        {STATUS_SHORT[t.current_status] || t.current_status}
+                      </span>
+                    </td>
+                    <td style={{ padding:"9px 14px", textAlign:"center", fontWeight:700, color: t.returns > 0 ? "#C04040" : "#B0BAC8", fontSize:13 }}>
+                      {t.returns > 0 ? `↩ ${t.returns}` : "—"}
+                    </td>
+                    <td style={{ padding:"9px 14px", color:"#4A7BF7", fontWeight:600, textAlign:"center" }}>{days}д</td>
+                    <td style={{ padding:"9px 14px", whiteSpace:"nowrap", fontWeight:600, color: isOverdue ? "#C04040" : "#6B7A90", fontSize:12 }}>
+                      {t.planned_end ? (isOverdue ? `⚠ ${fmtD(t.planned_end)}` : fmtD(t.planned_end)) : "—"}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div style={{ flex:1, overflow:"auto", padding:"12px 20px 20px" }}>
@@ -814,7 +877,7 @@ function AnalyticsView({ tasks, qualifications, actqErrors }: { tasks: TaskRow[]
           </div>
           <div style={{ display:"grid", gridTemplateColumns:"repeat(4, 1fr)", gap:12 }}>
             {sortedW.map(w => (
-              <WorkerCard key={w.assignee} stat={w} rank={qualityRank.get(w.assignee) ?? 0} totalWorkers={workerStats.length} qualifications={qualifications[w.assignee] || []} actq={actqErrors.get(w.assignee)} />
+              <WorkerCard key={w.assignee} stat={w} rank={qualityRank.get(w.assignee) ?? 0} totalWorkers={workerStats.length} qualifications={qualifications[w.assignee] || []} actq={actqErrors.get(w.assignee)} onDrillDown={() => setDrilldown(w.assignee)} />
             ))}
           </div>
         </>
@@ -1063,9 +1126,10 @@ function MatchingView({ tasks, qualifications, actqErrors, onWorkerClick }: { ta
                     </div>
                     <div style={{ display:"flex", flexWrap:"wrap", gap:4 }}>
                       {w.qualifications.map(q => (
-                        <span key={q} style={{ fontSize:10, padding:"2px 6px", borderRadius:4, fontWeight:600,
-                          background: q === w.matchingSkill ? "#16A34A" : "#F1F5F9",
-                          color:      q === w.matchingSkill ? "#fff" : "#64748B" }}>
+                        <span key={q} style={{ fontSize:10, padding:"2px 6px", borderRadius:4, fontWeight:600, border:"1px solid",
+                          ...(q === w.matchingSkill
+                            ? { background:"#16A34A", color:"#fff", borderColor:"#15803D" }
+                            : qualBadgeStyle(q)) }}>
                           {q}
                         </span>
                       ))}
