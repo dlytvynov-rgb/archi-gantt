@@ -28,12 +28,8 @@ function writeCache(data: any) {
 export async function GET() {
   const cached = readCache();
   if (cached) {
-    // Always return fresh today date
     cached.today = new Date().toISOString().slice(0, 10);
     return NextResponse.json(cached);
   }
-  // No cache — fetch fresh
-  const data = await fetchGanttData();
-  writeCache(data);
-  return NextResponse.json(data);
+  return NextResponse.json({ tasks: [], today: new Date().toISOString().slice(0, 10) });
 }
